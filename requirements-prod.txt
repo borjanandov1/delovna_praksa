@@ -1,0 +1,6 @@
+# Install on the FCSE server:  pip install -r requirements-prod.txt
+# Kept separate because gunicorn does not run on Windows — installing it
+# locally just produces a confusing error.
+-r requirements.txt
+
+gunicorn==23.0.0

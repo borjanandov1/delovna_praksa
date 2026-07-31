@@ -1,0 +1,32 @@
+# Secrets — never commit. Share .env.example instead.
+.env
+.env.*
+!.env.example
+
+# Virtualenv
+venv/
+.venv/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Django
+db.sqlite3
+db.sqlite3-journal
+staticfiles/
+media/
+*.log
+
+# Compiled translations are rebuilt on deploy with `compilemessages`.
+# The .po sources ARE committed — they hold the actual translations.
+*.mo
+
+# Editors / OS
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+desktop.ini
