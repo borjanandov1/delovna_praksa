@@ -1,0 +1,112 @@
+{% extends "base.html" %}
+{% load i18n static %}
+
+{% block title %}{{ member.name }} — {{ member.role }} — {{ site.name }}{% endblock %}
+{% block meta_description %}{{ member.short_bio|default:member.role|truncatechars:155 }}{% endblock %}
+{% block og_title %}{{ member.name }} — {{ member.role }}{% endblock %}
+{% block og_description %}{{ member.short_bio|default:member.role|truncatechars:155 }}{% endblock %}
+{% block og_image %}{{ request.scheme }}://{{ request.get_host }}{% if member.photo %}{{ member.photo.url }}{% else %}{% static 'img/og-default.jpg' %}{% endif %}{% endblock %}
+
+{% block content %}
+
+<header class="section-dark section-tight">
+  <div class="container">
+    <nav aria-label="{% trans 'Breadcrumb' %}" class="mb-3">
+      <ol class="breadcrumb mb-0" style="--bs-breadcrumb-divider:'/';font-size:.8125rem">
+        <li class="breadcrumb-item"><a href="{% url 'core:home' %}" class="text-white-50">{% trans "Home" %}</a></li>
+        <li class="breadcrumb-item"><a href="{% url 'team:list' %}" class="text-white-50">{% trans "Trainers" %}</a></li>
+        <li class="breadcrumb-item active text-white" aria-current="page">{{ member.name }}</li>
+      </ol>
+    </nav>
+    <span class="eyebrow eyebrow-light">{{ member.role }}</span>
+    <h1 class="mb-0">{{ member.name }}</h1>
+  </div>
+</header>
+
+<section class="section">
+  <div class="container">
+    <div class="row g-5">
+
+      <div class="col-lg-5">
+        {% if member.photo %}
+          <img src="{{ member.photo.url }}" alt="{{ member.name }}"
+               class="w-100 rounded-4" width="600" height="800"
+               style="object-fit:cover;aspect-ratio:3/4">
+        {% endif %}
+
+        <div class="card-forge p-4 mt-4">
+          <dl class="mb-0">
+            {% if member.years_experience %}
+              <dt class="small text-muted">{% trans "Experience" %}</dt>
+              <dd class="mb-3">{{ member.years_experience }} {% trans "years" %}</dd>
+            {% endif %}
+            {% if member.specialties.all %}
+              <dt class="small text-muted">{% trans "Specialties" %}</dt>
+              <dd class="mb-3 d-flex flex-wrap gap-2">
+                {% for s in member.specialties.all %}<span class="badge-lime">{{ s.name }}</span>{% endfor %}
+              </dd>
+            {% endif %}
+            {% if member.email or member.instagram %}
+              <dt class="small text-muted">{% trans "Get in touch" %}</dt>
+              <dd class="mb-0 d-flex gap-2">
+                {% if member.email %}
+                  <a class="btn btn-sm btn-outline-dark" href="mailto:{{ member.email }}">
+                    <i class="bi bi-envelope me-1" aria-hidden="true"></i>{% trans "Email" %}
+                  </a>
+                {% endif %}
+                {% if member.instagram %}
+                  <a class="btn btn-sm btn-outline-dark" href="{{ member.instagram }}" target="_blank" rel="noopener">
+                    <i class="bi bi-instagram me-1" aria-hidden="true"></i>Instagram
+                  </a>
+                {% endif %}
+              </dd>
+            {% endif %}
+          </dl>
+        </div>
+      </div>
+
+      <div class="col-lg-7">
+        {% if member.short_bio %}<p class="lead">{{ member.short_bio }}</p>{% endif %}
+        {% if member.bio %}<div>{{ member.bio|linebreaks }}</div>{% endif %}
+
+        {% if member.certification_items %}
+          <h2 class="h4 mt-5 mb-3">{% trans "Certifications" %}</h2>
+          <ul class="price-features">
+            {% for c in member.certification_items %}<li>{{ c }}</li>{% endfor %}
+          </ul>
+        {% endif %}
+
+        {% if member.classes.all %}
+          <h2 class="h4 mt-5 mb-3">{% trans "Classes led by" %} {{ member.name }}</h2>
+          <div class="row g-3">
+            {% for gym_class in member.classes.all %}
+              <div class="col-sm-6 d-flex">
+                {% include "partials/_class_card.html" with gym_class=gym_class %}
+              </div>
+            {% endfor %}
+          </div>
+        {% endif %}
+
+        <a class="btn btn-accent btn-lg mt-5" href="{% url 'contact:booking' %}">
+          {% blocktrans with name=member.name %}Train with {{ name }}{% endblocktrans %}
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+{% if others %}
+<section class="section section-cream">
+  <div class="container">
+    <h2 class="mb-5">{% trans "Other trainers" %}</h2>
+    <div class="row g-4">
+      {% for member in others %}
+        <div class="col-6 col-lg-4 d-flex">{% include "partials/_team_card.html" with member=member %}</div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{% endblock %}

@@ -56,6 +56,24 @@ class SiteSettings(models.Model):
         parts = [self.street, f"{self.postal_code} {self.city}".strip()]
         return ", ".join(p for p in parts if p)
 
+    @property
+    def map_embed_url(self):
+        """
+        OpenStreetMap iframe URL — no API key, no billing account, no tracking.
+
+        Built here rather than in the template because Django's `add` filter
+        coerces to int first and silently string-concatenates floats.
+        """
+        d_lng, d_lat = 0.006, 0.004
+        bbox = (
+            f"{self.map_lng - d_lng},{self.map_lat - d_lat},"
+            f"{self.map_lng + d_lng},{self.map_lat + d_lat}"
+        )
+        return (
+            "https://www.openstreetmap.org/export/embed.html"
+            f"?bbox={bbox}&layer=mapnik&marker={self.map_lat},{self.map_lng}"
+        )
+
 
 class OpeningHours(models.Model):
     """One row per weekday. Drives the 'Open now / Closed' badge in the header."""

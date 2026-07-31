@@ -1,0 +1,25 @@
+{% load i18n %}
+{# Expects: service #}
+<article class="card-forge position-relative reveal p-4 d-flex flex-column">
+  <div class="d-inline-flex align-items-center justify-content-center mb-3"
+       style="width:52px;height:52px;border-radius:14px;background:var(--forge-lime)">
+    <i class="bi {{ service.icon }} fs-4" style="color:var(--forge-black)" aria-hidden="true"></i>
+  </div>
+
+  <h3 class="h5 mb-2" style="font-family:var(--bs-body-font-family);font-weight:700;text-transform:none">
+    <a href="{{ service.get_absolute_url }}" class="stretch-link text-decoration-none text-reset">
+      {{ service.title }}
+    </a>
+  </h3>
+
+  <p class="text-muted small flex-grow-1 mb-3">{{ service.short_desc }}</p>
+
+  <div class="d-flex align-items-center justify-content-between">
+    {% if service.price_from %}
+      <span class="fw-bold">{% trans "from" %} {{ service.price_from }} {% trans "MKD" %}</span>
+    {% else %}
+      <span></span>
+    {% endif %}
+    <i class="bi bi-arrow-right" aria-hidden="true"></i>
+  </div>
+</article>

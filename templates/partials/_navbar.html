@@ -1,0 +1,85 @@
+{% load i18n %}
+{% with vn=request.resolver_match.view_name %}
+<nav class="navbar navbar-expand-lg navbar-forge sticky-top" aria-label="{% trans 'Main navigation' %}">
+  <div class="container">
+
+    <a class="navbar-brand d-flex align-items-center gap-2" href="{% url 'core:home' %}">
+      {% if site.logo %}<img src="{{ site.logo.url }}" alt="" height="30" width="30">{% endif %}
+      FORGE<span>.</span>
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#mainNav" aria-controls="mainNav"
+            aria-expanded="false" aria-label="{% trans 'Toggle navigation' %}">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav mx-lg-auto">
+
+        <li class="nav-item">
+          <a class="nav-link {% if vn == 'core:about' %}active{% endif %}"
+             {% if vn == 'core:about' %}aria-current="page"{% endif %}
+             href="{% url 'core:about' %}">{% trans "About" %}</a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle {% if 'training' in vn %}active{% endif %}"
+             href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            {% trans "Classes" %}
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="{% url 'training:class_list' %}">{% trans "All classes" %}</a></li>
+            <li><a class="dropdown-item" href="{% url 'training:schedule' %}">{% trans "Weekly schedule" %}</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="{% url 'training:pricing' %}">{% trans "Memberships" %}</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link {% if 'services' in vn %}active{% endif %}"
+             {% if vn == 'services:list' %}aria-current="page"{% endif %}
+             href="{% url 'services:list' %}">{% trans "Services" %}</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link {% if 'team' in vn %}active{% endif %}"
+             {% if vn == 'team:list' %}aria-current="page"{% endif %}
+             href="{% url 'team:list' %}">{% trans "Trainers" %}</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link {% if 'blog' in vn %}active{% endif %}"
+             {% if vn == 'blog:list' %}aria-current="page"{% endif %}
+             href="{% url 'blog:list' %}">{% trans "Blog" %}</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link {% if vn == 'contact:contact' %}active{% endif %}"
+             {% if vn == 'contact:contact' %}aria-current="page"{% endif %}
+             href="{% url 'contact:contact' %}">{% trans "Contact" %}</a>
+        </li>
+      </ul>
+
+      <div class="d-flex align-items-center gap-3 mt-3 mt-lg-0">
+
+        {# Posts to set_language, which stores the choice and redirects back. #}
+        <form action="{% url 'set_language' %}" method="post" class="lang-switch">
+          {% csrf_token %}
+          <input type="hidden" name="next" value="{{ request.get_full_path|slice:'3:' }}">
+          {% for code, label in LANGUAGES %}
+            {% if not forloop.first %}<span class="sep" aria-hidden="true">/</span>{% endif %}
+            <button type="submit" name="language" value="{{ code }}"
+                    aria-current="{% if code == LANGUAGE_CODE %}true{% else %}false{% endif %}"
+                    aria-label="{{ label }}">{{ code|upper }}</button>
+          {% endfor %}
+        </form>
+
+        <a class="btn btn-accent btn-sm" href="{% url 'contact:booking' %}">
+          {% trans "Free trial" %}
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+{% endwith %}

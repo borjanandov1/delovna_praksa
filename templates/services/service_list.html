@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}{% trans "Services" %} — {{ site.name }}{% endblock %}
+{% block meta_description %}{% trans "Personal training, nutrition coaching, physiotherapy and recovery services at FORGE Fitness Studio." %}{% endblock %}
+
+{% block content %}
+
+{% include "partials/_page_header.html" with eyebrow=_("What we offer") heading=_("Services") sub=_("Coaching, recovery and nutrition support — built around what you actually need.") %}
+
+<section class="section">
+  <div class="container">
+
+    {% if categories %}
+      <nav class="d-flex flex-wrap gap-2 mb-5" aria-label="{% trans 'Filter services by category' %}">
+        <a class="btn btn-sm {% if not active_category %}btn-primary{% else %}btn-outline-dark{% endif %}"
+           href="{% url 'services:list' %}"
+           {% if not active_category %}aria-current="true"{% endif %}>{% trans "All" %}</a>
+        {% for c in categories %}
+          <a class="btn btn-sm {% if active_category == c %}btn-primary{% else %}btn-outline-dark{% endif %}"
+             href="?category={{ c.slug }}"
+             {% if active_category == c %}aria-current="true"{% endif %}>{{ c.name }}</a>
+        {% endfor %}
+      </nav>
+    {% endif %}
+
+    <div class="row g-4">
+      {% for service in services %}
+        <div class="col-md-6 col-lg-4 d-flex">
+          {% include "partials/_service_card.html" with service=service %}
+        </div>
+      {% empty %}
+        <div class="col-12">
+          <p class="text-muted">{% trans "No services in this category yet." %}</p>
+        </div>
+      {% endfor %}
+    </div>
+
+  </div>
+</section>
+
+<section class="section section-dark">
+  <div class="container text-center">
+    <h2 class="mb-3">{% trans "Not sure where to start?" %}</h2>
+    <p class="lead mb-4 mx-auto" style="max-width:36rem">
+      {% trans "Book a free consultation and we'll put together a plan that fits your goals and your schedule." %}
+    </p>
+    <a class="btn btn-accent btn-lg" href="{% url 'contact:booking' %}">{% trans "Book a free trial" %}</a>
+  </div>
+</section>
+
+{% endblock %}

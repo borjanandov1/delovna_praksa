@@ -1,0 +1,47 @@
+{% load static %}<!--
+  Deliberately standalone: does NOT extend base.html.
+  A 500 often means the database or a context processor is the thing that broke,
+  so this page must render without {{ site }}, without any DB query, and without
+  the sitewide partials. Only static assets.
+-->
+<!doctype html>
+<html lang="mk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>500 — Server error</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="{% static 'img/favicon.svg' %}" type="image/svg+xml">
+  <style>
+    :root { --black:#101215; --lime:#C6F432; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; min-height: 100vh;
+      display: grid; place-items: center;
+      background: var(--black); color: #fff;
+      font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+      text-align: center; padding: 2rem;
+    }
+    .code { font-size: clamp(4rem, 16vw, 9rem); font-weight: 800; line-height: 1; color: var(--lime); }
+    h1 { font-size: clamp(1.5rem, 4vw, 2.25rem); margin: 1rem 0 .5rem; }
+    p { color: rgba(255,255,255,.65); max-width: 32rem; margin: 0 auto 2rem; line-height: 1.7; }
+    a {
+      display: inline-block; background: var(--lime); color: var(--black);
+      padding: .8rem 1.75rem; border-radius: 999px;
+      font-weight: 700; text-decoration: none;
+    }
+    a:hover { background: #AEDB1E; }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="code">500</div>
+    <h1>Нешто тргна наопаку / Something went wrong</h1>
+    <p>
+      Се случи неочекувана грешка на серверот. Обидете се повторно за неколку минути.<br>
+      An unexpected server error occurred. Please try again in a few minutes.
+    </p>
+    <a href="/">Почетна / Homepage</a>
+  </main>
+</body>
+</html>

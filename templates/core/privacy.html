@@ -1,0 +1,132 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}{% trans "Privacy Policy" %} — {{ site.name }}{% endblock %}
+{% block meta_description %}{% trans "How FORGE Fitness Studio collects, uses and stores personal data, and which cookies the site sets." %}{% endblock %}
+
+{% block content %}
+
+{% include "partials/_page_header.html" with eyebrow=_("Legal") heading=_("Privacy Policy") %}
+
+<section class="section">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+
+        <p class="text-muted small">{% trans "Last updated" %}: 31.07.2026</p>
+
+        <h2 class="h4 mt-5 mb-3">{% trans "1. Who we are" %}</h2>
+        <p>
+          {% blocktrans trimmed %}
+            This website is operated by FORGE Fitness Studio. If you have any
+            question about how your data is handled, contact us using the details
+            at the bottom of this page.
+          {% endblocktrans %}
+        </p>
+
+        <h2 class="h4 mt-5 mb-3">{% trans "2. What data we collect" %}</h2>
+        <p>{% trans "We only collect data you actively send us through a form on this site:" %}</p>
+        <ul class="text-muted">
+          <li>{% trans "Contact form: your name, email address, optional phone number, subject and message." %}</li>
+          <li>{% trans "Booking form: your name, email address, phone number, chosen class and preferred date and time." %}</li>
+        </ul>
+        <p>{% trans "We do not buy data, and we do not build profiles of visitors." %}</p>
+
+        <h2 class="h4 mt-5 mb-3">{% trans "3. Why we use it" %}</h2>
+        <p>
+          {% blocktrans trimmed %}
+            Solely to answer your enquiry or confirm your booking. We do not use
+            your details for marketing unless you ask us to, and we never sell or
+            share them with third parties.
+          {% endblocktrans %}
+        </p>
+
+        <h2 class="h4 mt-5 mb-3">{% trans "4. Cookies we set" %}</h2>
+        <p>
+          {% blocktrans trimmed %}
+            A cookie is a small text file stored by your browser. This site uses
+            only the cookies listed below. Necessary cookies are required for the
+            site to function and cannot be switched off.
+          {% endblocktrans %}
+        </p>
+
+        <div class="table-responsive mt-4">
+          <table class="table align-middle">
+            <caption class="visually-hidden">{% trans "Cookies used on this website" %}</caption>
+            <thead>
+              <tr>
+                <th scope="col">{% trans "Name" %}</th>
+                <th scope="col">{% trans "Purpose" %}</th>
+                <th scope="col">{% trans "Type" %}</th>
+                <th scope="col">{% trans "Duration" %}</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>sessionid</code></td>
+                <td>{% trans "Keeps a logged-in administrator signed in." %}</td>
+                <td>{% trans "Necessary" %}</td>
+                <td>{% trans "2 weeks" %}</td>
+              </tr>
+              <tr>
+                <td><code>csrftoken</code></td>
+                <td>{% trans "Protects forms against cross-site request forgery." %}</td>
+                <td>{% trans "Necessary" %}</td>
+                <td>{% trans "1 year" %}</td>
+              </tr>
+              <tr>
+                <td><code>django_language</code></td>
+                <td>{% trans "Remembers whether you chose Macedonian or English." %}</td>
+                <td>{% trans "Necessary" %}</td>
+                <td>{% trans "1 year" %}</td>
+              </tr>
+              <tr>
+                <td><code>forge_cookie_consent</code></td>
+                <td>{% trans "Stores your cookie choice so the banner is not shown again." %}</td>
+                <td>{% trans "Necessary" %}</td>
+                <td>{% trans "1 year" %}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="text-muted small">
+          {% blocktrans trimmed %}
+            We currently set no analytics or advertising cookies. If that changes,
+            they will only load after you press "Accept all" in the cookie banner.
+          {% endblocktrans %}
+        </p>
+
+        <p>
+          {% trans "You can change your choice at any time:" %}
+          <button type="button" class="btn btn-sm btn-outline-dark ms-2" data-cookie-reopen>
+            {% trans "Cookie settings" %}
+          </button>
+        </p>
+
+        <h2 class="h4 mt-5 mb-3">{% trans "5. How long we keep it" %}</h2>
+        <p>{% trans "Contact messages and bookings are kept for up to 24 months, then deleted." %}</p>
+
+        <h2 class="h4 mt-5 mb-3">{% trans "6. Your rights" %}</h2>
+        <p>
+          {% blocktrans trimmed %}
+            You may ask us what data we hold about you, ask for it to be corrected,
+            or ask us to delete it. Write to the email address below and we will
+            respond within 30 days.
+          {% endblocktrans %}
+        </p>
+
+        <h2 class="h4 mt-5 mb-3">{% trans "7. Contact" %}</h2>
+        <p class="mb-0">
+          {{ site.name }}<br>
+          {{ site.full_address }}<br>
+          {% if site.email %}<a href="mailto:{{ site.email }}">{{ site.email }}</a><br>{% endif %}
+          {% if site.phone %}<a href="tel:{{ site.phone|cut:' ' }}">{{ site.phone }}</a>{% endif %}
+        </p>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

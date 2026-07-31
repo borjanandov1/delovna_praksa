@@ -1,0 +1,31 @@
+{% load i18n %}
+{# Expects: post #}
+<article class="card-forge position-relative reveal d-flex flex-column">
+  <div class="card-media">
+    {% if post.cover_image %}
+      <img src="{{ post.cover_image.url }}" alt="{{ post.title }}"
+           width="600" height="450" loading="lazy" decoding="async">
+    {% else %}
+      <div class="d-flex align-items-center justify-content-center h-100 text-muted">
+        <i class="bi bi-journal-text fs-1" aria-hidden="true"></i>
+      </div>
+    {% endif %}
+  </div>
+
+  <div class="p-4 d-flex flex-column flex-grow-1">
+    <div class="d-flex align-items-center gap-2 mb-2 small text-muted">
+      {% if post.category %}<span class="badge-lime">{{ post.category.name }}</span>{% endif %}
+      <time datetime="{{ post.published_at|date:'Y-m-d' }}">{{ post.published_at|date:"j M Y" }}</time>
+      <span aria-hidden="true">·</span>
+      <span>{{ post.reading_time }} {% trans "min read" %}</span>
+    </div>
+
+    <h3 class="h5 mb-2" style="font-family:var(--bs-body-font-family);font-weight:700;text-transform:none">
+      <a href="{{ post.get_absolute_url }}" class="stretch-link text-decoration-none text-reset">
+        {{ post.title }}
+      </a>
+    </h3>
+
+    <p class="text-muted small flex-grow-1 mb-0">{{ post.excerpt|truncatechars:120 }}</p>
+  </div>
+</article>

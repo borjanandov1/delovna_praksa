@@ -1,0 +1,107 @@
+{% extends "base.html" %}
+{% load i18n static %}
+
+{% block title %}{{ service.title }} — {{ site.name }}{% endblock %}
+{% block meta_description %}{{ service.short_desc|truncatechars:155 }}{% endblock %}
+{% block og_title %}{{ service.title }}{% endblock %}
+{% block og_description %}{{ service.short_desc|truncatechars:155 }}{% endblock %}
+{% block og_image %}{{ request.scheme }}://{{ request.get_host }}{% if service.image %}{{ service.image.url }}{% else %}{% static 'img/og-default.jpg' %}{% endif %}{% endblock %}
+
+{% block content %}
+
+<header class="section-dark section-tight">
+  <div class="container">
+    <nav aria-label="{% trans 'Breadcrumb' %}" class="mb-3">
+      <ol class="breadcrumb mb-0" style="--bs-breadcrumb-divider:'/';font-size:.8125rem">
+        <li class="breadcrumb-item"><a href="{% url 'core:home' %}" class="text-white-50">{% trans "Home" %}</a></li>
+        <li class="breadcrumb-item"><a href="{% url 'services:list' %}" class="text-white-50">{% trans "Services" %}</a></li>
+        <li class="breadcrumb-item active text-white" aria-current="page">{{ service.title }}</li>
+      </ol>
+    </nav>
+
+    {% if service.category %}<span class="eyebrow eyebrow-light">{{ service.category.name }}</span>{% endif %}
+    <h1 class="mb-3">{{ service.title }}</h1>
+    <p class="lead mb-0" style="max-width:44rem">{{ service.short_desc }}</p>
+  </div>
+</header>
+
+<section class="section">
+  <div class="container">
+    <div class="row g-5">
+
+      <div class="col-lg-8">
+        {% if service.image %}
+          <img src="{{ service.image.url }}" alt="{{ service.title }}"
+               class="w-100 rounded-4 mb-4" width="900" height="600"
+               style="object-fit:cover;aspect-ratio:3/2">
+        {% endif %}
+
+        <div class="lead">{{ service.full_desc|linebreaks }}</div>
+
+        {% if service.included_items %}
+          <h2 class="h4 mt-5 mb-3">{% trans "What's included" %}</h2>
+          <ul class="price-features">
+            {% for item in service.included_items %}<li>{{ item }}</li>{% endfor %}
+          </ul>
+        {% endif %}
+
+        {% if service.gallery.all %}
+          <h2 class="h4 mt-5 mb-3">{% trans "Gallery" %}</h2>
+          <div class="row g-3">
+            {% for img in service.gallery.all %}
+              <div class="col-6 col-md-4">
+                <img src="{{ img.image.url }}" alt="{{ img.caption|default:service.title }}"
+                     class="w-100 rounded-3" width="400" height="300" loading="lazy"
+                     style="object-fit:cover;aspect-ratio:4/3">
+              </div>
+            {% endfor %}
+          </div>
+        {% endif %}
+      </div>
+
+      <aside class="col-lg-4">
+        <div class="card-forge p-4 sticky-lg-top" style="top:calc(var(--forge-nav-h) + 1.5rem)">
+          <h2 class="h5 mb-4" style="font-family:var(--bs-body-font-family);font-weight:700;text-transform:none">
+            {% trans "At a glance" %}
+          </h2>
+
+          <dl class="mb-4">
+            {% if service.price_from %}
+              <dt class="small text-muted">{% trans "Price from" %}</dt>
+              <dd class="fs-4 fw-bold mb-3">{{ service.price_from }} {% trans "MKD" %}</dd>
+            {% endif %}
+            {% if service.duration_min %}
+              <dt class="small text-muted">{% trans "Session length" %}</dt>
+              <dd class="mb-3">{{ service.duration_min }} {% trans "minutes" %}</dd>
+            {% endif %}
+            {% if service.category %}
+              <dt class="small text-muted">{% trans "Category" %}</dt>
+              <dd class="mb-0">{{ service.category.name }}</dd>
+            {% endif %}
+          </dl>
+
+          <a class="btn btn-accent w-100 mb-2" href="{% url 'contact:booking' %}">{% trans "Book this service" %}</a>
+          <a class="btn btn-outline-dark w-100" href="{% url 'contact:contact' %}">{% trans "Ask a question" %}</a>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+</section>
+
+{% if related %}
+<section class="section section-cream">
+  <div class="container">
+    <h2 class="mb-5">{% trans "Related services" %}</h2>
+    <div class="row g-4">
+      {% for service in related %}
+        <div class="col-md-6 col-lg-4 d-flex">
+          {% include "partials/_service_card.html" with service=service %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{% endblock %}

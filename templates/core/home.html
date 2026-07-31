@@ -1,0 +1,280 @@
+{% extends "base.html" %}
+{% load i18n static %}
+
+{% block title %}{{ site.name }} — {{ site.tagline }}{% endblock %}
+{% block meta_description %}{{ site.short_about|truncatechars:155 }}{% endblock %}
+
+{% block content %}
+
+{# ------------------------------------------------------------------ Hero #}
+<section class="hero">
+  {% if site.hero_image %}
+    <img class="hero-media" src="{{ site.hero_image.url }}" alt="" fetchpriority="high" width="1920" height="1080">
+  {% endif %}
+
+  <div class="container hero-inner">
+    <div class="row">
+      <div class="col-lg-8">
+        <span class="eyebrow eyebrow-light">{{ site.city }} · {% trans "Since 2019" %}</span>
+        <h1 class="mb-4">
+          {% blocktrans trimmed %}
+            Build the body.<br>Forge the <span class="mark-lime">mindset</span>.
+          {% endblocktrans %}
+        </h1>
+        <p class="lead mb-4">{{ site.tagline }}</p>
+
+        <div class="d-flex flex-wrap gap-3">
+          <a class="btn btn-accent btn-lg" href="{% url 'contact:booking' %}">
+            {% trans "Book a free trial" %}
+          </a>
+          <a class="btn btn-outline-light btn-lg" href="{% url 'training:schedule' %}">
+            {% trans "See the schedule" %}
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# --------------------------------------------------------- Stats strip #}
+<section class="section-dark py-4 border-top" style="border-color:rgba(255,255,255,.08)!important">
+  <div class="container">
+    <div class="row text-center g-4">
+      <div class="col-6 col-lg-3">
+        <div class="stat-value">1200+</div>
+        <div class="stat-label">{% trans "Members" %}</div>
+      </div>
+      <div class="col-6 col-lg-3">
+        <div class="stat-value">{{ trainer_count }}</div>
+        <div class="stat-label">{% trans "Certified trainers" %}</div>
+      </div>
+      <div class="col-6 col-lg-3">
+        <div class="stat-value">40+</div>
+        <div class="stat-label">{% trans "Classes per week" %}</div>
+      </div>
+      <div class="col-6 col-lg-3">
+        <div class="stat-value">1400m²</div>
+        <div class="stat-label">{% trans "Training floor" %}</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# ----------------------------------------------------------- Classes #}
+{% if featured_classes %}
+<section class="section">
+  <div class="container">
+    <div class="d-flex flex-wrap justify-content-between align-items-end gap-3 mb-5">
+      <div>
+        <span class="eyebrow">{% trans "Train with us" %}</span>
+        <h2 class="mb-0">{% trans "Group classes" %}</h2>
+      </div>
+      <a class="btn btn-outline-dark" href="{% url 'training:class_list' %}">{% trans "All classes" %}</a>
+    </div>
+
+    <div class="row g-4">
+      {% for gym_class in featured_classes %}
+        <div class="col-sm-6 col-lg-3 d-flex">
+          {% include "partials/_class_card.html" with gym_class=gym_class %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{# ------------------------------------------------------------- About #}
+<section class="section section-cream">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6">
+        <span class="eyebrow">{% trans "Who we are" %}</span>
+        <h2 class="mb-4">{% trans "More than a gym" %}</h2>
+        <p class="lead">{{ site.short_about }}</p>
+        <a class="btn btn-primary mt-3" href="{% url 'core:about' %}">{% trans "Our story" %}</a>
+      </div>
+      <div class="col-lg-6">
+        <div class="row g-3">
+          {% for service in featured_services %}
+            <div class="col-sm-6 d-flex">
+              {% include "partials/_service_card.html" with service=service %}
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# ---------------------------------------------------------- Trainers #}
+{% if trainers %}
+<section class="section">
+  <div class="container">
+    <div class="d-flex flex-wrap justify-content-between align-items-end gap-3 mb-5">
+      <div>
+        <span class="eyebrow">{% trans "The team" %}</span>
+        <h2 class="mb-0">{% trans "Meet your trainers" %}</h2>
+      </div>
+      <a class="btn btn-outline-dark" href="{% url 'team:list' %}">{% trans "All trainers" %}</a>
+    </div>
+
+    <div class="row g-4">
+      {% for member in trainers %}
+        <div class="col-6 col-lg-3 d-flex">
+          {% include "partials/_team_card.html" with member=member %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{# --------------------------------------------------------- Pricing #}
+{% if plans %}
+<section class="section section-cream">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="eyebrow justify-content-center">{% trans "Memberships" %}</span>
+      <h2 class="mb-0">{% trans "Pick your plan" %}</h2>
+    </div>
+
+    <div class="row g-4 justify-content-center">
+      {% for plan in plans %}
+        <div class="col-md-6 col-lg-4 d-flex">
+          <div class="card-forge price-card {% if plan.is_featured %}featured{% endif %} p-4 p-lg-5 reveal d-flex flex-column w-100">
+            {% if plan.is_featured %}
+              <span class="badge-lime position-absolute" style="top:-.75rem;left:50%;transform:translateX(-50%)">
+                {% trans "Most popular" %}
+              </span>
+            {% endif %}
+            <h3 class="h4 mb-1" style="font-family:var(--bs-body-font-family);font-weight:700;text-transform:none">{{ plan.name }}</h3>
+            <p class="text-muted small mb-4">{{ plan.tagline }}</p>
+
+            <div class="d-flex align-items-baseline gap-2 mb-4">
+              <span class="price-amount">{{ plan.price }}</span>
+              <span class="price-period">{% trans "MKD" %} / {{ plan.period }}</span>
+            </div>
+
+            <ul class="price-features mb-4 flex-grow-1">
+              {% for feature in plan.feature_items %}<li>{{ feature }}</li>{% endfor %}
+            </ul>
+
+            <a class="btn {% if plan.is_featured %}btn-accent{% else %}btn-outline-dark{% endif %} w-100"
+               href="{% url 'contact:booking' %}">{% trans "Get started" %}</a>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+
+    <p class="text-center text-muted small mt-4 mb-0">
+      <a href="{% url 'training:pricing' %}">{% trans "Compare all membership options" %}</a>
+    </p>
+  </div>
+</section>
+{% endif %}
+
+{# ----------------------------------------------------- Testimonials #}
+{% if testimonials %}
+<section class="section section-dark">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="eyebrow eyebrow-light justify-content-center">{% trans "Results" %}</span>
+      <h2 class="mb-0">{% trans "What our members say" %}</h2>
+    </div>
+
+    <div class="row g-4">
+      {% for t in testimonials %}
+        <div class="col-md-4">
+          <figure class="h-100 p-4 reveal" style="background:rgba(255,255,255,.05);border-radius:1rem">
+            <div class="mb-3" aria-label="{% blocktrans with n=t.rating %}Rated {{ n }} out of 5{% endblocktrans %}">
+              {% for _ in t.stars %}<i class="bi bi-star-fill" style="color:var(--forge-lime)" aria-hidden="true"></i>{% endfor %}
+            </div>
+            <blockquote class="mb-3"><p class="mb-0">"{{ t.text }}"</p></blockquote>
+            <figcaption class="d-flex align-items-center gap-3">
+              {% if t.photo %}
+                <img src="{{ t.photo.url }}" alt="" width="44" height="44"
+                     class="rounded-circle" style="object-fit:cover" loading="lazy">
+              {% endif %}
+              <span>
+                <span class="d-block text-white fw-semibold">{{ t.author }}</span>
+                <span class="small">{{ t.role }}</span>
+              </span>
+            </figcaption>
+          </figure>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{# ---------------------------------------------------------- Blog #}
+{% if latest_posts %}
+<section class="section">
+  <div class="container">
+    <div class="d-flex flex-wrap justify-content-between align-items-end gap-3 mb-5">
+      <div>
+        <span class="eyebrow">{% trans "Journal" %}</span>
+        <h2 class="mb-0">{% trans "Latest from the blog" %}</h2>
+      </div>
+      <a class="btn btn-outline-dark" href="{% url 'blog:list' %}">{% trans "All posts" %}</a>
+    </div>
+
+    <div class="row g-4">
+      {% for post in latest_posts %}
+        <div class="col-md-6 col-lg-4 d-flex">
+          {% include "partials/_post_card.html" with post=post %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{# ------------------------------------------------------ CTA + map #}
+<section class="section section-cream">
+  <div class="container">
+    <div class="row g-5 align-items-center">
+      <div class="col-lg-5">
+        <span class="eyebrow">{% trans "Come by" %}</span>
+        <h2 class="mb-3">{% trans "Your first session is on us" %}</h2>
+        <p class="lead mb-4">
+          {% blocktrans trimmed %}
+            Drop in for a free trial, meet the trainers and see the floor before
+            you commit to anything.
+          {% endblocktrans %}
+        </p>
+
+        <ul class="list-unstyled d-grid gap-2 mb-4">
+          {% if site.full_address %}
+            <li class="d-flex gap-2"><i class="bi bi-geo-alt" aria-hidden="true"></i>{{ site.full_address }}</li>
+          {% endif %}
+          {% if site.phone %}
+            <li class="d-flex gap-2"><i class="bi bi-telephone" aria-hidden="true"></i>
+              <a href="tel:{{ site.phone|cut:' ' }}" class="text-reset">{{ site.phone }}</a></li>
+          {% endif %}
+          <li class="d-flex gap-2 align-items-center">
+            <span class="status-dot {% if not is_open_now %}closed{% endif %}" aria-hidden="true"></span>
+            {% if is_open_now %}{% trans "Open now" %}{% else %}{% trans "Currently closed" %}{% endif %}
+          </li>
+        </ul>
+
+        <a class="btn btn-accent btn-lg" href="{% url 'contact:booking' %}">{% trans "Book a free trial" %}</a>
+      </div>
+
+      <div class="col-lg-7">
+        {# OpenStreetMap embed: no API key, no billing account, no tracking. #}
+        <iframe
+          title="{% trans 'Map showing the location of the gym' %}"
+          class="w-100 rounded-4 border-0"
+          height="380"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          src="{{ site.map_embed_url }}">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,102 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}{% trans "Contact us" %} — {{ site.name }}{% endblock %}
+{% block meta_description %}{% trans "Get in touch with FORGE Fitness Studio — address, phone, email, opening hours and a contact form." %}{% endblock %}
+
+{% block content %}
+
+{% include "partials/_page_header.html" with eyebrow=_("Get in touch") heading=_("Contact us") sub=_("Questions about memberships, classes or personal training? We answer within one working day.") %}
+
+<section class="section">
+  <div class="container">
+    <div class="row g-5">
+
+      <div class="col-lg-7">
+        <h2 class="h4 mb-4">{% trans "Send us a message" %}</h2>
+        {% include "contact/partials/_contact_form.html" %}
+      </div>
+
+      <aside class="col-lg-5">
+        <div class="card-forge p-4 p-lg-5 mb-4">
+          <h2 class="h5 mb-4" style="font-family:var(--bs-body-font-family);font-weight:700;text-transform:none">
+            {% trans "Visit the studio" %}
+          </h2>
+
+          <ul class="list-unstyled d-grid gap-3 mb-0">
+            {% if site.full_address %}
+              <li class="d-flex gap-3">
+                <i class="bi bi-geo-alt fs-5" style="color:var(--forge-lime-dark)" aria-hidden="true"></i>
+                <span>
+                  <span class="d-block small text-muted">{% trans "Address" %}</span>
+                  {{ site.full_address }}
+                </span>
+              </li>
+            {% endif %}
+            {% if site.phone %}
+              <li class="d-flex gap-3">
+                <i class="bi bi-telephone fs-5" style="color:var(--forge-lime-dark)" aria-hidden="true"></i>
+                <span>
+                  <span class="d-block small text-muted">{% trans "Phone" %}</span>
+                  <a href="tel:{{ site.phone|cut:' ' }}" class="text-reset">{{ site.phone }}</a>
+                </span>
+              </li>
+            {% endif %}
+            {% if site.email %}
+              <li class="d-flex gap-3">
+                <i class="bi bi-envelope fs-5" style="color:var(--forge-lime-dark)" aria-hidden="true"></i>
+                <span>
+                  <span class="d-block small text-muted">{% trans "Email" %}</span>
+                  <a href="mailto:{{ site.email }}" class="text-reset">{{ site.email }}</a>
+                </span>
+              </li>
+            {% endif %}
+            <li class="d-flex gap-3">
+              <i class="bi bi-clock fs-5" style="color:var(--forge-lime-dark)" aria-hidden="true"></i>
+              <span class="flex-grow-1">
+                <span class="d-block small text-muted mb-1">
+                  {% trans "Opening hours" %}
+                  <span class="ms-1">
+                    <span class="status-dot {% if not is_open_now %}closed{% endif %}" aria-hidden="true"></span>
+                    {% if is_open_now %}{% trans "Open now" %}{% else %}{% trans "Closed" %}{% endif %}
+                  </span>
+                </span>
+                {% for h in opening_hours %}
+                  <span class="d-flex justify-content-between gap-3">
+                    <span>{{ h.get_weekday_display }}</span>
+                    <span class="text-muted">
+                      {% if h.is_closed %}{% trans "Closed" %}{% else %}{{ h.opens|time:"H:i" }}–{{ h.closes|time:"H:i" }}{% endif %}
+                    </span>
+                  </span>
+                {% endfor %}
+              </span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="card-forge p-4 text-center">
+          <h2 class="h6 mb-2" style="font-family:var(--bs-body-font-family);font-weight:700;text-transform:none">
+            {% trans "Want to train instead of talk?" %}
+          </h2>
+          <p class="text-muted small mb-3">{% trans "Book a free trial session directly." %}</p>
+          <a class="btn btn-accent w-100" href="{% url 'contact:booking' %}">{% trans "Book a free trial" %}</a>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+</section>
+
+<section class="section-tight pb-0">
+  <div class="container-fluid px-0">
+    <iframe
+      title="{% trans 'Map showing the location of the gym' %}"
+      class="w-100 border-0 d-block"
+      height="420"
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      src="{{ site.map_embed_url }}"></iframe>
+  </div>
+</section>
+
+{% endblock %}

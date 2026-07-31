@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}{% trans "Page not found" %} — {{ site.name }}{% endblock %}
+{% block meta_description %}{% trans "The page you were looking for does not exist." %}{% endblock %}
+
+{% block content %}
+<section class="section text-center">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-6">
+        <div class="stat-value mb-3" style="font-size:clamp(5rem,18vw,10rem);color:var(--forge-lime-dark)">404</div>
+        <h1 class="mb-3">{% trans "This page skipped leg day" %}</h1>
+        <p class="lead mb-4">
+          {% trans "The page you're looking for doesn't exist or has been moved." %}
+        </p>
+
+        <div class="d-flex flex-wrap gap-2 justify-content-center">
+          <a class="btn btn-accent" href="{% url 'core:home' %}">{% trans "Back to homepage" %}</a>
+          <a class="btn btn-outline-dark" href="{% url 'training:schedule' %}">{% trans "See the schedule" %}</a>
+          <a class="btn btn-outline-dark" href="{% url 'contact:contact' %}">{% trans "Contact us" %}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

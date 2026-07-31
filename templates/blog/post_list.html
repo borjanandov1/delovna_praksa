@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}{% trans "Blog" %} — {{ site.name }}{% endblock %}
+{% block meta_description %}{% trans "Training advice, nutrition guides and studio news from the coaching team at FORGE Fitness Studio." %}{% endblock %}
+
+{% block content %}
+
+{% include "partials/_page_header.html" with eyebrow=_("Journal") heading=_("Training & nutrition blog") sub=_("Practical advice from our coaches — no fads, no supplements to sell you.") %}
+
+<section class="section">
+  <div class="container">
+
+    <div class="row g-3 align-items-center mb-5">
+      <div class="col-lg-7">
+        <nav class="d-flex flex-wrap gap-2" aria-label="{% trans 'Filter posts by category' %}">
+          <a class="btn btn-sm {% if not active_category %}btn-primary{% else %}btn-outline-dark{% endif %}"
+             href="{% url 'blog:list' %}"
+             {% if not active_category %}aria-current="true"{% endif %}>{% trans "All" %}</a>
+          {% for c in categories %}
+            <a class="btn btn-sm {% if active_category == c %}btn-primary{% else %}btn-outline-dark{% endif %}"
+               href="?category={{ c.slug }}"
+               {% if active_category == c %}aria-current="true"{% endif %}>{{ c.name }}</a>
+          {% endfor %}
+        </nav>
+      </div>
+
+      <div class="col-lg-5">
+        {# HTMX: updates the grid as you type, with a normal GET as fallback. #}
+        <form role="search" method="get" action="{% url 'blog:list' %}"
+              hx-get="{% url 'blog:list' %}"
+              hx-target="#postGrid"
+              hx-select="#postGrid"
+              hx-swap="outerHTML"
+              hx-trigger="submit, keyup changed delay:400ms from:input[name='q']"
+              hx-push-url="true">
+          <label for="blogSearch" class="visually-hidden">{% trans "Search the blog" %}</label>
+          <div class="input-group">
+            <input type="search" class="form-control" id="blogSearch" name="q"
+                   value="{{ query }}" placeholder="{% trans 'Search articles…' %}">
+            {% if active_category %}
+              <input type="hidden" name="category" value="{{ active_category.slug }}">
+            {% endif %}
+            <button class="btn btn-primary" type="submit">
+              <i class="bi bi-search" aria-hidden="true"></i>
+              <span class="visually-hidden">{% trans "Search" %}</span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    {% include "blog/partials/_post_grid.html" %}
+
+  </div>
+</section>
+
+{% endblock %}

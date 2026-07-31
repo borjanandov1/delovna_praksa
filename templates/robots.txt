@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Nothing useful for crawlers behind these.
+Disallow: /admin/
+Disallow: /i18n/
+
+Sitemap: {{ request.scheme }}://{{ request.get_host }}/sitemap.xml

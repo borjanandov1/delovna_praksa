@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}{% trans "Terms of Use" %} — {{ site.name }}{% endblock %}
+{% block meta_description %}{% trans "Terms governing the use of the FORGE Fitness Studio website, memberships and class bookings." %}{% endblock %}
+
+{% block content %}
+
+{% include "partials/_page_header.html" with eyebrow=_("Legal") heading=_("Terms of Use") %}
+
+<section class="section">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+
+        <p class="text-muted small">{% trans "Last updated" %}: 31.07.2026</p>
+
+        <h2 class="h4 mt-5 mb-3">{% trans "1. Using this website" %}</h2>
+        <p>
+          {% blocktrans trimmed %}
+            By using this website you agree to these terms. The content is provided
+            for information about our studio, classes and memberships.
+          {% endblocktrans %}
+        </p>
+
+        <h2 class="h4 mt-5 mb-3">{% trans "2. Bookings" %}</h2>
+        <p>
+          {% blocktrans trimmed %}
+            Submitting the booking form is a request, not a confirmed place. A
+            booking is only confirmed once we contact you by phone or email.
+            Places in group classes are limited by the capacity shown on each
+            class page.
+          {% endblocktrans %}
+        </p>
+
+        <h2 class="h4 mt-5 mb-3">{% trans "3. Cancellations" %}</h2>
+        <p>
+          {% blocktrans trimmed %}
+            Please cancel at least four hours before a booked class so the place
+            can be offered to someone else. Repeated no-shows may result in
+            booking restrictions.
+          {% endblocktrans %}
+        </p>
+
+        <h2 class="h4 mt-5 mb-3">{% trans "4. Health and safety" %}</h2>
+        <p>
+          {% blocktrans trimmed %}
+            Training carries inherent risk. You train at your own risk and confirm
+            that you are medically fit to take part. Tell your coach about any
+            injury or condition before a session. Follow the instructions of staff
+            and the rules displayed in the studio at all times.
+          {% endblocktrans %}
+        </p>
+
+        <h2 class="h4 mt-5 mb-3">{% trans "5. Memberships and pricing" %}</h2>
+        <p>
+          {% blocktrans trimmed %}
+            Prices shown on this site are in Macedonian denars and include VAT.
+            We may change prices, class timetables and opening hours; the version
+            published on this website at the time of purchase applies.
+          {% endblocktrans %}
+        </p>
+
+        <h2 class="h4 mt-5 mb-3">{% trans "6. Intellectual property" %}</h2>
+        <p>
+          {% blocktrans trimmed %}
+            All text, photographs and the FORGE name and logo on this site belong
+            to FORGE Fitness Studio and may not be reused without written
+            permission.
+          {% endblocktrans %}
+        </p>
+
+        <h2 class="h4 mt-5 mb-3">{% trans "7. Liability" %}</h2>
+        <p>
+          {% blocktrans trimmed %}
+            We take care to keep the information on this site accurate, but we do
+            not accept liability for loss arising from reliance on it. Nothing in
+            these terms limits liability where the law does not allow it.
+          {% endblocktrans %}
+        </p>
+
+        <h2 class="h4 mt-5 mb-3">{% trans "8. Contact" %}</h2>
+        <p class="mb-0">
+          {% trans "Questions about these terms:" %}
+          {% if site.email %}<a href="mailto:{{ site.email }}">{{ site.email }}</a>{% endif %}
+        </p>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

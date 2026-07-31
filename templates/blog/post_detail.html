@@ -1,0 +1,106 @@
+{% extends "base.html" %}
+{% load i18n static %}
+
+{% block title %}{{ post.title }} — {{ site.name }}{% endblock %}
+{% block meta_description %}{{ post.excerpt|truncatechars:155 }}{% endblock %}
+{% block og_title %}{{ post.title }}{% endblock %}
+{% block og_description %}{{ post.excerpt|truncatechars:155 }}{% endblock %}
+{% block og_image %}{{ request.scheme }}://{{ request.get_host }}{% if post.cover_image %}{{ post.cover_image.url }}{% else %}{% static 'img/og-default.jpg' %}{% endif %}{% endblock %}
+
+{% block extra_css %}
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="{{ post.published_at|date:'c' }}">
+{% endblock %}
+
+{% block content %}
+
+<header class="section-dark section-tight">
+  <div class="container">
+    <nav aria-label="{% trans 'Breadcrumb' %}" class="mb-3">
+      <ol class="breadcrumb mb-0" style="--bs-breadcrumb-divider:'/';font-size:.8125rem">
+        <li class="breadcrumb-item"><a href="{% url 'core:home' %}" class="text-white-50">{% trans "Home" %}</a></li>
+        <li class="breadcrumb-item"><a href="{% url 'blog:list' %}" class="text-white-50">{% trans "Blog" %}</a></li>
+        <li class="breadcrumb-item active text-white" aria-current="page">{{ post.title|truncatechars:40 }}</li>
+      </ol>
+    </nav>
+
+    {% if post.category %}<span class="eyebrow eyebrow-light">{{ post.category.name }}</span>{% endif %}
+    <h1 class="mb-3">{{ post.title }}</h1>
+
+    <div class="d-flex flex-wrap align-items-center gap-3 small text-white-50">
+      {% if post.author %}
+        <a href="{{ post.author.get_absolute_url }}" class="d-flex align-items-center gap-2 text-decoration-none text-white-50">
+          {% if post.author.photo %}
+            <img src="{{ post.author.photo.url }}" alt="" width="32" height="32"
+                 class="rounded-circle" style="object-fit:cover">
+          {% endif %}
+          {{ post.author.name }}
+        </a>
+        <span aria-hidden="true">·</span>
+      {% endif %}
+      <time datetime="{{ post.published_at|date:'Y-m-d' }}">{{ post.published_at|date:"j F Y" }}</time>
+      <span aria-hidden="true">·</span>
+      <span>{{ post.reading_time }} {% trans "min read" %}</span>
+    </div>
+  </div>
+</header>
+
+<article class="section">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+
+        {% if post.cover_image %}
+          <img src="{{ post.cover_image.url }}" alt="{{ post.title }}"
+               class="w-100 rounded-4 mb-5" width="900" height="500"
+               style="object-fit:cover;aspect-ratio:16/9">
+        {% endif %}
+
+        <p class="lead">{{ post.excerpt }}</p>
+
+        <div class="mt-4">{{ post.body|linebreaks }}</div>
+
+        <hr class="my-5">
+
+        <div class="d-flex flex-wrap justify-content-between align-items-center gap-3">
+          <a class="btn btn-outline-dark" href="{% url 'blog:list' %}">
+            <i class="bi bi-arrow-left me-1" aria-hidden="true"></i>{% trans "Back to blog" %}
+          </a>
+
+          {% if post.author %}
+            <div class="d-flex align-items-center gap-3">
+              {% if post.author.photo %}
+                <img src="{{ post.author.photo.url }}" alt="" width="48" height="48"
+                     class="rounded-circle" style="object-fit:cover" loading="lazy">
+              {% endif %}
+              <span>
+                <span class="d-block small text-muted">{% trans "Written by" %}</span>
+                <a href="{{ post.author.get_absolute_url }}" class="fw-semibold text-decoration-none text-reset">
+                  {{ post.author.name }}
+                </a>
+              </span>
+            </div>
+          {% endif %}
+        </div>
+
+      </div>
+    </div>
+  </div>
+</article>
+
+{% if related %}
+<section class="section section-cream">
+  <div class="container">
+    <h2 class="mb-5">{% trans "Keep reading" %}</h2>
+    <div class="row g-4">
+      {% for post in related %}
+        <div class="col-md-6 col-lg-4 d-flex">
+          {% include "partials/_post_card.html" with post=post %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{% endblock %}

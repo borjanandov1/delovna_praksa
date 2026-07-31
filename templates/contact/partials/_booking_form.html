@@ -1,0 +1,35 @@
+{% load i18n crispy_forms_tags %}
+<form id="bookingForm" method="post" action="{% url 'contact:booking' %}"
+      hx-post="{% url 'contact:booking' %}"
+      hx-target="#bookingForm"
+      hx-swap="outerHTML"
+      hx-disabled-elt="find button[type=submit]"
+      novalidate>
+  {% csrf_token %}
+
+  {% if form.non_field_errors %}
+    <div class="alert alert-danger" role="alert">{{ form.non_field_errors }}</div>
+  {% endif %}
+
+  <div class="row g-3">
+    <div class="col-md-6">{{ form.name|as_crispy_field }}</div>
+    <div class="col-md-6">{{ form.email|as_crispy_field }}</div>
+    <div class="col-md-6">{{ form.phone|as_crispy_field }}</div>
+    <div class="col-md-6">{{ form.gym_class|as_crispy_field }}</div>
+    <div class="col-md-6">{{ form.preferred_date|as_crispy_field }}</div>
+    <div class="col-md-6">{{ form.preferred_time|as_crispy_field }}</div>
+    <div class="col-12">{{ form.notes|as_crispy_field }}</div>
+  </div>
+
+  <div class="hp-field" aria-hidden="true">{{ form.website }}</div>
+
+  <button type="submit" class="btn btn-accent btn-lg mt-4">
+    <span class="htmx-indicator spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+    {% trans "Request booking" %}
+  </button>
+
+  <p class="text-muted small mt-3 mb-0">
+    {% trans "This is a request — we'll confirm your place by phone or email." %}
+    <a href="{% url 'core:privacy' %}">{% trans "Privacy Policy" %}</a>
+  </p>
+</form>

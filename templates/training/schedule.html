@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}{% trans "Weekly schedule" %} — {{ site.name }}{% endblock %}
+{% block meta_description %}{% trans "The full weekly class timetable at FORGE Fitness Studio — times, coaches and rooms for every session." %}{% endblock %}
+
+{% block content %}
+
+{% include "partials/_page_header.html" with eyebrow=_("Timetable") heading=_("Weekly schedule") sub=_("Same timetable every week. Book a place, or just turn up ten minutes early.") %}
+
+<section class="section">
+  <div class="container">
+
+    {% if not has_sessions %}
+      <p class="text-muted">{% trans "The timetable is being updated. Please check back shortly." %}</p>
+    {% endif %}
+
+    {% for day_label, sessions in schedule %}
+      {% if sessions %}
+        <div class="mb-5 reveal">
+          <h2 class="h4 mb-3 d-flex align-items-center gap-3">
+            {{ day_label }}
+            <span class="badge-lime">{{ sessions|length }} {% trans "sessions" %}</span>
+          </h2>
+
+          <div class="table-responsive">
+            <table class="table schedule-table mb-0">
+              <caption class="visually-hidden">
+                {% blocktrans %}Classes on {{ day_label }}{% endblocktrans %}
+              </caption>
+              <thead>
+                <tr>
+                  <th scope="col">{% trans "Time" %}</th>
+                  <th scope="col">{% trans "Class" %}</th>
+                  <th scope="col">{% trans "Coach" %}</th>
+                  <th scope="col">{% trans "Room" %}</th>
+                  <th scope="col" class="text-end">{% trans "Intensity" %}</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for s in sessions %}
+                  <tr>
+                    <td class="fw-semibold text-nowrap">
+                      {{ s.start_time|time:"H:i" }}–{{ s.end_time|time:"H:i" }}
+                    </td>
+                    <td>
+                      <a href="{{ s.gym_class.get_absolute_url }}" class="fw-semibold text-decoration-none text-reset">
+                        {{ s.gym_class.title }}
+                      </a>
+                    </td>
+                    <td class="text-muted">
+                      {% if s.gym_class.trainer %}
+                        <a href="{{ s.gym_class.trainer.get_absolute_url }}" class="text-decoration-none text-reset">
+                          {{ s.gym_class.trainer.name }}
+                        </a>
+                      {% else %}—{% endif %}
+                    </td>
+                    <td class="text-muted">{{ s.room|default:"—" }}</td>
+                    <td class="text-end">
+                      <span class="badge text-bg-{{ s.gym_class.intensity_badge }}">
+                        {{ s.gym_class.get_intensity_display }}
+                      </span>
+                    </td>
+                  </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      {% endif %}
+    {% endfor %}
+
+  </div>
+</section>
+
+<section class="section section-dark">
+  <div class="container text-center">
+    <h2 class="mb-3">{% trans "Reserve your spot" %}</h2>
+    <p class="lead mb-4 mx-auto" style="max-width:36rem">
+      {% trans "Classes fill up fast in the evenings. Book ahead so you don't miss out." %}
+    </p>
+    <a class="btn btn-accent btn-lg" href="{% url 'contact:booking' %}">{% trans "Book a class" %}</a>
+  </div>
+</section>
+
+{% endblock %}

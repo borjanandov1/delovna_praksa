@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}{% trans "Our trainers" %} — {{ site.name }}{% endblock %}
+{% block meta_description %}{% trans "Meet the certified coaching team at FORGE Fitness Studio — strength, conditioning, mobility and nutrition specialists." %}{% endblock %}
+
+{% block content %}
+
+{% include "partials/_page_header.html" with eyebrow=_("The team") heading=_("Our trainers") sub=_("Certified coaches who write your programme, correct your technique and remember your name.") %}
+
+<section class="section">
+  <div class="container">
+    <div class="row g-4">
+      {% for member in members %}
+        <div class="col-6 col-lg-3 d-flex">
+          {% include "partials/_team_card.html" with member=member %}
+        </div>
+      {% empty %}
+        <div class="col-12"><p class="text-muted">{% trans "Trainer profiles are coming soon." %}</p></div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section-cream">
+  <div class="container text-center">
+    <span class="eyebrow justify-content-center">{% trans "Join us" %}</span>
+    <h2 class="mb-3">{% trans "Want to coach at FORGE?" %}</h2>
+    <p class="lead mb-4 mx-auto" style="max-width:36rem">
+      {% trans "We're always interested in hearing from certified trainers who put coaching before selling." %}
+    </p>
+    <a class="btn btn-primary btn-lg" href="{% url 'contact:contact' %}">{% trans "Get in touch" %}</a>
+  </div>
+</section>
+
+{% endblock %}

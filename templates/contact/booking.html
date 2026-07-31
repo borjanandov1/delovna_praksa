@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}{% trans "Book a free trial" %} — {{ site.name }}{% endblock %}
+{% block meta_description %}{% trans "Book your free trial session at FORGE Fitness Studio. Pick a class and a date — no membership required." %}{% endblock %}
+
+{% block content %}
+
+{% include "partials/_page_header.html" with eyebrow=_("Free trial") heading=_("Book your first session") sub=_("No membership, no card details, no pressure. Pick a time and we'll confirm it with you.") %}
+
+<section class="section">
+  <div class="container">
+    <div class="row g-5">
+
+      <div class="col-lg-7">
+        {% include "contact/partials/_booking_form.html" %}
+      </div>
+
+      <aside class="col-lg-5">
+        <div class="card-forge p-4 p-lg-5">
+          <h2 class="h5 mb-4" style="font-family:var(--bs-body-font-family);font-weight:700;text-transform:none">
+            {% trans "What happens next" %}
+          </h2>
+
+          <ol class="list-unstyled d-grid gap-4 mb-0">
+            <li class="d-flex gap-3">
+              <span class="badge-lime flex-shrink-0" style="width:28px;height:28px;display:grid;place-items:center">1</span>
+              <span>
+                <strong class="d-block">{% trans "We confirm your slot" %}</strong>
+                <span class="text-muted small">{% trans "By phone or email, usually within a few hours." %}</span>
+              </span>
+            </li>
+            <li class="d-flex gap-3">
+              <span class="badge-lime flex-shrink-0" style="width:28px;height:28px;display:grid;place-items:center">2</span>
+              <span>
+                <strong class="d-block">{% trans "Arrive 10 minutes early" %}</strong>
+                <span class="text-muted small">{% trans "So we can show you around and go through the basics." %}</span>
+              </span>
+            </li>
+            <li class="d-flex gap-3">
+              <span class="badge-lime flex-shrink-0" style="width:28px;height:28px;display:grid;place-items:center">3</span>
+              <span>
+                <strong class="d-block">{% trans "Train with a coach" %}</strong>
+                <span class="text-muted small">{% trans "A full session with technique coaching, completely free." %}</span>
+              </span>
+            </li>
+          </ol>
+
+          <hr class="my-4">
+
+          <p class="small text-muted mb-2"><strong>{% trans "Bring" %}:</strong>
+            {% trans "training clothes, indoor shoes, a water bottle and a towel." %}</p>
+          <p class="small text-muted mb-0">
+            {% trans "Need to change or cancel?" %}
+            {% if site.phone %}
+              <a href="tel:{{ site.phone|cut:' ' }}">{{ site.phone }}</a>
+            {% else %}
+              <a href="{% url 'contact:contact' %}">{% trans "Contact us" %}</a>
+            {% endif %}
+          </p>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+</section>
+
+{% endblock %}

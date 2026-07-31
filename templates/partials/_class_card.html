@@ -1,0 +1,38 @@
+{% load i18n %}
+{# Expects: gym_class #}
+<article class="card-forge position-relative reveal d-flex flex-column">
+  <div class="card-media">
+    {% if gym_class.image %}
+      <img src="{{ gym_class.image.url }}" alt="{{ gym_class.title }}"
+           width="600" height="450" loading="lazy" decoding="async">
+    {% else %}
+      <div class="d-flex align-items-center justify-content-center h-100 text-muted">
+        <i class="bi bi-lightning-charge fs-1" aria-hidden="true"></i>
+      </div>
+    {% endif %}
+    <span class="badge-lime position-absolute" style="top:.75rem;left:.75rem">
+      {{ gym_class.duration_min }} {% trans "min" %}
+    </span>
+  </div>
+
+  <div class="p-4 d-flex flex-column flex-grow-1">
+    <div class="d-flex align-items-center gap-2 mb-2">
+      <span class="badge text-bg-{{ gym_class.intensity_badge }}">{{ gym_class.get_intensity_display }}</span>
+      {% if gym_class.trainer %}
+        <span class="text-muted small">{{ gym_class.trainer.name }}</span>
+      {% endif %}
+    </div>
+
+    <h3 class="h5 mb-2" style="font-family:var(--bs-body-font-family);font-weight:700;text-transform:none">
+      <a href="{{ gym_class.get_absolute_url }}" class="stretch-link text-decoration-none text-reset">
+        {{ gym_class.title }}
+      </a>
+    </h3>
+
+    <p class="text-muted small mb-3 flex-grow-1">{{ gym_class.short_desc }}</p>
+
+    <span class="small fw-semibold d-inline-flex align-items-center gap-1">
+      {% trans "View class" %} <i class="bi bi-arrow-right" aria-hidden="true"></i>
+    </span>
+  </div>
+</article>

@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}{% trans "Group classes" %} — {{ site.name }}{% endblock %}
+{% block meta_description %}{% trans "HIIT, strength, spinning, yoga and mobility classes at FORGE Fitness Studio — forty sessions every week." %}{% endblock %}
+
+{% block content %}
+
+{% include "partials/_page_header.html" with eyebrow=_("Train with us") heading=_("Group classes") sub=_("Forty coached sessions a week, from beginner mobility to competition-grade conditioning.") %}
+
+<section class="section">
+  <div class="container">
+
+    <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 mb-5">
+      <nav class="d-flex flex-wrap gap-2" aria-label="{% trans 'Filter classes by intensity' %}">
+        <a class="btn btn-sm {% if not active_intensity %}btn-primary{% else %}btn-outline-dark{% endif %}"
+           href="{% url 'training:class_list' %}"
+           {% if not active_intensity %}aria-current="true"{% endif %}>{% trans "All levels" %}</a>
+        {% for value, label in intensities %}
+          <a class="btn btn-sm {% if active_intensity == value %}btn-primary{% else %}btn-outline-dark{% endif %}"
+             href="?intensity={{ value }}"
+             {% if active_intensity == value %}aria-current="true"{% endif %}>{{ label }}</a>
+        {% endfor %}
+      </nav>
+
+      <a class="btn btn-outline-dark btn-sm" href="{% url 'training:schedule' %}">
+        <i class="bi bi-calendar-week me-1" aria-hidden="true"></i>{% trans "Weekly schedule" %}
+      </a>
+    </div>
+
+    <div class="row g-4">
+      {% for gym_class in classes %}
+        <div class="col-sm-6 col-lg-4 d-flex">
+          {% include "partials/_class_card.html" with gym_class=gym_class %}
+        </div>
+      {% empty %}
+        <div class="col-12"><p class="text-muted">{% trans "No classes match this filter." %}</p></div>
+      {% endfor %}
+    </div>
+
+  </div>
+</section>
+
+<section class="section section-dark">
+  <div class="container text-center">
+    <h2 class="mb-3">{% trans "First class is free" %}</h2>
+    <p class="lead mb-4 mx-auto" style="max-width:36rem">
+      {% trans "Try any class on the timetable at no cost, with no membership required." %}
+    </p>
+    <a class="btn btn-accent btn-lg" href="{% url 'contact:booking' %}">{% trans "Book a free trial" %}</a>
+  </div>
+</section>
+
+{% endblock %}

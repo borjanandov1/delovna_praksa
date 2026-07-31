@@ -1,3 +1,78 @@
 from django.shortcuts import render
+from django.utils.translation import gettext_lazy as _
+from django.views.generic import TemplateView
 
-# Create your views here.
+from blog.models import Post
+from services.models import Service
+from team.models import TeamMember
+from training.models import GymClass, MembershipPlan
+
+from .models import FAQ, Testimonial
+
+
+class HomeView(TemplateView):
+    template_name = "core/home.html"
+
+    def get_context_data(self, **kwargs):
+        ctx = super().get_context_data(**kwargs)
+        ctx.update(
+            featured_services=Service.objects.filter(is_featured=True)[:3],
+            featured_classes=GymClass.objects.filter(is_active=True)[:4],
+            trainers=TeamMember.objects.filter(is_active=True)[:4],
+            plans=MembershipPlan.objects.all()[:3],
+            testimonials=Testimonial.objects.filter(is_featured=True)[:3],
+            latest_posts=Post.published.select_related("category", "author")[:3],
+            # Full count, not the sliced list used for the cards above.
+            trainer_count=TeamMember.objects.filter(is_active=True).count(),
+            class_count=GymClass.objects.filter(is_active=True).count(),
+        )
+        return ctx
+
+
+class AboutView(TemplateView):
+    template_name = "core/about.html"
+
+    def get_context_data(self, **kwargs):
+        ctx = super().get_context_data(**kwargs)
+        ctx["trainers"] = TeamMember.objects.filter(is_active=True)[:4]
+        ctx["testimonials"] = Testimonial.objects.all()[:6]
+        # Static editorial content — deliberately not a model, since it changes
+        # once every few years and does not need an admin screen.
+        ctx["milestones"] = [
+            (2019, _("Opened with two racks in a converted textile workshop.")),
+            (2021, _("Expanded to 1400m² and added the group-class studio.")),
+            (2023, _("Certified strength & conditioning programme launched.")),
+            (2025, _("1200 members and a coaching team of eight.")),
+        ]
+        return ctx
+
+
+class FAQView(TemplateView):
+    template_name = "core/faq.html"
+
+    def get_context_data(self, **kwargs):
+        ctx = super().get_context_data(**kwargs)
+        # Group by category so the template renders one accordion per group.
+        grouped = {}
+        for item in FAQ.objects.all():
+            grouped.setdefault(item.get_category_display(), []).append(item)
+        ctx["faq_groups"] = grouped
+        return ctx
+
+
+class PrivacyView(TemplateView):
+    template_name = "core/privacy.html"
+
+
+class TermsView(TemplateView):
+    template_name = "core/terms.html"
+
+
+def custom_404(request, exception):
+    return render(request, "404.html", status=404)
+
+
+def custom_500(request):
+    # No context processors run for handler500, so this template must not rely
+    # on {{ site }} — see templates/500.html.
+    return render(request, "500.html", status=500)

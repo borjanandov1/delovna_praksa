@@ -1,0 +1,31 @@
+{% load i18n %}
+{% comment %}
+  Cookie consent. Hidden by default and revealed by main.js only when no choice
+  has been stored yet, so it never flashes for returning visitors.
+  The choice is written to BOTH localStorage and a cookie, so the server can
+  read it too. "Cookie settings" in the footer reopens this.
+{% endcomment %}
+<div class="cookie-banner" id="cookieBanner" role="dialog" aria-modal="false"
+     aria-labelledby="cookieTitle" aria-describedby="cookieDesc" hidden>
+
+  <h2 id="cookieTitle" class="h5 text-white mb-2" style="font-family:var(--bs-body-font-family);font-size:1.05rem">
+    <i class="bi bi-cookie me-1" aria-hidden="true"></i>{% trans "We use cookies" %}
+  </h2>
+
+  <p id="cookieDesc" class="mb-3" style="font-size:.9rem">
+    {% blocktrans trimmed %}
+      We use necessary cookies to make the site work. With your consent we also
+      use analytics cookies to understand how the site is used.
+    {% endblocktrans %}
+    <a href="{% url 'core:privacy' %}">{% trans "Read our Privacy Policy" %}</a>.
+  </p>
+
+  <div class="d-flex flex-wrap gap-2">
+    <button type="button" class="btn btn-accent btn-sm" data-cookie-accept="all">
+      {% trans "Accept all" %}
+    </button>
+    <button type="button" class="btn btn-outline-light btn-sm" data-cookie-accept="necessary">
+      {% trans "Only necessary" %}
+    </button>
+  </div>
+</div>

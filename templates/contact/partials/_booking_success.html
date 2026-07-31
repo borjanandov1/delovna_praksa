@@ -1,0 +1,26 @@
+{% load i18n %}
+<div class="text-center py-5" role="status" aria-live="polite">
+  <div class="d-inline-flex align-items-center justify-content-center mb-4"
+       style="width:72px;height:72px;border-radius:50%;background:var(--forge-lime)">
+    <i class="bi bi-calendar-check fs-1" style="color:var(--forge-black)" aria-hidden="true"></i>
+  </div>
+
+  <h2 class="h4 mb-3" style="font-family:var(--bs-body-font-family);font-weight:700;text-transform:none">
+    {% trans "Booking requested" %}
+  </h2>
+
+  <p class="text-muted mb-2 mx-auto" style="max-width:28rem">{{ success_message }}</p>
+
+  {% if object %}
+    <p class="mb-4">
+      <strong>{{ object.preferred_date|date:"l, j F Y" }}</strong>
+      {% if object.preferred_time %} · {{ object.preferred_time|time:"H:i" }}{% endif %}
+      {% if object.gym_class %}<br>{{ object.gym_class.title }}{% endif %}
+    </p>
+  {% endif %}
+
+  <div class="d-flex flex-wrap gap-2 justify-content-center">
+    <a class="btn btn-outline-dark" href="{% url 'training:schedule' %}">{% trans "See the schedule" %}</a>
+    <a class="btn btn-outline-dark" href="{% url 'core:home' %}">{% trans "Back to homepage" %}</a>
+  </div>
+</div>

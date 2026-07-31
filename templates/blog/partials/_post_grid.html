@@ -1,0 +1,47 @@
+{% load i18n %}
+{% comment %}
+  Results grid only. Rendered on its own for HTMX requests (see
+  PostListView.get_template_names) and included by post_list.html otherwise,
+  so both paths render identical markup.
+{% endcomment %}
+<div id="postGrid">
+  <div class="row g-4">
+    {% for post in posts %}
+      <div class="col-md-6 col-lg-4 d-flex">
+        {% include "partials/_post_card.html" with post=post %}
+      </div>
+    {% empty %}
+      <div class="col-12 text-center py-5">
+        <i class="bi bi-search fs-1 text-muted" aria-hidden="true"></i>
+        <p class="text-muted mt-3 mb-0">{% trans "No posts found. Try a different search or category." %}</p>
+      </div>
+    {% endfor %}
+  </div>
+
+  {% if is_paginated %}
+    <nav class="mt-5" aria-label="{% trans 'Blog pagination' %}">
+      <ul class="pagination justify-content-center">
+        {% if page_obj.has_previous %}
+          <li class="page-item">
+            <a class="page-link" href="?page={{ page_obj.previous_page_number }}{% if query %}&q={{ query|urlencode }}{% endif %}{% if active_category %}&category={{ active_category.slug }}{% endif %}"
+               aria-label="{% trans 'Previous page' %}">&laquo;</a>
+          </li>
+        {% endif %}
+
+        {% for num in paginator.page_range %}
+          <li class="page-item {% if num == page_obj.number %}active{% endif %}">
+            <a class="page-link" href="?page={{ num }}{% if query %}&q={{ query|urlencode }}{% endif %}{% if active_category %}&category={{ active_category.slug }}{% endif %}"
+               {% if num == page_obj.number %}aria-current="page"{% endif %}>{{ num }}</a>
+          </li>
+        {% endfor %}
+
+        {% if page_obj.has_next %}
+          <li class="page-item">
+            <a class="page-link" href="?page={{ page_obj.next_page_number }}{% if query %}&q={{ query|urlencode }}{% endif %}{% if active_category %}&category={{ active_category.slug }}{% endif %}"
+               aria-label="{% trans 'Next page' %}">&raquo;</a>
+          </li>
+        {% endif %}
+      </ul>
+    </nav>
+  {% endif %}
+</div>

@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}{% trans "About us" %} — {{ site.name }}{% endblock %}
+{% block meta_description %}{% blocktrans %}Our story, our values and the people behind {{ site }}.{% endblocktrans %}{% endblock %}
+
+{% block content %}
+
+{% include "partials/_page_header.html" with eyebrow=_("Who we are") heading=_("More than a gym") sub=site.tagline crumbs=crumbs %}
+
+<section class="section">
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-lg-7">
+        <h2 class="mb-4">{% trans "Our story" %}</h2>
+        <div class="lead mb-4">{{ site.short_about|linebreaks }}</div>
+        <p class="text-muted">
+          {% blocktrans trimmed %}
+            FORGE opened in a converted textile workshop in 2019 with two squat
+            racks and a stubborn belief: strength training should be welcoming,
+            coached properly, and free of intimidation. Today we run a 1400m²
+            floor, forty classes a week and a coaching team that still knows
+            every member by name.
+          {% endblocktrans %}
+        </p>
+      </div>
+
+      <div class="col-lg-5">
+        <div class="card-forge p-4 p-lg-5">
+          <h3 class="h5 mb-4" style="font-family:var(--bs-body-font-family);font-weight:700;text-transform:none">
+            {% trans "What we stand for" %}
+          </h3>
+          <ul class="price-features mb-0">
+            <li>{% trans "Coaching first — every member gets a plan" %}</li>
+            <li>{% trans "No intimidation, no judgement" %}</li>
+            <li>{% trans "Equipment maintained to competition standard" %}</li>
+            <li>{% trans "Transparent pricing, no lock-in contracts" %}</li>
+            <li>{% trans "A community, not a turnstile" %}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# Timeline #}
+<section class="section section-cream">
+  <div class="container">
+    <span class="eyebrow">{% trans "Milestones" %}</span>
+    <h2 class="mb-5">{% trans "How we got here" %}</h2>
+
+    <div class="row g-4">
+      {% for year, text in milestones %}
+        <div class="col-md-6 col-lg-3">
+          <div class="card-forge p-4 h-100 reveal">
+            <div class="stat-value" style="color:var(--forge-lime-dark)">{{ year }}</div>
+            <p class="mb-0 mt-2 text-muted small">{{ text }}</p>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% if trainers %}
+<section class="section">
+  <div class="container">
+    <div class="d-flex flex-wrap justify-content-between align-items-end gap-3 mb-5">
+      <div>
+        <span class="eyebrow">{% trans "The team" %}</span>
+        <h2 class="mb-0">{% trans "Coaches who show up" %}</h2>
+      </div>
+      <a class="btn btn-outline-dark" href="{% url 'team:list' %}">{% trans "All trainers" %}</a>
+    </div>
+    <div class="row g-4">
+      {% for member in trainers %}
+        <div class="col-6 col-lg-3 d-flex">{% include "partials/_team_card.html" with member=member %}</div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<section class="section section-dark">
+  <div class="container text-center">
+    <h2 class="mb-3">{% trans "Come see the place" %}</h2>
+    <p class="lead mb-4 mx-auto" style="max-width:36rem">
+      {% trans "Book a free trial session and train with us before you decide." %}
+    </p>
+    <a class="btn btn-accent btn-lg" href="{% url 'contact:booking' %}">{% trans "Book a free trial" %}</a>
+  </div>
+</section>
+
+{% endblock %}

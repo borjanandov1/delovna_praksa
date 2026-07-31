@@ -1,0 +1,134 @@
+{% extends "base.html" %}
+{% load i18n static %}
+
+{% block title %}{{ gym_class.title }} — {% trans "Classes" %} — {{ site.name }}{% endblock %}
+{% block meta_description %}{{ gym_class.short_desc|truncatechars:155 }}{% endblock %}
+{% block og_title %}{{ gym_class.title }}{% endblock %}
+{% block og_description %}{{ gym_class.short_desc|truncatechars:155 }}{% endblock %}
+{% block og_image %}{{ request.scheme }}://{{ request.get_host }}{% if gym_class.image %}{{ gym_class.image.url }}{% else %}{% static 'img/og-default.jpg' %}{% endif %}{% endblock %}
+
+{% block content %}
+
+<header class="section-dark section-tight">
+  <div class="container">
+    <nav aria-label="{% trans 'Breadcrumb' %}" class="mb-3">
+      <ol class="breadcrumb mb-0" style="--bs-breadcrumb-divider:'/';font-size:.8125rem">
+        <li class="breadcrumb-item"><a href="{% url 'core:home' %}" class="text-white-50">{% trans "Home" %}</a></li>
+        <li class="breadcrumb-item"><a href="{% url 'training:class_list' %}" class="text-white-50">{% trans "Classes" %}</a></li>
+        <li class="breadcrumb-item active text-white" aria-current="page">{{ gym_class.title }}</li>
+      </ol>
+    </nav>
+
+    <div class="d-flex flex-wrap gap-2 mb-3">
+      <span class="badge-ghost">{{ gym_class.get_intensity_display }} {% trans "intensity" %}</span>
+      <span class="badge-ghost">{{ gym_class.duration_min }} {% trans "min" %}</span>
+      <span class="badge-ghost">{% trans "Max" %} {{ gym_class.capacity }}</span>
+    </div>
+
+    <h1 class="mb-3">{{ gym_class.title }}</h1>
+    <p class="lead mb-0" style="max-width:44rem">{{ gym_class.short_desc }}</p>
+  </div>
+</header>
+
+<section class="section">
+  <div class="container">
+    <div class="row g-5">
+
+      <div class="col-lg-8">
+        {% if gym_class.image %}
+          <img src="{{ gym_class.image.url }}" alt="{{ gym_class.title }}"
+               class="w-100 rounded-4 mb-4" width="900" height="600"
+               style="object-fit:cover;aspect-ratio:3/2">
+        {% endif %}
+
+        <div class="lead">{{ gym_class.full_desc|linebreaks }}</div>
+
+        {% if gym_class.benefit_items %}
+          <h2 class="h4 mt-5 mb-3">{% trans "What you'll get out of it" %}</h2>
+          <ul class="price-features">
+            {% for b in gym_class.benefit_items %}<li>{{ b }}</li>{% endfor %}
+          </ul>
+        {% endif %}
+
+        {% if sessions %}
+          <h2 class="h4 mt-5 mb-3">{% trans "When it runs" %}</h2>
+          <div class="table-responsive">
+            <table class="table schedule-table mb-0">
+              <caption class="visually-hidden">
+                {% blocktrans with name=gym_class.title %}Weekly times for {{ name }}{% endblocktrans %}
+              </caption>
+              <thead>
+                <tr>
+                  <th scope="col">{% trans "Day" %}</th>
+                  <th scope="col">{% trans "Time" %}</th>
+                  <th scope="col">{% trans "Room" %}</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for s in sessions %}
+                  <tr>
+                    <td>{{ s.get_weekday_display }}</td>
+                    <td>{{ s.start_time|time:"H:i" }}–{{ s.end_time|time:"H:i" }}</td>
+                    <td>{{ s.room|default:"—" }}</td>
+                  </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+        {% endif %}
+      </div>
+
+      <aside class="col-lg-4">
+        <div class="card-forge p-4 sticky-lg-top" style="top:calc(var(--forge-nav-h) + 1.5rem)">
+          {% if gym_class.trainer %}
+            <h2 class="h6 text-muted mb-3" style="font-family:var(--bs-body-font-family);text-transform:none">
+              {% trans "Your coach" %}
+            </h2>
+            <a href="{{ gym_class.trainer.get_absolute_url }}" class="d-flex align-items-center gap-3 text-decoration-none text-reset mb-4">
+              {% if gym_class.trainer.photo %}
+                <img src="{{ gym_class.trainer.photo.url }}" alt="" width="56" height="56"
+                     class="rounded-circle" style="object-fit:cover" loading="lazy">
+              {% endif %}
+              <span>
+                <span class="d-block fw-semibold">{{ gym_class.trainer.name }}</span>
+                <span class="small text-muted">{{ gym_class.trainer.role }}</span>
+              </span>
+            </a>
+          {% endif %}
+
+          <dl class="mb-4">
+            <dt class="small text-muted">{% trans "Duration" %}</dt>
+            <dd class="mb-3">{{ gym_class.duration_min }} {% trans "minutes" %}</dd>
+            <dt class="small text-muted">{% trans "Intensity" %}</dt>
+            <dd class="mb-3"><span class="badge text-bg-{{ gym_class.intensity_badge }}">{{ gym_class.get_intensity_display }}</span></dd>
+            <dt class="small text-muted">{% trans "Class size" %}</dt>
+            <dd class="mb-0">{% trans "Max" %} {{ gym_class.capacity }} {% trans "people" %}</dd>
+          </dl>
+
+          <a class="btn btn-accent w-100 mb-2" href="{% url 'contact:booking' %}?class={{ gym_class.pk }}">
+            {% trans "Book this class" %}
+          </a>
+          <a class="btn btn-outline-dark w-100" href="{% url 'training:schedule' %}">{% trans "See full schedule" %}</a>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+</section>
+
+{% if related %}
+<section class="section section-cream">
+  <div class="container">
+    <h2 class="mb-5">{% trans "You might also like" %}</h2>
+    <div class="row g-4">
+      {% for gym_class in related %}
+        <div class="col-sm-6 col-lg-4 d-flex">
+          {% include "partials/_class_card.html" with gym_class=gym_class %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{% endblock %}

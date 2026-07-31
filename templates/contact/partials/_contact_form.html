@@ -1,0 +1,40 @@
+{% load i18n crispy_forms_tags %}
+{% comment %}
+  Posts via HTMX and swaps itself out for the success partial.
+  Without JS it degrades to a normal POST → redirect → success message.
+{% endcomment %}
+<form id="contactForm" method="post" action="{% url 'contact:contact' %}"
+      hx-post="{% url 'contact:contact' %}"
+      hx-target="#contactForm"
+      hx-swap="outerHTML"
+      hx-disabled-elt="find button[type=submit]"
+      novalidate>
+  {% csrf_token %}
+
+  {% if form.non_field_errors %}
+    <div class="alert alert-danger" role="alert">{{ form.non_field_errors }}</div>
+  {% endif %}
+
+  <div class="row g-3">
+    <div class="col-md-6">{{ form.name|as_crispy_field }}</div>
+    <div class="col-md-6">{{ form.email|as_crispy_field }}</div>
+    <div class="col-md-6">{{ form.phone|as_crispy_field }}</div>
+    <div class="col-md-6">{{ form.subject|as_crispy_field }}</div>
+    <div class="col-12">{{ form.message|as_crispy_field }}</div>
+  </div>
+
+  {# Honeypot: off-screen, never focusable, invisible to screen readers. #}
+  <div class="hp-field" aria-hidden="true">{{ form.website }}</div>
+
+  <button type="submit" class="btn btn-accent btn-lg mt-4">
+    <span class="htmx-indicator spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+    {% trans "Send message" %}
+  </button>
+
+  <p class="text-muted small mt-3 mb-0">
+    {% blocktrans trimmed %}
+      By sending this form you agree to us storing your details so we can reply.
+    {% endblocktrans %}
+    <a href="{% url 'core:privacy' %}">{% trans "Privacy Policy" %}</a>
+  </p>
+</form>

@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}{% trans "Memberships & pricing" %} — {{ site.name }}{% endblock %}
+{% block meta_description %}{% trans "Transparent membership pricing at FORGE Fitness Studio. No lock-in contracts, no joining fee." %}{% endblock %}
+
+{% block content %}
+
+{% include "partials/_page_header.html" with eyebrow=_("Memberships") heading=_("Simple, honest pricing") sub=_("No joining fee, no lock-in contract, cancel with 30 days' notice.") %}
+
+<section class="section">
+  <div class="container">
+    <div class="row g-4 justify-content-center">
+      {% for plan in plans %}
+        <div class="col-md-6 col-lg-4 d-flex">
+          <div class="card-forge price-card {% if plan.is_featured %}featured{% endif %} p-4 p-lg-5 reveal d-flex flex-column w-100">
+            {% if plan.is_featured %}
+              <span class="badge-lime position-absolute" style="top:-.75rem;left:50%;transform:translateX(-50%)">
+                {% trans "Most popular" %}
+              </span>
+            {% endif %}
+
+            <h2 class="h4 mb-1" style="font-family:var(--bs-body-font-family);font-weight:700;text-transform:none">
+              {{ plan.name }}
+            </h2>
+            <p class="text-muted small mb-4">{{ plan.tagline }}</p>
+
+            <div class="d-flex align-items-baseline gap-2 mb-4">
+              <span class="price-amount">{{ plan.price }}</span>
+              <span class="price-period">{% trans "MKD" %} / {{ plan.period }}</span>
+            </div>
+
+            <ul class="price-features mb-4 flex-grow-1">
+              {% for feature in plan.feature_items %}<li>{{ feature }}</li>{% endfor %}
+            </ul>
+
+            <a class="btn {% if plan.is_featured %}btn-accent{% else %}btn-outline-dark{% endif %} w-100"
+               href="{% url 'contact:booking' %}">{% trans "Get started" %}</a>
+          </div>
+        </div>
+      {% empty %}
+        <div class="col-12 text-center">
+          <p class="text-muted">{% trans "Membership options are being updated. Please contact us for current prices." %}</p>
+        </div>
+      {% endfor %}
+    </div>
+
+    <div class="row justify-content-center mt-5">
+      <div class="col-lg-8">
+        <div class="card-forge p-4 p-lg-5">
+          <h2 class="h5 mb-4" style="font-family:var(--bs-body-font-family);font-weight:700;text-transform:none">
+            {% trans "Included with every membership" %}
+          </h2>
+          <div class="row g-3">
+            <div class="col-sm-6"><i class="bi bi-check-lg me-2" style="color:var(--forge-lime-dark)" aria-hidden="true"></i>{% trans "Free induction session" %}</div>
+            <div class="col-sm-6"><i class="bi bi-check-lg me-2" style="color:var(--forge-lime-dark)" aria-hidden="true"></i>{% trans "Locker and shower access" %}</div>
+            <div class="col-sm-6"><i class="bi bi-check-lg me-2" style="color:var(--forge-lime-dark)" aria-hidden="true"></i>{% trans "Towel service" %}</div>
+            <div class="col-sm-6"><i class="bi bi-check-lg me-2" style="color:var(--forge-lime-dark)" aria-hidden="true"></i>{% trans "Freeze your membership up to 2 months" %}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-cream">
+  <div class="container text-center">
+    <h2 class="mb-3">{% trans "Try before you buy" %}</h2>
+    <p class="lead mb-4 mx-auto" style="max-width:36rem">
+      {% trans "Every membership starts with a free trial session and a fitness assessment." %}
+    </p>
+    <div class="d-flex flex-wrap gap-3 justify-content-center">
+      <a class="btn btn-accent btn-lg" href="{% url 'contact:booking' %}">{% trans "Book a free trial" %}</a>
+      <a class="btn btn-outline-dark btn-lg" href="{% url 'core:faq' %}">{% trans "Read the FAQ" %}</a>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
