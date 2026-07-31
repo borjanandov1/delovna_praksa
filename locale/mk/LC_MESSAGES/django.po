@@ -1,0 +1,1828 @@
+# Macedonian translations for FORGE Fitness Studio.
+# Copyright (C) 2026 ORGANIZATION
+# This file is distributed under the same license as the FORGE Fitness Studio project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: FORGE Fitness Studio VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2026-08-01 00:27+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: mk\n"
+"Language-Team: mk <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: templates/core/privacy.html:75 templates/core/privacy.html:81
+#: templates/core/privacy.html:87
+msgid "1 year"
+msgstr "1 година"
+
+#: templates/core/terms.html:18
+msgid "1. Using this website"
+msgstr "1. Користење на веб-страницата"
+
+#: templates/core/privacy.html:18
+msgid "1. Who we are"
+msgstr "1. Кои сме ние"
+
+#: core/views.py:45
+msgid "1200 members and a coaching team of eight."
+msgstr "1200 члена и тренерски тим од осум луѓе."
+
+#: templates/core/privacy.html:69
+msgid "2 weeks"
+msgstr "2 недели"
+
+#: templates/core/terms.html:26
+msgid "2. Bookings"
+msgstr "2. Резервации"
+
+#: templates/core/privacy.html:27
+msgid "2. What data we collect"
+msgstr "2. Кои податоци ги собираме"
+
+#: templates/core/terms.html:36
+msgid "3. Cancellations"
+msgstr "3. Откажување"
+
+#: templates/core/privacy.html:35
+msgid "3. Why we use it"
+msgstr "3. Зошто ги користиме"
+
+#: templates/core/privacy.html:44
+msgid "4. Cookies we set"
+msgstr "4. Колачиња што ги поставуваме"
+
+#: templates/core/terms.html:45
+msgid "4. Health and safety"
+msgstr "4. Здравје и безбедност"
+
+#: templates/core/privacy.html:107
+msgid "5. How long we keep it"
+msgstr "5. Колку долго ги чуваме"
+
+#: templates/core/terms.html:55
+msgid "5. Memberships and pricing"
+msgstr "5. Членарини и цени"
+
+#: templates/core/terms.html:64
+msgid "6. Intellectual property"
+msgstr "6. Интелектуална сопственост"
+
+#: templates/core/privacy.html:110
+msgid "6. Your rights"
+msgstr "6. Твои права"
+
+#: templates/core/privacy.html:119
+msgid "7. Contact"
+msgstr "7. Контакт"
+
+#: templates/core/terms.html:73
+msgid "7. Liability"
+msgstr "7. Одговорност"
+
+#: templates/core/terms.html:82
+msgid "8. Contact"
+msgstr "8. Контакт"
+
+#: templates/core/about.html:38
+msgid "A community, not a turnstile"
+msgstr "Заедница, а не пропусница"
+
+#: templates/core/privacy.html:46
+msgid ""
+"A cookie is a small text file stored by your browser. This site uses only the cookies"
+" listed below. Necessary cookies are required for the site to function and cannot be "
+"switched off."
+msgstr ""
+"Колаче е мала текстуална датотека што ја зачувува твојот прелистувач. Оваа страница "
+"ги користи само колачињата наведени подолу. Неопходните колачиња се потребни за "
+"функционирање на страницата и не можат да се исклучат."
+
+#: templates/contact/booking.html:44
+msgid "A full session with technique coaching, completely free."
+msgstr "Целосен тренинг со корекција на техниката, целосно бесплатно."
+
+#: templates/partials/_footer.html:30 templates/partials/_navbar.html:23
+msgid "About"
+msgstr "За нас"
+
+#: templates/core/about.html:4
+msgid "About us"
+msgstr "За нас"
+
+#: templates/partials/_cookie_banner.html:25
+msgid "Accept all"
+msgstr "Прифати ги сите"
+
+#: core/admin.py:16 templates/contact/contact.html:31
+msgid "Address"
+msgstr "Адреса"
+
+#: templates/blog/post_list.html:19 templates/services/service_list.html:18
+msgid "All"
+msgstr "Сите"
+
+#: templates/core/home.html:72 templates/partials/_navbar.html:32
+msgid "All classes"
+msgstr "Сите часови"
+
+#: templates/training/class_list.html:18
+msgid "All levels"
+msgstr "Сите нивоа"
+
+#: templates/core/home.html:220
+msgid "All posts"
+msgstr "Сите објави"
+
+#: templates/partials/_footer.html:83
+msgid "All rights reserved."
+msgstr "Сите права задржани."
+
+#: templates/core/terms.html:66
+msgid ""
+"All text, photographs and the FORGE name and logo on this site belong to FORGE "
+"Fitness Studio and may not be reused without written permission."
+msgstr ""
+"Целиот текст, фотографиите и името и логото FORGE на оваа страница се сопственост на "
+"FORGE Fitness Studio и не смеат да се користат без писмена дозвола."
+
+#: templates/core/about.html:73 templates/core/home.html:118
+msgid "All trainers"
+msgstr "Сите тренери"
+
+#: templates/core/faq.html:5
+msgid "Answers about memberships, classes, opening hours and getting started at FORGE."
+msgstr "Одговори за членарини, часови, работно време и започнување во FORGE."
+
+#: templates/contact/booking.html:36
+msgid "Arrive 10 minutes early"
+msgstr "Дојди 10 минути порано"
+
+#: templates/services/service_detail.html:84
+msgid "Ask a question"
+msgstr "Постави прашање"
+
+#: templates/services/service_detail.html:65
+msgid "At a glance"
+msgstr "Накратко"
+
+#: templates/blog/post_detail.html:67
+msgid "Back to blog"
+msgstr "Назад на блогот"
+
+#: templates/404.html:19 templates/contact/partials/_booking_success.html:24
+#: templates/contact/partials/_contact_success.html:15
+msgid "Back to homepage"
+msgstr "Назад на почетна"
+
+#: templates/blog/post_detail.html:22 templates/blog/post_list.html:4
+#: templates/partials/_footer.html:36 templates/partials/_navbar.html:54
+msgid "Blog"
+msgstr "Блог"
+
+#: templates/blog/partials/_post_grid.html:22
+msgid "Blog pagination"
+msgstr "Страничење на блогот"
+
+#: templates/training/schedule.html:82
+msgid "Book a class"
+msgstr "Резервирај час"
+
+#: templates/services/service_list.html:46
+msgid ""
+"Book a free consultation and we'll put together a plan that fits your goals and your "
+"schedule."
+msgstr ""
+"Закажи бесплатна консултација и ќе составиме план што одговара на твоите цели и "
+"распоред."
+
+#: templates/contact/booking.html:4 templates/contact/contact.html:82
+#: templates/core/about.html:90 templates/core/home.html:28 templates/core/home.html:262
+#: templates/services/service_list.html:48 templates/training/class_list.html:50
+#: templates/training/pricing.html:73
+msgid "Book a free trial"
+msgstr "Закажи бесплатен тренинг"
+
+#: templates/core/about.html:88
+msgid "Book a free trial session and train with us before you decide."
+msgstr "Закажи бесплатен тренинг и тренирај со нас пред да одлучиш."
+
+#: templates/contact/contact.html:81
+msgid "Book a free trial session directly."
+msgstr "Закажи бесплатен тренинг директно."
+
+#: templates/training/class_detail.html:109
+msgid "Book this class"
+msgstr "Резервирај го часот"
+
+#: templates/services/service_detail.html:83
+msgid "Book this service"
+msgstr "Резервирај ја услугата"
+
+#: templates/contact/booking.html:9
+msgid "Book your first session"
+msgstr "Закажи го првиот тренинг"
+
+#: templates/contact/booking.html:5
+msgid ""
+"Book your free trial session at FORGE Fitness Studio. Pick a class and a date — no "
+"membership required."
+msgstr ""
+"Закажи бесплатен тренинг во FORGE Fitness Studio. Избери час и датум — без потреба од"
+" членство."
+
+#: templates/core/privacy.html:31
+msgid ""
+"Booking form: your name, email address, phone number, chosen class and preferred date"
+" and time."
+msgstr "Формулар за резервација: име, е-пошта, телефон, избран час и посакуван датум и време."
+
+#: contact/views.py:102
+msgid "Booking received. We'll confirm your session by phone or email."
+msgstr "Ја примивме резервацијата. Ќе го потврдиме терминот по телефон или е-пошта."
+
+#: templates/contact/partials/_booking_success.html:9
+msgid "Booking requested"
+msgstr "Резервацијата е побарана"
+
+#: services/models.py:35
+msgid "Bootstrap Icons class, e.g. bi-heart-pulse"
+msgstr "Bootstrap Icons класа, на пр. bi-heart-pulse"
+
+#: templates/blog/post_detail.html:19 templates/partials/_page_header.html:13
+#: templates/services/service_detail.html:14 templates/team/team_detail.html:14
+#: templates/training/class_detail.html:14
+msgid "Breadcrumb"
+msgstr "Патека на движење"
+
+#: templates/contact/booking.html:51
+msgid "Bring"
+msgstr "Понеси"
+
+#: templates/core/home.html:20
+msgid "Build the body.<br>Forge the <span class=\"mark-lime\">mindset</span>."
+msgstr "Изгради тело.<br>Искови <span class=\"mark-lime\">карактер</span>."
+
+#: templates/contact/booking.html:30
+msgid "By phone or email, usually within a few hours."
+msgstr "По телефон или е-пошта, обично во рок од неколку часа."
+
+#: templates/contact/partials/_contact_form.html:35
+msgid "By sending this form you agree to us storing your details so we can reply."
+msgstr ""
+"Со испраќање на формуларот се согласуваш да ги зачуваме твоите податоци за да можеме "
+"да одговориме."
+
+#: templates/core/terms.html:20
+msgid ""
+"By using this website you agree to these terms. The content is provided for "
+"information about our studio, classes and memberships."
+msgstr ""
+"Со користење на оваа страница се согласуваш со овие услови. Содржината е наменета за "
+"информирање за нашето студио, часовите и членарините."
+
+#: contact/admin.py:45
+msgid "Cancel selected bookings"
+msgstr "Откажи ги избраните резервации"
+
+#: contact/models.py:33
+msgid "Cancelled"
+msgstr "Откажано"
+
+#: templates/services/service_detail.html:78
+msgid "Category"
+msgstr "Категорија"
+
+#: templates/team/team_detail.html:73
+msgid "Certifications"
+msgstr "Сертификати"
+
+#: templates/team/team_list.html:9
+msgid ""
+"Certified coaches who write your programme, correct your technique and remember your "
+"name."
+msgstr ""
+"Сертифицирани тренери што ја пишуваат твојата програма, ја коригираат техниката и го "
+"паметат твоето име."
+
+#: core/views.py:44
+msgid "Certified strength & conditioning programme launched."
+msgstr "Започна сертифицираната програма за сила и кондиција."
+
+#: templates/core/home.html:49
+msgid "Certified trainers"
+msgstr "Сертифицирани тренери"
+
+#: templates/training/schedule.html:34
+msgid "Class"
+msgstr "Час"
+
+#: templates/training/class_detail.html:104
+msgid "Class size"
+msgstr "Големина на групата"
+
+#: templates/partials/_footer.html:31 templates/partials/_navbar.html:29
+#: templates/training/class_detail.html:4 templates/training/class_detail.html:17
+msgid "Classes"
+msgstr "Часови"
+
+#: templates/training/schedule.html:80
+msgid "Classes fill up fast in the evenings. Book ahead so you don't miss out."
+msgstr "Вечерните термини се пополнуваат брзо. Резервирај однапред за да не пропуштиш."
+
+#: templates/team/team_detail.html:80
+msgid "Classes led by"
+msgstr "Часови што ги води"
+
+#: templates/training/schedule.html:29
+#, python-format
+msgid "Classes on %(day_label)s"
+msgstr "Часови во %(day_label)s"
+
+#: templates/core/home.html:53
+msgid "Classes per week"
+msgstr "Часови неделно"
+
+#: templates/contact/contact.html:61 templates/contact/contact.html:68
+#: templates/partials/_footer.html:73
+msgid "Closed"
+msgstr "Затворено"
+
+#: templates/training/schedule.html:35
+msgid "Coach"
+msgstr "Тренер"
+
+#: templates/core/about.html:71
+msgid "Coaches who show up"
+msgstr "Тренери што се тука"
+
+#: templates/core/about.html:34
+msgid "Coaching first — every member gets a plan"
+msgstr "Прво коучинг — секој член добива план"
+
+#: templates/services/service_list.html:9
+msgid "Coaching, recovery and nutrition support — built around what you actually need."
+msgstr ""
+"Коучинг, опоравување и поддршка во исхраната — прилагодени на тоа што навистина ти "
+"треба."
+
+#: templates/core/home.html:239
+msgid "Come by"
+msgstr "Намини"
+
+#: templates/core/about.html:86
+msgid "Come see the place"
+msgstr "Дојди да го видиш просторот"
+
+#: templates/core/home.html:170
+msgid "Compare all membership options"
+msgstr "Спореди ги сите пакети"
+
+#: contact/admin.py:41
+msgid "Confirm selected bookings"
+msgstr "Потврди ги избраните резервации"
+
+#: contact/models.py:32
+msgid "Confirmed"
+msgstr "Потврдено"
+
+#: core/admin.py:17 templates/partials/_footer.html:38 templates/partials/_footer.html:43
+#: templates/partials/_navbar.html:60
+msgid "Contact"
+msgstr "Контакт"
+
+#: templates/core/privacy.html:30
+msgid "Contact form: your name, email address, optional phone number, subject and message."
+msgstr "Формулар за контакт: име, е-пошта, телефон (по избор), наслов и порака."
+
+#: templates/core/privacy.html:108
+msgid "Contact messages and bookings are kept for up to 24 months, then deleted."
+msgstr "Пораките и резервациите се чуваат до 24 месеци, а потоа се бришат."
+
+#: templates/404.html:21 templates/contact/booking.html:58 templates/contact/contact.html:4
+#: templates/contact/contact.html:9 templates/core/faq.html:44
+msgid "Contact us"
+msgstr "Контактирај нè"
+
+#: templates/core/privacy.html:103 templates/partials/_footer.html:90
+msgid "Cookie settings"
+msgstr "Поставки за колачиња"
+
+#: templates/core/privacy.html:55
+msgid "Cookies used on this website"
+msgstr "Колачиња што се користат на оваа страница"
+
+#: templates/core/home.html:258
+msgid "Currently closed"
+msgstr "Моментално затворено"
+
+#: templates/training/class_detail.html:62
+msgid "Day"
+msgstr "Ден"
+
+#: templates/core/home.html:242
+msgid ""
+"Drop in for a free trial, meet the trainers and see the floor before you commit to "
+"anything."
+msgstr ""
+"Дојди на бесплатен тренинг, запознај ги тренерите и види ја салата пред да се обврзеш"
+" на било што."
+
+#: templates/core/privacy.html:61 templates/training/class_detail.html:100
+msgid "Duration"
+msgstr "Времетраење"
+
+#: templates/contact/contact.html:49 templates/team/team_detail.html:54
+msgid "Email"
+msgstr "Е-пошта"
+
+#: templates/core/about.html:36
+msgid "Equipment maintained to competition standard"
+msgstr "Опрема одржувана на натпреварувачки стандард"
+
+#: templates/training/pricing.html:70
+msgid "Every membership starts with a free trial session and a fitness assessment."
+msgstr "Секое членство почнува со бесплатен тренинг и фитнес проценка."
+
+#: templates/core/faq.html:9
+msgid "Everything people usually ask before their first session."
+msgstr "Сè што луѓето обично прашуваат пред првиот тренинг."
+
+#: core/views.py:43
+msgid "Expanded to 1400m² and added the group-class studio."
+msgstr "Се проширивме на 1400м² и додадовме студио за групни часови."
+
+#: templates/team/team_detail.html:40
+msgid "Experience"
+msgstr "Искуство"
+
+#: templates/partials/_footer.html:28
+msgid "Explore"
+msgstr "Истражи"
+
+#: core/models.py:149 templates/partials/_footer.html:37
+msgid "FAQ"
+msgstr "Прашања"
+
+#: core/models.py:150
+msgid "FAQs"
+msgstr "Често поставувани прашања"
+
+#: templates/core/about.html:18
+msgid ""
+"FORGE opened in a converted textile workshop in 2019 with two squat racks and a "
+"stubborn belief: strength training should be welcoming, coached properly, and free of"
+" intimidation. Today we run a 1400m² floor, forty classes a week and a coaching team "
+"that still knows every member by name."
+msgstr ""
+"FORGE се отвори во преуредена текстилна работилница во 2019 година, со две "
+"конструкции за чучањ и тврдоглаво уверување: тренингот за сила треба да биде "
+"пристапен, стручно воден и без чувство на непријатност. Денес имаме сала од 1400м², "
+"четириесет часа неделно и тренерски тим што сè уште го знае секој член по име."
+
+#: core/models.py:27 templates/partials/_footer.html:14
+msgid "Facebook"
+msgstr "Facebook"
+
+#: templates/training/class_list.html:15
+msgid "Filter classes by intensity"
+msgstr "Филтрирај часови по интензитет"
+
+#: templates/blog/post_list.html:16
+msgid "Filter posts by category"
+msgstr "Филтрирај објави по категорија"
+
+#: templates/services/service_list.html:15
+msgid "Filter services by category"
+msgstr "Филтрирај услуги по категорија"
+
+#: templates/training/class_list.html:46
+msgid "First class is free"
+msgstr "Првиот час е бесплатен"
+
+#: templates/training/class_list.html:9
+msgid ""
+"Forty coached sessions a week, from beginner mobility to competition-grade "
+"conditioning."
+msgstr ""
+"Четириесет водени часа неделно, од мобилност за почетници до кондиција на "
+"натпреварувачко ниво."
+
+#: templates/training/pricing.html:55
+msgid "Free induction session"
+msgstr "Бесплатна воведна сесија"
+
+#: templates/contact/booking.html:9 templates/partials/_navbar.html:79
+msgid "Free trial"
+msgstr "Бесплатен тренинг"
+
+#: contact/forms.py:102
+msgid "Free trial session (any class)"
+msgstr "Бесплатен пробен тренинг (кој било час)"
+
+#: templates/training/pricing.html:58
+msgid "Freeze your membership up to 2 months"
+msgstr "Замрзнување на членството до 2 месеци"
+
+#: templates/core/faq.html:4 templates/core/faq.html:9
+msgid "Frequently asked questions"
+msgstr "Често поставувани прашања"
+
+#: core/models.py:86 training/models.py:15
+msgid "Friday"
+msgstr "Петок"
+
+#: templates/services/service_detail.html:49
+msgid "Gallery"
+msgstr "Галерија"
+
+#: core/models.py:135
+msgid "General"
+msgstr "Општо"
+
+#: templates/contact/contact.html:9 templates/team/team_detail.html:50
+#: templates/team/team_list.html:32
+msgid "Get in touch"
+msgstr "Јави се"
+
+#: templates/contact/contact.html:5
+msgid ""
+"Get in touch with FORGE Fitness Studio — address, phone, email, opening hours and a "
+"contact form."
+msgstr ""
+"Контактирај го FORGE Fitness Studio — адреса, телефон, е-пошта, работно време и "
+"формулар за контакт."
+
+#: templates/core/home.html:163 templates/training/pricing.html:38
+msgid "Get started"
+msgstr "Започни"
+
+#: templates/core/home.html:70 templates/training/class_list.html:4
+#: templates/training/class_list.html:9
+msgid "Group classes"
+msgstr "Групни часови"
+
+#: templates/training/class_list.html:5
+msgid ""
+"HIIT, strength, spinning, yoga and mobility classes at FORGE Fitness Studio — forty "
+"sessions every week."
+msgstr ""
+"HIIT, сила, спининг, јога и мобилност во FORGE Fitness Studio — четириесет часа "
+"секоја недела."
+
+#: templates/core/faq.html:9
+msgid "Help"
+msgstr "Помош"
+
+#: training/models.py:28
+msgid "High"
+msgstr "Висок"
+
+#: templates/blog/post_detail.html:21 templates/partials/_page_header.html:15
+#: templates/services/service_detail.html:16 templates/team/team_detail.html:16
+#: templates/training/class_detail.html:16
+msgid "Home"
+msgstr "Почетна"
+
+#: templates/core/privacy.html:5
+msgid ""
+"How FORGE Fitness Studio collects, uses and stores personal data, and which cookies "
+"the site sets."
+msgstr ""
+"Како FORGE Fitness Studio собира, користи и чува лични податоци и кои колачиња ги "
+"поставува страницата."
+
+#: contact/forms.py:57
+msgid "How can we help?"
+msgstr "Како можеме да помогнеме?"
+
+#: templates/core/about.html:50
+msgid "How we got here"
+msgstr "Како стигнавме дотука"
+
+#: core/admin.py:15
+msgid "Identity"
+msgstr "Идентитет"
+
+#: templates/training/pricing.html:52
+msgid "Included with every membership"
+msgstr "Вклучено во секој пакет"
+
+#: core/models.py:28 team/models.py:38 templates/partials/_footer.html:18
+msgid "Instagram"
+msgstr "Instagram"
+
+#: templates/training/class_detail.html:102 templates/training/schedule.html:37
+msgid "Intensity"
+msgstr "Интензитет"
+
+#: templates/team/team_list.html:27
+msgid "Join us"
+msgstr "Придружи ни се"
+
+#: templates/blog/post_list.html:9 templates/core/home.html:217
+msgid "Journal"
+msgstr "Дневник"
+
+#: templates/blog/post_detail.html:94
+msgid "Keep reading"
+msgstr "Продолжи со читање"
+
+#: templates/core/privacy.html:67
+msgid "Keeps a logged-in administrator signed in."
+msgstr "Го одржува најавен администраторот."
+
+#: templates/core/privacy.html:16 templates/core/terms.html:16
+msgid "Last updated"
+msgstr "Последно ажурирано"
+
+#: templates/core/home.html:218
+msgid "Latest from the blog"
+msgstr "Најново од блогот"
+
+#: contact/forms.py:25
+msgid "Leave this field empty"
+msgstr "Остави го ова поле празно"
+
+#: templates/core/privacy.html:9 templates/core/terms.html:9
+msgid "Legal"
+msgstr "Правни информации"
+
+#: templates/training/pricing.html:56
+msgid "Locker and shower access"
+msgstr "Пристап до гардероба и туш"
+
+#: training/models.py:26
+msgid "Low"
+msgstr "Низок"
+
+#: templates/core/home.html:155 templates/partials/_service_card.html:19
+#: templates/services/service_detail.html:71 templates/training/pricing.html:30
+msgid "MKD"
+msgstr "ден."
+
+#: templates/partials/_navbar.html:3
+msgid "Main navigation"
+msgstr "Главна навигација"
+
+#: core/admin.py:9
+msgid "Manage the website"
+msgstr "Управувај со страницата"
+
+#: core/admin.py:19
+msgid "Map"
+msgstr "Мапа"
+
+#: templates/contact/contact.html:93 templates/core/home.html:268
+msgid "Map showing the location of the gym"
+msgstr "Мапа со локацијата на салата"
+
+#: contact/admin.py:21
+msgid "Mark selected messages as read"
+msgstr "Означи ги избраните пораки како прочитани"
+
+#: contact/admin.py:25
+msgid "Mark selected messages as unread"
+msgstr "Означи ги избраните пораки како непрочитани"
+
+#: templates/training/class_detail.html:25 templates/training/class_detail.html:105
+msgid "Max"
+msgstr "Најмногу"
+
+#: training/models.py:27
+msgid "Medium"
+msgstr "Среден"
+
+#: templates/team/team_list.html:5
+msgid ""
+"Meet the certified coaching team at FORGE Fitness Studio — strength, conditioning, "
+"mobility and nutrition specialists."
+msgstr ""
+"Запознај го сертифицираниот тренерски тим на FORGE Fitness Studio — специјалисти за "
+"сила, кондиција, мобилност и исхрана."
+
+#: templates/core/home.html:116
+msgid "Meet your trainers"
+msgstr "Запознај ги тренерите"
+
+#: templates/core/home.html:45
+msgid "Members"
+msgstr "Членови"
+
+#: core/models.py:136
+msgid "Membership"
+msgstr "Членство"
+
+#: templates/training/pricing.html:43
+msgid "Membership options are being updated. Please contact us for current prices."
+msgstr "Пакетите се ажурираат. Контактирај нè за актуелните цени."
+
+#: templates/core/home.html:137 templates/partials/_footer.html:33
+#: templates/partials/_navbar.html:35 templates/training/pricing.html:9
+msgid "Memberships"
+msgstr "Членарини"
+
+#: templates/training/pricing.html:4
+msgid "Memberships & pricing"
+msgstr "Членарини и цени"
+
+#: templates/contact/partials/_contact_success.html:10
+msgid "Message sent"
+msgstr "Пораката е испратена"
+
+#: templates/core/about.html:49
+msgid "Milestones"
+msgstr "Пресвртници"
+
+#: core/models.py:82 training/models.py:11
+msgid "Monday"
+msgstr "Понеделник"
+
+#: templates/core/about.html:9 templates/core/home.html:92
+msgid "More than a gym"
+msgstr "Повеќе од сала"
+
+#: templates/core/home.html:147 templates/training/pricing.html:19
+msgid "Most popular"
+msgstr "Најпопуларен"
+
+#: templates/core/privacy.html:58
+msgid "Name"
+msgstr "Име"
+
+#: templates/core/privacy.html:68 templates/core/privacy.html:74
+#: templates/core/privacy.html:80 templates/core/privacy.html:86
+msgid "Necessary"
+msgstr "Неопходно"
+
+#: templates/contact/booking.html:54
+msgid "Need to change or cancel?"
+msgstr "Треба да промениш или откажеш?"
+
+#: templates/blog/partials/_post_grid.html:41
+msgid "Next page"
+msgstr "Следна страница"
+
+#: templates/training/class_list.html:37
+msgid "No classes match this filter."
+msgstr "Ниту еден час не одговара на овој филтер."
+
+#: templates/core/about.html:35
+msgid "No intimidation, no judgement"
+msgstr "Без непријатност и без осудување"
+
+#: templates/training/pricing.html:9
+msgid "No joining fee, no lock-in contract, cancel with 30 days' notice."
+msgstr ""
+"Без трошок за зачленување, без обврзувачки договор, откажување со известување од 30 "
+"дена."
+
+#: templates/contact/booking.html:9
+msgid ""
+"No membership, no card details, no pressure. Pick a time and we'll confirm it with "
+"you."
+msgstr ""
+"Без членство, без податоци за картичка, без притисок. Избери термин и ќе го потврдиме"
+" со тебе."
+
+#: templates/blog/partials/_post_grid.html:16
+msgid "No posts found. Try a different search or category."
+msgstr "Нема пронајдени објави. Пробај друго пребарување или категорија."
+
+#: templates/core/faq.html:36
+msgid "No questions have been published yet."
+msgstr "Сè уште не се објавени прашања."
+
+#: templates/services/service_list.html:34
+msgid "No services in this category yet."
+msgstr "Сè уште нема услуги во оваа категорија."
+
+#: templates/services/service_list.html:44
+msgid "Not sure where to start?"
+msgstr "Не си сигурен од каде да почнеш?"
+
+#: services/models.py:40
+msgid "One item per line."
+msgstr "Една ставка по ред."
+
+#: team/models.py:31 training/models.py:35 training/models.py:116
+msgid "One per line."
+msgstr "Едно по ред."
+
+#: templates/partials/_cookie_banner.html:28
+msgid "Only necessary"
+msgstr "Само неопходни"
+
+#: templates/contact/contact.html:61 templates/core/home.html:258
+msgid "Open now"
+msgstr "Отворено сега"
+
+#: core/views.py:42
+msgid "Opened with two racks in a converted textile workshop."
+msgstr "Отворивме со две конструкции во преуредена текстилна работилница."
+
+#: templates/contact/contact.html:58 templates/partials/_footer.html:67
+msgid "Opening hours"
+msgstr "Работно време"
+
+#: templates/team/team_detail.html:102
+msgid "Other trainers"
+msgstr "Други тренери"
+
+#: templates/core/about.html:15 templates/core/home.html:94
+msgid "Our story"
+msgstr "Нашата приказна"
+
+#: templates/core/about.html:5
+#, python-format
+msgid "Our story, our values and the people behind %(site)s."
+msgstr "Нашата приказна, нашите вредности и луѓето зад %(site)s."
+
+#: templates/team/team_list.html:4 templates/team/team_list.html:9
+msgid "Our trainers"
+msgstr "Нашите тренери"
+
+#: templates/404.html:4
+msgid "Page not found"
+msgstr "Страницата не е пронајдена"
+
+#: contact/models.py:31
+msgid "Pending"
+msgstr "Во очекување"
+
+#: templates/services/service_list.html:5
+msgid ""
+"Personal training, nutrition coaching, physiotherapy and recovery services at FORGE "
+"Fitness Studio."
+msgstr ""
+"Персонален тренинг, нутриционистичко советување, физиотерапија и услуги за "
+"опоравување во FORGE Fitness Studio."
+
+#: templates/contact/contact.html:40
+msgid "Phone"
+msgstr "Телефон"
+
+#: templates/core/home.html:138
+msgid "Pick your plan"
+msgstr "Избери пакет"
+
+#: templates/core/terms.html:38
+msgid ""
+"Please cancel at least four hours before a booked class so the place can be offered "
+"to someone else. Repeated no-shows may result in booking restrictions."
+msgstr ""
+"Откажи најмалку четири часа пред резервираниот час за местото да може да се понуди на"
+" друг. Повторено недоаѓање може да доведе до ограничување на резервациите."
+
+#: contact/forms.py:110
+msgid "Please choose a date in the future."
+msgstr "Избери датум во иднина."
+
+#: contact/forms.py:70
+msgid "Please write at least 10 characters so we can help properly."
+msgstr "Напиши барем 10 карактери за да можеме да помогнеме како треба."
+
+#: templates/blog/post_list.html:9
+msgid "Practical advice from our coaches — no fads, no supplements to sell you."
+msgstr "Практични совети од нашите тренери — без модни трендови и без продажба на суплементи."
+
+#: templates/blog/partials/_post_grid.html:27
+msgid "Previous page"
+msgstr "Претходна страница"
+
+#: templates/services/service_detail.html:70
+msgid "Price from"
+msgstr "Цена од"
+
+#: templates/core/terms.html:57
+msgid ""
+"Prices shown on this site are in Macedonian denars and include VAT. We may change "
+"prices, class timetables and opening hours; the version published on this website at "
+"the time of purchase applies."
+msgstr ""
+"Цените на оваа страница се во денари и вклучуваат ДДВ. Можеме да ги менуваме цените, "
+"распоредот и работното време; важи верзијата објавена на страницата во моментот на "
+"купување."
+
+#: templates/contact/partials/_booking_form.html:33
+#: templates/contact/partials/_contact_form.html:38 templates/core/privacy.html:4
+#: templates/core/privacy.html:9 templates/partials/_footer.html:85
+msgid "Privacy Policy"
+msgstr "Политика за приватност"
+
+#: templates/core/privacy.html:73
+msgid "Protects forms against cross-site request forgery."
+msgstr "Ги штити формуларите од фалсификување на барања меѓу страници."
+
+#: templates/core/privacy.html:59
+msgid "Purpose"
+msgstr "Намена"
+
+#: templates/contact/contact.html:9
+msgid ""
+"Questions about memberships, classes or personal training? We answer within one "
+"working day."
+msgstr ""
+"Прашања за членарини, часови или персонален тренинг? Одговараме во рок од еден "
+"работен ден."
+
+#: templates/core/terms.html:84
+msgid "Questions about these terms:"
+msgstr "Прашања за овие услови:"
+
+#: templates/core/home.html:189
+#, python-format
+msgid "Rated %(n)s out of 5"
+msgstr "Оценка %(n)s од 5"
+
+#: templates/partials/_cookie_banner.html:20
+msgid "Read our Privacy Policy"
+msgstr "Прочитај ја Политиката за приватност"
+
+#: templates/training/pricing.html:74
+msgid "Read the FAQ"
+msgstr "Прочитај ги прашањата"
+
+#: templates/services/service_detail.html:95
+msgid "Related services"
+msgstr "Слични услуги"
+
+#: templates/core/privacy.html:79
+msgid "Remembers whether you chose Macedonian or English."
+msgstr "Памти дали си избрал македонски или англиски."
+
+#: templates/contact/partials/_booking_form.html:28
+msgid "Request booking"
+msgstr "Побарај резервација"
+
+#: templates/training/schedule.html:78
+msgid "Reserve your spot"
+msgstr "Резервирај го своето место"
+
+#: templates/core/home.html:181
+msgid "Results"
+msgstr "Резултати"
+
+#: templates/training/class_detail.html:64 templates/training/schedule.html:36
+msgid "Room"
+msgstr "Сала"
+
+#: templates/training/schedule.html:9
+msgid "Same timetable every week. Book a place, or just turn up ten minutes early."
+msgstr "Ист распоред секоја недела. Резервирај место или едноставно дојди десет минути порано."
+
+#: core/models.py:87 training/models.py:16
+msgid "Saturday"
+msgstr "Сабота"
+
+#: templates/partials/_footer.html:32
+msgid "Schedule"
+msgstr "Распоред"
+
+#: templates/blog/post_list.html:46
+msgid "Search"
+msgstr "Пребарај"
+
+#: templates/blog/post_list.html:40
+msgid "Search articles…"
+msgstr "Пребарај статии…"
+
+#: templates/blog/post_list.html:37
+msgid "Search the blog"
+msgstr "Пребарај го блогот"
+
+#: templates/training/class_detail.html:111
+msgid "See full schedule"
+msgstr "Види го целиот распоред"
+
+#: templates/404.html:20 templates/contact/partials/_booking_success.html:23
+#: templates/core/home.html:31
+msgid "See the schedule"
+msgstr "Види го распоредот"
+
+#: templates/contact/partials/_contact_form.html:31
+msgid "Send message"
+msgstr "Испрати порака"
+
+#: templates/contact/contact.html:16
+msgid "Send us a message"
+msgstr "Испрати ни порака"
+
+#: templates/core/faq.html:43
+msgid "Send us a message and we'll get back to you within one working day."
+msgstr "Испрати ни порака и ќе ти одговориме во рок од еден работен ден."
+
+#: templates/partials/_footer.html:34 templates/partials/_navbar.html:42
+#: templates/services/service_detail.html:17 templates/services/service_list.html:4
+#: templates/services/service_list.html:9
+msgid "Services"
+msgstr "Услуги"
+
+#: templates/services/service_detail.html:74
+msgid "Session length"
+msgstr "Времетраење на сесија"
+
+#: templates/training/pricing.html:9
+msgid "Simple, honest pricing"
+msgstr "Едноставни и чесни цени"
+
+#: templates/core/home.html:18
+msgid "Since 2019"
+msgstr "Од 2019"
+
+#: templates/base.html:53
+msgid "Skip to content"
+msgstr "Прескокни до содржината"
+
+#: templates/contact/booking.html:37
+msgid "So we can show you around and go through the basics."
+msgstr "За да ти го покажеме просторот и да ги поминеме основите."
+
+#: core/admin.py:18
+msgid "Social media"
+msgstr "Социјални мрежи"
+
+#: templates/core/privacy.html:37
+msgid ""
+"Solely to answer your enquiry or confirm your booking. We do not use your details for"
+" marketing unless you ask us to, and we never sell or share them with third parties."
+msgstr ""
+"Исклучиво за да одговориме на твоето прашање или да ја потврдиме резервацијата. Не ги"
+" користиме твоите податоци за маркетинг освен ако сам не побараш, и никогаш не ги "
+"продаваме ниту споделуваме со трети лица."
+
+#: templates/team/team_detail.html:44
+msgid "Specialties"
+msgstr "Специјалности"
+
+#: templates/core/faq.html:41
+msgid "Still have a question?"
+msgstr "Сè уште имаш прашање?"
+
+#: templates/core/privacy.html:85
+msgid "Stores your cookie choice so the banner is not shown again."
+msgstr "Го зачувува твојот избор за колачиња за да не се прикажува повторно известувањето."
+
+#: templates/core/terms.html:28
+msgid ""
+"Submitting the booking form is a request, not a confirmed place. A booking is only "
+"confirmed once we contact you by phone or email. Places in group classes are limited "
+"by the capacity shown on each class page."
+msgstr ""
+"Испраќањето на формуларот за резервација е барање, а не потврдено место. "
+"Резервацијата е потврдена дури откако ќе те контактираме по телефон или е-пошта. "
+"Местата на групните часови се ограничени според капацитетот наведен на страницата на "
+"секој час."
+
+#: core/models.py:88 training/models.py:17
+msgid "Sunday"
+msgstr "Недела"
+
+#: templates/core/terms.html:5
+msgid ""
+"Terms governing the use of the FORGE Fitness Studio website, memberships and class "
+"bookings."
+msgstr ""
+"Услови за користење на веб-страницата на FORGE Fitness Studio, членарините и "
+"резервациите."
+
+#: templates/core/terms.html:4 templates/core/terms.html:9
+#: templates/partials/_footer.html:86
+msgid "Terms of Use"
+msgstr "Услови за користење"
+
+#: contact/views.py:78
+msgid "Thanks — your message has been sent. We'll reply shortly."
+msgstr "Ти благодариме — пораката е испратена. Ќе одговориме наскоро."
+
+#: templates/training/schedule.html:5
+msgid ""
+"The full weekly class timetable at FORGE Fitness Studio — times, coaches and rooms "
+"for every session."
+msgstr ""
+"Целосниот неделен распоред на FORGE Fitness Studio — термини, тренери и сали за секој"
+" час."
+
+#: templates/404.html:5
+msgid "The page you were looking for does not exist."
+msgstr "Страницата што ја бараше не постои."
+
+#: templates/404.html:15
+msgid "The page you're looking for doesn't exist or has been moved."
+msgstr "Страницата што ја бараш не постои или е преместена."
+
+#: templates/core/about.html:70 templates/core/home.html:115
+#: templates/team/team_list.html:9
+msgid "The team"
+msgstr "Тимот"
+
+#: templates/training/schedule.html:15
+msgid "The timetable is being updated. Please check back shortly."
+msgstr "Распоредот се ажурира. Провери повторно наскоро."
+
+#: templates/contact/partials/_booking_form.html:32
+msgid "This is a request — we'll confirm your place by phone or email."
+msgstr "Ова е барање — местото ќе го потврдиме по телефон или е-пошта."
+
+#: templates/404.html:13
+msgid "This page skipped leg day"
+msgstr "Оваа страница го прескокна тренингот за нозе"
+
+#: templates/core/privacy.html:20
+msgid ""
+"This website is operated by FORGE Fitness Studio. If you have any question about how "
+"your data is handled, contact us using the details at the bottom of this page."
+msgstr ""
+"Оваа веб-страница ја управува FORGE Fitness Studio. Ако имаш прашање за тоа како се "
+"обработуваат твоите податоци, контактирај нè на податоците подолу."
+
+#: core/models.py:85 training/models.py:14
+msgid "Thursday"
+msgstr "Четврток"
+
+#: templates/training/class_detail.html:63 templates/training/schedule.html:33
+msgid "Time"
+msgstr "Време"
+
+#: templates/training/schedule.html:9
+msgid "Timetable"
+msgstr "Распоред"
+
+#: templates/partials/_navbar.html:13
+msgid "Toggle navigation"
+msgstr "Отвори/затвори мени"
+
+#: templates/training/pricing.html:57
+msgid "Towel service"
+msgstr "Пешкири"
+
+#: templates/team/team_detail.html:91
+#, python-format
+msgid "Train with %(name)s"
+msgstr "Тренирај со %(name)s"
+
+#: templates/contact/booking.html:43
+msgid "Train with a coach"
+msgstr "Тренирај со тренер"
+
+#: templates/core/home.html:69 templates/training/class_list.html:9
+msgid "Train with us"
+msgstr "Тренирај со нас"
+
+#: templates/team/team_list.html:19
+msgid "Trainer profiles are coming soon."
+msgstr "Профилите на тренерите наскоро."
+
+#: templates/partials/_footer.html:35 templates/partials/_navbar.html:48
+#: templates/team/team_detail.html:17
+msgid "Trainers"
+msgstr "Тренери"
+
+#: core/models.py:137
+msgid "Training"
+msgstr "Тренинг"
+
+#: templates/blog/post_list.html:9
+msgid "Training & nutrition blog"
+msgstr "Блог за тренинг и исхрана"
+
+#: templates/blog/post_list.html:5
+msgid ""
+"Training advice, nutrition guides and studio news from the coaching team at FORGE "
+"Fitness Studio."
+msgstr ""
+"Совети за тренинг, водичи за исхрана и новости од тренерскиот тим на FORGE Fitness "
+"Studio."
+
+#: templates/core/terms.html:47
+msgid ""
+"Training carries inherent risk. You train at your own risk and confirm that you are "
+"medically fit to take part. Tell your coach about any injury or condition before a "
+"session. Follow the instructions of staff and the rules displayed in the studio at "
+"all times."
+msgstr ""
+"Тренингот носи одреден ризик. Тренираш на сопствена одговорност и потврдуваш дека си "
+"здравствено способен за учество. Извести го тренерот за секоја повреда или состојба "
+"пред тренингот. Секогаш следи ги упатствата на персоналот и правилата истакнати во "
+"студиото."
+
+#: templates/core/home.html:57
+msgid "Training floor"
+msgstr "Простор за тренинг"
+
+#: templates/training/pricing.html:5
+msgid ""
+"Transparent membership pricing at FORGE Fitness Studio. No lock-in contracts, no "
+"joining fee."
+msgstr ""
+"Транспарентни цени на членарини во FORGE Fitness Studio. Без обврзувачки договори и "
+"без трошок за зачленување."
+
+#: templates/core/about.html:37
+msgid "Transparent pricing, no lock-in contracts"
+msgstr "Транспарентни цени, без обврзувачки договори"
+
+#: templates/training/class_list.html:48
+msgid "Try any class on the timetable at no cost, with no membership required."
+msgstr "Пробај кој било час од распоредот бесплатно, без потреба од членство."
+
+#: templates/training/pricing.html:68
+msgid "Try before you buy"
+msgstr "Пробај пред да платиш"
+
+#: core/models.py:83 training/models.py:12
+msgid "Tuesday"
+msgstr "Вторник"
+
+#: templates/core/privacy.html:60
+msgid "Type"
+msgstr "Тип"
+
+#: templates/partials/_class_card.html:35
+msgid "View class"
+msgstr "Види го часот"
+
+#: templates/contact/contact.html:23
+msgid "Visit the studio"
+msgstr "Посети го студиото"
+
+#: templates/team/team_list.html:28
+msgid "Want to coach at FORGE?"
+msgstr "Сакаш да тренираш во FORGE?"
+
+#: templates/contact/contact.html:79
+msgid "Want to train instead of talk?"
+msgstr "Сакаш да тренираш наместо да разговараш?"
+
+#: templates/contact/booking.html:29
+msgid "We confirm your slot"
+msgstr "Го потврдуваме терминот"
+
+#: templates/core/privacy.html:94
+msgid ""
+"We currently set no analytics or advertising cookies. If that changes, they will only"
+" load after you press \"Accept all\" in the cookie banner."
+msgstr ""
+"Моментално не поставуваме аналитички или рекламни колачиња. Ако тоа се промени, тие "
+"ќе се вчитаат само откако ќе притиснеш „Прифати ги сите“."
+
+#: templates/core/privacy.html:33
+msgid "We do not buy data, and we do not build profiles of visitors."
+msgstr "Не купуваме податоци и не создаваме профили на посетители."
+
+#: templates/core/privacy.html:28
+msgid "We only collect data you actively send us through a form on this site:"
+msgstr "Собираме само податоци што активно ни ги испраќаш преку формулар на оваа страница:"
+
+#: templates/core/terms.html:75
+msgid ""
+"We take care to keep the information on this site accurate, but we do not accept "
+"liability for loss arising from reliance on it. Nothing in these terms limits "
+"liability where the law does not allow it."
+msgstr ""
+"Се грижиме информациите на оваа страница да бидат точни, но не прифаќаме одговорност "
+"за штета настаната од потпирање на нив. Ништо во овие услови не ја ограничува "
+"одговорноста таму каде што законот тоа не го дозволува."
+
+#: templates/partials/_cookie_banner.html:12
+msgid "We use cookies"
+msgstr "Користиме колачиња"
+
+#: templates/partials/_cookie_banner.html:16
+msgid ""
+"We use necessary cookies to make the site work. With your consent we also use "
+"analytics cookies to understand how the site is used."
+msgstr ""
+"Користиме неопходни колачиња за да функционира страницата. Со твоја согласност "
+"користиме и аналитички колачиња за да разбереме како се користи страницата."
+
+#: templates/team/team_list.html:30
+msgid ""
+"We're always interested in hearing from certified trainers who put coaching before "
+"selling."
+msgstr ""
+"Секогаш сме заинтересирани за сертифицирани тренери кои го ставаат коучингот пред "
+"продажбата."
+
+#: core/models.py:84 training/models.py:13
+msgid "Wednesday"
+msgstr "Среда"
+
+#: templates/partials/_navbar.html:33 templates/training/class_list.html:27
+#: templates/training/schedule.html:4 templates/training/schedule.html:9
+msgid "Weekly schedule"
+msgstr "Неделен распоред"
+
+#: templates/training/class_detail.html:58
+#, python-format
+msgid "Weekly times for %(name)s"
+msgstr "Неделни термини за %(name)s"
+
+#: templates/contact/booking.html:22
+msgid "What happens next"
+msgstr "Што следува"
+
+#: templates/core/home.html:182
+msgid "What our members say"
+msgstr "Што велат нашите членови"
+
+#: templates/services/service_list.html:9
+msgid "What we offer"
+msgstr "Што нудиме"
+
+#: templates/core/about.html:31
+msgid "What we stand for"
+msgstr "Во што веруваме"
+
+#: templates/training/class_detail.html:47
+msgid "What you'll get out of it"
+msgstr "Што добиваш"
+
+#: templates/services/service_detail.html:42
+msgid "What's included"
+msgstr "Што е вклучено"
+
+#: templates/training/class_detail.html:54
+msgid "When it runs"
+msgstr "Кога се одржува"
+
+#: templates/core/about.html:9 templates/core/home.html:91
+msgid "Who we are"
+msgstr "Кои сме ние"
+
+#: templates/blog/post_detail.html:77
+msgid "Written by"
+msgstr "Напишано од"
+
+#: templates/core/privacy.html:101
+msgid "You can change your choice at any time:"
+msgstr "Можеш да го смениш изборот во секое време:"
+
+#: templates/core/privacy.html:112
+msgid ""
+"You may ask us what data we hold about you, ask for it to be corrected, or ask us to "
+"delete it. Write to the email address below and we will respond within 30 days."
+msgstr ""
+"Можеш да побараш да дознаеш кои податоци ги чуваме за тебе, да побараш исправка или "
+"бришење. Пиши ни на е-поштата подолу и ќе одговориме во рок од 30 дена."
+
+#: templates/training/class_detail.html:122
+msgid "You might also like"
+msgstr "Можеби ќе ти се допадне и"
+
+#: core/models.py:29 templates/partials/_footer.html:22
+msgid "YouTube"
+msgstr "YouTube"
+
+#: templates/training/class_detail.html:85
+msgid "Your coach"
+msgstr "Твојот тренер"
+
+#: templates/core/home.html:240
+msgid "Your first session is on us"
+msgstr "Првиот тренинг е на наша сметка"
+
+#: contact/forms.py:58
+msgid "Your message"
+msgstr "Твојата порака"
+
+#: contact/forms.py:49
+msgid "Your name"
+msgstr "Твоето име"
+
+#: contact/forms.py:39
+msgid "Your submission could not be processed."
+msgstr "Твоето барање не можеше да се обработи."
+
+#: team/models.py:40 training/models.py:52
+msgid "active"
+msgstr "активен"
+
+#: core/models.py:141
+msgid "answer"
+msgstr "одговор"
+
+#: blog/models.py:50 core/models.py:108
+msgid "author"
+msgstr "автор"
+
+#: training/models.py:35
+msgid "benefits"
+msgstr "придобивки"
+
+#: team/models.py:24
+msgid "biography"
+msgstr "биографија"
+
+#: blog/models.py:15
+msgid "blog categories"
+msgstr "категории на блог"
+
+#: blog/models.py:14
+msgid "blog category"
+msgstr "категорија на блог"
+
+#: blog/models.py:37
+msgid "body"
+msgstr "содржина"
+
+#: contact/models.py:59
+msgid "booking"
+msgstr "резервација"
+
+#: contact/models.py:60
+msgid "bookings"
+msgstr "резервации"
+
+#: training/models.py:42
+msgid "capacity"
+msgstr "капацитет"
+
+#: services/models.py:77
+msgid "caption"
+msgstr "опис на слика"
+
+#: blog/models.py:42 core/models.py:143 services/models.py:23
+msgid "category"
+msgstr "категорија"
+
+#: team/models.py:31
+msgid "certifications"
+msgstr "сертификати"
+
+#: core/models.py:22
+msgid "city"
+msgstr "град"
+
+#: contact/models.py:42 training/models.py:57 training/models.py:82
+msgid "class"
+msgstr "час"
+
+#: training/models.py:93
+msgid "class session"
+msgstr "термин"
+
+#: training/models.py:94
+msgid "class sessions"
+msgstr "термини"
+
+#: training/models.py:58
+msgid "classes"
+msgstr "часови"
+
+#: core/models.py:94
+msgid "closed all day"
+msgstr "затворено цел ден"
+
+#: core/models.py:93
+msgid "closes"
+msgstr "затвора"
+
+#: contact/models.py:17
+msgid "contact message"
+msgstr "порака"
+
+#: contact/models.py:18
+msgid "contact messages"
+msgstr "пораки"
+
+#: blog/models.py:39
+msgid "cover image"
+msgstr "насловна слика"
+
+#: contact/models.py:55
+msgid "created"
+msgstr "креирано"
+
+#: services/models.py:46 training/models.py:41
+msgid "duration (minutes)"
+msgstr "времетраење (минути)"
+
+#: contact/models.py:7 contact/models.py:37 core/models.py:25 team/models.py:37
+msgid "email"
+msgstr "е-пошта"
+
+#: blog/models.py:36
+msgid "excerpt"
+msgstr "извадок"
+
+#: core/models.py:113
+msgid "featured"
+msgstr "истакнато"
+
+#: services/models.py:49
+msgid "featured on homepage"
+msgstr "истакнато на почетна"
+
+#: training/models.py:116
+msgid "features"
+msgstr "карактеристики"
+
+#: templates/partials/_service_card.html:19
+msgid "from"
+msgstr "од"
+
+#: services/models.py:38 training/models.py:34
+msgid "full description"
+msgstr "целосен опис"
+
+#: team/models.py:20
+msgid "full name"
+msgstr "име и презиме"
+
+#: core/models.py:19
+msgid "hero image"
+msgstr "главна слика"
+
+#: training/models.py:117
+msgid "highlight this plan"
+msgstr "истакни го овој пакет"
+
+#: services/models.py:32
+msgid "icon"
+msgstr "икона"
+
+#: services/models.py:48 services/models.py:76 training/models.py:37
+msgid "image"
+msgstr "слика"
+
+#: templates/training/class_detail.html:23 training/models.py:39
+msgid "intensity"
+msgstr "интензитет"
+
+#: core/models.py:18
+msgid "logo"
+msgstr "лого"
+
+#: core/models.py:31
+msgid "map latitude"
+msgstr "географска ширина"
+
+#: core/models.py:32
+msgid "map longitude"
+msgstr "географска должина"
+
+#: training/models.py:122
+msgid "membership plan"
+msgstr "пакет"
+
+#: training/models.py:123
+msgid "membership plans"
+msgstr "пакети"
+
+#: contact/models.py:10
+msgid "message"
+msgstr "порака"
+
+#: templates/partials/_class_card.html:14 templates/training/class_detail.html:24
+msgid "min"
+msgstr "мин"
+
+#: templates/blog/post_detail.html:43 templates/partials/_post_card.html:20
+msgid "min read"
+msgstr "мин читање"
+
+#: templates/services/service_detail.html:75 templates/training/class_detail.html:101
+msgid "minutes"
+msgstr "минути"
+
+#: blog/models.py:8 contact/models.py:6 contact/models.py:36 core/models.py:14
+#: services/models.py:7 team/models.py:7 training/models.py:109
+msgid "name"
+msgstr "име"
+
+#: contact/models.py:50
+msgid "notes"
+msgstr "белешки"
+
+#: core/models.py:98 core/models.py:99
+msgid "opening hours"
+msgstr "работно време"
+
+#: core/models.py:92
+msgid "opens"
+msgstr "отвора"
+
+#: blog/models.py:10 core/models.py:114 core/models.py:145 services/models.py:9
+#: services/models.py:50 services/models.py:78 team/models.py:41 training/models.py:53
+#: training/models.py:118
+msgid "order"
+msgstr "редослед"
+
+#: templates/training/class_detail.html:105
+msgid "people"
+msgstr "луѓе"
+
+#: training/models.py:115
+msgid "period"
+msgstr "период"
+
+#: contact/models.py:8 contact/models.py:38 core/models.py:24
+msgid "phone"
+msgstr "телефон"
+
+#: core/models.py:112 team/models.py:26
+msgid "photo"
+msgstr "фотографија"
+
+#: blog/models.py:66
+msgid "post"
+msgstr "објава"
+
+#: core/models.py:23
+msgid "postal code"
+msgstr "поштенски број"
+
+#: blog/models.py:67
+msgid "posts"
+msgstr "објави"
+
+#: contact/models.py:48
+msgid "preferred date"
+msgstr "посакуван датум"
+
+#: contact/models.py:49
+msgid "preferred time"
+msgstr "посакувано време"
+
+#: training/models.py:112
+msgid "price (MKD)"
+msgstr "цена (ден.)"
+
+#: services/models.py:43
+msgid "price from (MKD)"
+msgstr "цена од (ден.)"
+
+#: blog/models.py:58
+msgid "published"
+msgstr "објавено"
+
+#: blog/models.py:57
+msgid "published at"
+msgstr "објавено на"
+
+#: core/models.py:140
+msgid "question"
+msgstr "прашање"
+
+#: core/models.py:111
+msgid "rating"
+msgstr "оценка"
+
+#: contact/models.py:13
+msgid "read"
+msgstr "прочитано"
+
+#: contact/models.py:12
+msgid "received"
+msgstr "примено"
+
+#: core/models.py:109 team/models.py:22
+msgid "role"
+msgstr "улога"
+
+#: training/models.py:88
+msgid "room"
+msgstr "сала"
+
+#: services/models.py:54 services/models.py:72
+msgid "service"
+msgstr "услуга"
+
+#: services/models.py:14
+msgid "service categories"
+msgstr "категории на услуги"
+
+#: services/models.py:13
+msgid "service category"
+msgstr "категорија на услуга"
+
+#: services/models.py:82
+msgid "service image"
+msgstr "слика на услуга"
+
+#: services/models.py:83
+msgid "service images"
+msgstr "слики на услуги"
+
+#: services/models.py:55
+msgid "services"
+msgstr "услуги"
+
+#: templates/training/schedule.html:23
+msgid "sessions"
+msgstr "часа"
+
+#: core/models.py:16
+msgid "short about"
+msgstr "краток опис"
+
+#: team/models.py:23
+msgid "short bio"
+msgstr "кратка биографија"
+
+#: services/models.py:37 training/models.py:33
+msgid "short description"
+msgstr "краток опис"
+
+#: core/models.py:35 core/models.py:36
+msgid "site settings"
+msgstr "поставки на страницата"
+
+#: blog/models.py:9 blog/models.py:35 services/models.py:8 services/models.py:30
+#: team/models.py:8 team/models.py:21 training/models.py:32 training/models.py:110
+msgid "slug"
+msgstr "URL-ознака"
+
+#: team/models.py:13 team/models.py:28
+msgid "specialties"
+msgstr "специјалности"
+
+#: team/models.py:12
+msgid "specialty"
+msgstr "специјалност"
+
+#: training/models.py:87
+msgid "start time"
+msgstr "почеток"
+
+#: contact/models.py:53
+msgid "status"
+msgstr "статус"
+
+#: core/models.py:21
+msgid "street"
+msgstr "улица"
+
+#: contact/models.py:9
+msgid "subject"
+msgstr "наслов"
+
+#: core/models.py:15 training/models.py:111
+msgid "tagline"
+msgstr "слоган"
+
+#: team/models.py:45
+msgid "team member"
+msgstr "член на тимот"
+
+#: team/models.py:46
+msgid "team members"
+msgstr "членови на тимот"
+
+#: core/models.py:118
+msgid "testimonial"
+msgstr "препорака"
+
+#: core/models.py:119
+msgid "testimonials"
+msgstr "препораки"
+
+#: core/models.py:110
+msgid "text"
+msgstr "текст"
+
+#: blog/models.py:34 services/models.py:29 training/models.py:31
+msgid "title"
+msgstr "наслов"
+
+#: training/models.py:45
+msgid "trainer"
+msgstr "тренер"
+
+#: templates/contact/booking.html:52
+msgid "training clothes, indoor shoes, a water bottle and a towel."
+msgstr "спортска облека, патики за внатре, шише вода и пешкир."
+
+#: contact/models.py:63
+msgid "trial session"
+msgstr "пробен тренинг"
+
+#: blog/models.py:59
+msgid "views"
+msgstr "прегледи"
+
+#: core/models.py:91 training/models.py:86
+msgid "weekday"
+msgstr "ден во неделата"
+
+#: services/models.py:40
+msgid "what's included"
+msgstr "што е вклучено"
+
+#: templates/team/team_detail.html:41
+msgid "years"
+msgstr "години"
+
+#: team/models.py:34
+msgid "years of experience"
+msgstr "години искуство"
+

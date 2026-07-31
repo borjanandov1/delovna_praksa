@@ -28,6 +28,10 @@
       </a>
     </div>
 
+    <h2 class="visually-hidden">
+      {% if active_intensity %}{% trans "Filtered classes" %}{% else %}{% trans "All classes" %}{% endif %}
+    </h2>
+
     <div class="row g-4">
       {% for gym_class in classes %}
         <div class="col-sm-6 col-lg-4 d-flex">

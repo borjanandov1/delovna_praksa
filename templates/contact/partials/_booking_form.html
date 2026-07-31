@@ -21,7 +21,11 @@
     <div class="col-12">{{ form.notes|as_crispy_field }}</div>
   </div>
 
-  <div class="hp-field" aria-hidden="true">{{ form.website }}</div>
+  {# Honeypot — see _contact_form.html. #}
+  <div class="hp-field">
+    <label for="{{ form.website.id_for_label }}">{{ form.website.label }}</label>
+    {{ form.website }}
+  </div>
 
   <button type="submit" class="btn btn-accent btn-lg mt-4">
     <span class="htmx-indicator spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>

@@ -23,13 +23,12 @@ class HoneypotMixin:
         self.fields[self.HONEYPOT] = forms.CharField(
             required=False,
             label=_("Leave this field empty"),
+            # No aria-hidden: the field keeps a visible-to-AT label reading
+            # "Leave this field empty", which is the accessible honeypot
+            # pattern. aria-hidden on a focusable control is itself a
+            # violation, and tabindex=-1 already keeps it out of tab order.
             widget=forms.TextInput(
-                attrs={
-                    "autocomplete": "off",
-                    "tabindex": "-1",
-                    "class": "hp-field",
-                    "aria-hidden": "true",
-                }
+                attrs={"autocomplete": "off", "tabindex": "-1"}
             ),
         )
 

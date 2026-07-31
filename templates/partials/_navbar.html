@@ -24,10 +24,12 @@
         </li>
 
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle {% if 'training' in vn %}active{% endif %}"
-             href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          {# A button, not a placeholder anchor: dead hrefs break crawlers and keyboard users. #}
+          <button type="button"
+                  class="nav-link dropdown-toggle btn btn-link {% if 'training' in vn %}active{% endif %}"
+                  data-bs-toggle="dropdown" aria-expanded="false">
             {% trans "Classes" %}
-          </a>
+          </button>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="{% url 'training:class_list' %}">{% trans "All classes" %}</a></li>
             <li><a class="dropdown-item" href="{% url 'training:schedule' %}">{% trans "Weekly schedule" %}</a></li>
@@ -35,6 +37,7 @@
             <li><a class="dropdown-item" href="{% url 'training:pricing' %}">{% trans "Memberships" %}</a></li>
           </ul>
         </li>
+
 
         <li class="nav-item">
           <a class="nav-link {% if 'services' in vn %}active{% endif %}"

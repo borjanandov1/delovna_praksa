@@ -1,0 +1,1822 @@
+# English translations for FORGE Fitness Studio.
+# Copyright (C) 2026 ORGANIZATION
+# This file is distributed under the same license as the FORGE Fitness Studio project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: FORGE Fitness Studio VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2026-08-01 00:27+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: templates/core/privacy.html:75 templates/core/privacy.html:81
+#: templates/core/privacy.html:87
+msgid "1 year"
+msgstr "1 year"
+
+#: templates/core/terms.html:18
+msgid "1. Using this website"
+msgstr "1. Using this website"
+
+#: templates/core/privacy.html:18
+msgid "1. Who we are"
+msgstr "1. Who we are"
+
+#: core/views.py:45
+msgid "1200 members and a coaching team of eight."
+msgstr "1200 members and a coaching team of eight."
+
+#: templates/core/privacy.html:69
+msgid "2 weeks"
+msgstr "2 weeks"
+
+#: templates/core/terms.html:26
+msgid "2. Bookings"
+msgstr "2. Bookings"
+
+#: templates/core/privacy.html:27
+msgid "2. What data we collect"
+msgstr "2. What data we collect"
+
+#: templates/core/terms.html:36
+msgid "3. Cancellations"
+msgstr "3. Cancellations"
+
+#: templates/core/privacy.html:35
+msgid "3. Why we use it"
+msgstr "3. Why we use it"
+
+#: templates/core/privacy.html:44
+msgid "4. Cookies we set"
+msgstr "4. Cookies we set"
+
+#: templates/core/terms.html:45
+msgid "4. Health and safety"
+msgstr "4. Health and safety"
+
+#: templates/core/privacy.html:107
+msgid "5. How long we keep it"
+msgstr "5. How long we keep it"
+
+#: templates/core/terms.html:55
+msgid "5. Memberships and pricing"
+msgstr "5. Memberships and pricing"
+
+#: templates/core/terms.html:64
+msgid "6. Intellectual property"
+msgstr "6. Intellectual property"
+
+#: templates/core/privacy.html:110
+msgid "6. Your rights"
+msgstr "6. Your rights"
+
+#: templates/core/privacy.html:119
+msgid "7. Contact"
+msgstr "7. Contact"
+
+#: templates/core/terms.html:73
+msgid "7. Liability"
+msgstr "7. Liability"
+
+#: templates/core/terms.html:82
+msgid "8. Contact"
+msgstr "8. Contact"
+
+#: templates/core/about.html:38
+msgid "A community, not a turnstile"
+msgstr "A community, not a turnstile"
+
+#: templates/core/privacy.html:46
+msgid ""
+"A cookie is a small text file stored by your browser. This site uses only the cookies"
+" listed below. Necessary cookies are required for the site to function and cannot be "
+"switched off."
+msgstr ""
+"A cookie is a small text file stored by your browser. This site uses only the cookies"
+" listed below. Necessary cookies are required for the site to function and cannot be "
+"switched off."
+
+#: templates/contact/booking.html:44
+msgid "A full session with technique coaching, completely free."
+msgstr "A full session with technique coaching, completely free."
+
+#: templates/partials/_footer.html:30 templates/partials/_navbar.html:23
+msgid "About"
+msgstr "About"
+
+#: templates/core/about.html:4
+msgid "About us"
+msgstr "About us"
+
+#: templates/partials/_cookie_banner.html:25
+msgid "Accept all"
+msgstr "Accept all"
+
+#: core/admin.py:16 templates/contact/contact.html:31
+msgid "Address"
+msgstr "Address"
+
+#: templates/blog/post_list.html:19 templates/services/service_list.html:18
+msgid "All"
+msgstr "All"
+
+#: templates/core/home.html:72 templates/partials/_navbar.html:32
+msgid "All classes"
+msgstr "All classes"
+
+#: templates/training/class_list.html:18
+msgid "All levels"
+msgstr "All levels"
+
+#: templates/core/home.html:220
+msgid "All posts"
+msgstr "All posts"
+
+#: templates/partials/_footer.html:83
+msgid "All rights reserved."
+msgstr "All rights reserved."
+
+#: templates/core/terms.html:66
+msgid ""
+"All text, photographs and the FORGE name and logo on this site belong to FORGE "
+"Fitness Studio and may not be reused without written permission."
+msgstr ""
+"All text, photographs and the FORGE name and logo on this site belong to FORGE "
+"Fitness Studio and may not be reused without written permission."
+
+#: templates/core/about.html:73 templates/core/home.html:118
+msgid "All trainers"
+msgstr "All trainers"
+
+#: templates/core/faq.html:5
+msgid "Answers about memberships, classes, opening hours and getting started at FORGE."
+msgstr "Answers about memberships, classes, opening hours and getting started at FORGE."
+
+#: templates/contact/booking.html:36
+msgid "Arrive 10 minutes early"
+msgstr "Arrive 10 minutes early"
+
+#: templates/services/service_detail.html:84
+msgid "Ask a question"
+msgstr "Ask a question"
+
+#: templates/services/service_detail.html:65
+msgid "At a glance"
+msgstr "At a glance"
+
+#: templates/blog/post_detail.html:67
+msgid "Back to blog"
+msgstr "Back to blog"
+
+#: templates/404.html:19 templates/contact/partials/_booking_success.html:24
+#: templates/contact/partials/_contact_success.html:15
+msgid "Back to homepage"
+msgstr "Back to homepage"
+
+#: templates/blog/post_detail.html:22 templates/blog/post_list.html:4
+#: templates/partials/_footer.html:36 templates/partials/_navbar.html:54
+msgid "Blog"
+msgstr "Blog"
+
+#: templates/blog/partials/_post_grid.html:22
+msgid "Blog pagination"
+msgstr "Blog pagination"
+
+#: templates/training/schedule.html:82
+msgid "Book a class"
+msgstr "Book a class"
+
+#: templates/services/service_list.html:46
+msgid ""
+"Book a free consultation and we'll put together a plan that fits your goals and your "
+"schedule."
+msgstr ""
+"Book a free consultation and we'll put together a plan that fits your goals and your "
+"schedule."
+
+#: templates/contact/booking.html:4 templates/contact/contact.html:82
+#: templates/core/about.html:90 templates/core/home.html:28 templates/core/home.html:262
+#: templates/services/service_list.html:48 templates/training/class_list.html:50
+#: templates/training/pricing.html:73
+msgid "Book a free trial"
+msgstr "Book a free trial"
+
+#: templates/core/about.html:88
+msgid "Book a free trial session and train with us before you decide."
+msgstr "Book a free trial session and train with us before you decide."
+
+#: templates/contact/contact.html:81
+msgid "Book a free trial session directly."
+msgstr "Book a free trial session directly."
+
+#: templates/training/class_detail.html:109
+msgid "Book this class"
+msgstr "Book this class"
+
+#: templates/services/service_detail.html:83
+msgid "Book this service"
+msgstr "Book this service"
+
+#: templates/contact/booking.html:9
+msgid "Book your first session"
+msgstr "Book your first session"
+
+#: templates/contact/booking.html:5
+msgid ""
+"Book your free trial session at FORGE Fitness Studio. Pick a class and a date — no "
+"membership required."
+msgstr ""
+"Book your free trial session at FORGE Fitness Studio. Pick a class and a date — no "
+"membership required."
+
+#: templates/core/privacy.html:31
+msgid ""
+"Booking form: your name, email address, phone number, chosen class and preferred date"
+" and time."
+msgstr ""
+"Booking form: your name, email address, phone number, chosen class and preferred date"
+" and time."
+
+#: contact/views.py:102
+msgid "Booking received. We'll confirm your session by phone or email."
+msgstr "Booking received. We'll confirm your session by phone or email."
+
+#: templates/contact/partials/_booking_success.html:9
+msgid "Booking requested"
+msgstr "Booking requested"
+
+#: services/models.py:35
+msgid "Bootstrap Icons class, e.g. bi-heart-pulse"
+msgstr "Bootstrap Icons class, e.g. bi-heart-pulse"
+
+#: templates/blog/post_detail.html:19 templates/partials/_page_header.html:13
+#: templates/services/service_detail.html:14 templates/team/team_detail.html:14
+#: templates/training/class_detail.html:14
+msgid "Breadcrumb"
+msgstr "Breadcrumb"
+
+#: templates/contact/booking.html:51
+msgid "Bring"
+msgstr "Bring"
+
+#: templates/core/home.html:20
+msgid "Build the body.<br>Forge the <span class=\"mark-lime\">mindset</span>."
+msgstr "Build the body.<br>Forge the <span class=\"mark-lime\">mindset</span>."
+
+#: templates/contact/booking.html:30
+msgid "By phone or email, usually within a few hours."
+msgstr "By phone or email, usually within a few hours."
+
+#: templates/contact/partials/_contact_form.html:35
+msgid "By sending this form you agree to us storing your details so we can reply."
+msgstr "By sending this form you agree to us storing your details so we can reply."
+
+#: templates/core/terms.html:20
+msgid ""
+"By using this website you agree to these terms. The content is provided for "
+"information about our studio, classes and memberships."
+msgstr ""
+"By using this website you agree to these terms. The content is provided for "
+"information about our studio, classes and memberships."
+
+#: contact/admin.py:45
+msgid "Cancel selected bookings"
+msgstr "Cancel selected bookings"
+
+#: contact/models.py:33
+msgid "Cancelled"
+msgstr "Cancelled"
+
+#: templates/services/service_detail.html:78
+msgid "Category"
+msgstr "Category"
+
+#: templates/team/team_detail.html:73
+msgid "Certifications"
+msgstr "Certifications"
+
+#: templates/team/team_list.html:9
+msgid ""
+"Certified coaches who write your programme, correct your technique and remember your "
+"name."
+msgstr ""
+"Certified coaches who write your programme, correct your technique and remember your "
+"name."
+
+#: core/views.py:44
+msgid "Certified strength & conditioning programme launched."
+msgstr "Certified strength & conditioning programme launched."
+
+#: templates/core/home.html:49
+msgid "Certified trainers"
+msgstr "Certified trainers"
+
+#: templates/training/schedule.html:34
+msgid "Class"
+msgstr "Class"
+
+#: templates/training/class_detail.html:104
+msgid "Class size"
+msgstr "Class size"
+
+#: templates/partials/_footer.html:31 templates/partials/_navbar.html:29
+#: templates/training/class_detail.html:4 templates/training/class_detail.html:17
+msgid "Classes"
+msgstr "Classes"
+
+#: templates/training/schedule.html:80
+msgid "Classes fill up fast in the evenings. Book ahead so you don't miss out."
+msgstr "Classes fill up fast in the evenings. Book ahead so you don't miss out."
+
+#: templates/team/team_detail.html:80
+msgid "Classes led by"
+msgstr "Classes led by"
+
+#: templates/training/schedule.html:29
+#, python-format
+msgid "Classes on %(day_label)s"
+msgstr "Classes on %(day_label)s"
+
+#: templates/core/home.html:53
+msgid "Classes per week"
+msgstr "Classes per week"
+
+#: templates/contact/contact.html:61 templates/contact/contact.html:68
+#: templates/partials/_footer.html:73
+msgid "Closed"
+msgstr "Closed"
+
+#: templates/training/schedule.html:35
+msgid "Coach"
+msgstr "Coach"
+
+#: templates/core/about.html:71
+msgid "Coaches who show up"
+msgstr "Coaches who show up"
+
+#: templates/core/about.html:34
+msgid "Coaching first — every member gets a plan"
+msgstr "Coaching first — every member gets a plan"
+
+#: templates/services/service_list.html:9
+msgid "Coaching, recovery and nutrition support — built around what you actually need."
+msgstr "Coaching, recovery and nutrition support — built around what you actually need."
+
+#: templates/core/home.html:239
+msgid "Come by"
+msgstr "Come by"
+
+#: templates/core/about.html:86
+msgid "Come see the place"
+msgstr "Come see the place"
+
+#: templates/core/home.html:170
+msgid "Compare all membership options"
+msgstr "Compare all membership options"
+
+#: contact/admin.py:41
+msgid "Confirm selected bookings"
+msgstr "Confirm selected bookings"
+
+#: contact/models.py:32
+msgid "Confirmed"
+msgstr "Confirmed"
+
+#: core/admin.py:17 templates/partials/_footer.html:38 templates/partials/_footer.html:43
+#: templates/partials/_navbar.html:60
+msgid "Contact"
+msgstr "Contact"
+
+#: templates/core/privacy.html:30
+msgid "Contact form: your name, email address, optional phone number, subject and message."
+msgstr "Contact form: your name, email address, optional phone number, subject and message."
+
+#: templates/core/privacy.html:108
+msgid "Contact messages and bookings are kept for up to 24 months, then deleted."
+msgstr "Contact messages and bookings are kept for up to 24 months, then deleted."
+
+#: templates/404.html:21 templates/contact/booking.html:58 templates/contact/contact.html:4
+#: templates/contact/contact.html:9 templates/core/faq.html:44
+msgid "Contact us"
+msgstr "Contact us"
+
+#: templates/core/privacy.html:103 templates/partials/_footer.html:90
+msgid "Cookie settings"
+msgstr "Cookie settings"
+
+#: templates/core/privacy.html:55
+msgid "Cookies used on this website"
+msgstr "Cookies used on this website"
+
+#: templates/core/home.html:258
+msgid "Currently closed"
+msgstr "Currently closed"
+
+#: templates/training/class_detail.html:62
+msgid "Day"
+msgstr "Day"
+
+#: templates/core/home.html:242
+msgid ""
+"Drop in for a free trial, meet the trainers and see the floor before you commit to "
+"anything."
+msgstr ""
+"Drop in for a free trial, meet the trainers and see the floor before you commit to "
+"anything."
+
+#: templates/core/privacy.html:61 templates/training/class_detail.html:100
+msgid "Duration"
+msgstr "Duration"
+
+#: templates/contact/contact.html:49 templates/team/team_detail.html:54
+msgid "Email"
+msgstr "Email"
+
+#: templates/core/about.html:36
+msgid "Equipment maintained to competition standard"
+msgstr "Equipment maintained to competition standard"
+
+#: templates/training/pricing.html:70
+msgid "Every membership starts with a free trial session and a fitness assessment."
+msgstr "Every membership starts with a free trial session and a fitness assessment."
+
+#: templates/core/faq.html:9
+msgid "Everything people usually ask before their first session."
+msgstr "Everything people usually ask before their first session."
+
+#: core/views.py:43
+msgid "Expanded to 1400m² and added the group-class studio."
+msgstr "Expanded to 1400m² and added the group-class studio."
+
+#: templates/team/team_detail.html:40
+msgid "Experience"
+msgstr "Experience"
+
+#: templates/partials/_footer.html:28
+msgid "Explore"
+msgstr "Explore"
+
+#: core/models.py:149 templates/partials/_footer.html:37
+msgid "FAQ"
+msgstr "FAQ"
+
+#: core/models.py:150
+msgid "FAQs"
+msgstr "FAQs"
+
+#: templates/core/about.html:18
+msgid ""
+"FORGE opened in a converted textile workshop in 2019 with two squat racks and a "
+"stubborn belief: strength training should be welcoming, coached properly, and free of"
+" intimidation. Today we run a 1400m² floor, forty classes a week and a coaching team "
+"that still knows every member by name."
+msgstr ""
+"FORGE opened in a converted textile workshop in 2019 with two squat racks and a "
+"stubborn belief: strength training should be welcoming, coached properly, and free of"
+" intimidation. Today we run a 1400m² floor, forty classes a week and a coaching team "
+"that still knows every member by name."
+
+#: core/models.py:27 templates/partials/_footer.html:14
+msgid "Facebook"
+msgstr "Facebook"
+
+#: templates/training/class_list.html:15
+msgid "Filter classes by intensity"
+msgstr "Filter classes by intensity"
+
+#: templates/blog/post_list.html:16
+msgid "Filter posts by category"
+msgstr "Filter posts by category"
+
+#: templates/services/service_list.html:15
+msgid "Filter services by category"
+msgstr "Filter services by category"
+
+#: templates/training/class_list.html:46
+msgid "First class is free"
+msgstr "First class is free"
+
+#: templates/training/class_list.html:9
+msgid ""
+"Forty coached sessions a week, from beginner mobility to competition-grade "
+"conditioning."
+msgstr ""
+"Forty coached sessions a week, from beginner mobility to competition-grade "
+"conditioning."
+
+#: templates/training/pricing.html:55
+msgid "Free induction session"
+msgstr "Free induction session"
+
+#: templates/contact/booking.html:9 templates/partials/_navbar.html:79
+msgid "Free trial"
+msgstr "Free trial"
+
+#: contact/forms.py:102
+msgid "Free trial session (any class)"
+msgstr "Free trial session (any class)"
+
+#: templates/training/pricing.html:58
+msgid "Freeze your membership up to 2 months"
+msgstr "Freeze your membership up to 2 months"
+
+#: templates/core/faq.html:4 templates/core/faq.html:9
+msgid "Frequently asked questions"
+msgstr "Frequently asked questions"
+
+#: core/models.py:86 training/models.py:15
+msgid "Friday"
+msgstr "Friday"
+
+#: templates/services/service_detail.html:49
+msgid "Gallery"
+msgstr "Gallery"
+
+#: core/models.py:135
+msgid "General"
+msgstr "General"
+
+#: templates/contact/contact.html:9 templates/team/team_detail.html:50
+#: templates/team/team_list.html:32
+msgid "Get in touch"
+msgstr "Get in touch"
+
+#: templates/contact/contact.html:5
+msgid ""
+"Get in touch with FORGE Fitness Studio — address, phone, email, opening hours and a "
+"contact form."
+msgstr ""
+"Get in touch with FORGE Fitness Studio — address, phone, email, opening hours and a "
+"contact form."
+
+#: templates/core/home.html:163 templates/training/pricing.html:38
+msgid "Get started"
+msgstr "Get started"
+
+#: templates/core/home.html:70 templates/training/class_list.html:4
+#: templates/training/class_list.html:9
+msgid "Group classes"
+msgstr "Group classes"
+
+#: templates/training/class_list.html:5
+msgid ""
+"HIIT, strength, spinning, yoga and mobility classes at FORGE Fitness Studio — forty "
+"sessions every week."
+msgstr ""
+"HIIT, strength, spinning, yoga and mobility classes at FORGE Fitness Studio — forty "
+"sessions every week."
+
+#: templates/core/faq.html:9
+msgid "Help"
+msgstr "Help"
+
+#: training/models.py:28
+msgid "High"
+msgstr "High"
+
+#: templates/blog/post_detail.html:21 templates/partials/_page_header.html:15
+#: templates/services/service_detail.html:16 templates/team/team_detail.html:16
+#: templates/training/class_detail.html:16
+msgid "Home"
+msgstr "Home"
+
+#: templates/core/privacy.html:5
+msgid ""
+"How FORGE Fitness Studio collects, uses and stores personal data, and which cookies "
+"the site sets."
+msgstr ""
+"How FORGE Fitness Studio collects, uses and stores personal data, and which cookies "
+"the site sets."
+
+#: contact/forms.py:57
+msgid "How can we help?"
+msgstr "How can we help?"
+
+#: templates/core/about.html:50
+msgid "How we got here"
+msgstr "How we got here"
+
+#: core/admin.py:15
+msgid "Identity"
+msgstr "Identity"
+
+#: templates/training/pricing.html:52
+msgid "Included with every membership"
+msgstr "Included with every membership"
+
+#: core/models.py:28 team/models.py:38 templates/partials/_footer.html:18
+msgid "Instagram"
+msgstr "Instagram"
+
+#: templates/training/class_detail.html:102 templates/training/schedule.html:37
+msgid "Intensity"
+msgstr "Intensity"
+
+#: templates/team/team_list.html:27
+msgid "Join us"
+msgstr "Join us"
+
+#: templates/blog/post_list.html:9 templates/core/home.html:217
+msgid "Journal"
+msgstr "Journal"
+
+#: templates/blog/post_detail.html:94
+msgid "Keep reading"
+msgstr "Keep reading"
+
+#: templates/core/privacy.html:67
+msgid "Keeps a logged-in administrator signed in."
+msgstr "Keeps a logged-in administrator signed in."
+
+#: templates/core/privacy.html:16 templates/core/terms.html:16
+msgid "Last updated"
+msgstr "Last updated"
+
+#: templates/core/home.html:218
+msgid "Latest from the blog"
+msgstr "Latest from the blog"
+
+#: contact/forms.py:25
+msgid "Leave this field empty"
+msgstr "Leave this field empty"
+
+#: templates/core/privacy.html:9 templates/core/terms.html:9
+msgid "Legal"
+msgstr "Legal"
+
+#: templates/training/pricing.html:56
+msgid "Locker and shower access"
+msgstr "Locker and shower access"
+
+#: training/models.py:26
+msgid "Low"
+msgstr "Low"
+
+#: templates/core/home.html:155 templates/partials/_service_card.html:19
+#: templates/services/service_detail.html:71 templates/training/pricing.html:30
+msgid "MKD"
+msgstr "MKD"
+
+#: templates/partials/_navbar.html:3
+msgid "Main navigation"
+msgstr "Main navigation"
+
+#: core/admin.py:9
+msgid "Manage the website"
+msgstr "Manage the website"
+
+#: core/admin.py:19
+msgid "Map"
+msgstr "Map"
+
+#: templates/contact/contact.html:93 templates/core/home.html:268
+msgid "Map showing the location of the gym"
+msgstr "Map showing the location of the gym"
+
+#: contact/admin.py:21
+msgid "Mark selected messages as read"
+msgstr "Mark selected messages as read"
+
+#: contact/admin.py:25
+msgid "Mark selected messages as unread"
+msgstr "Mark selected messages as unread"
+
+#: templates/training/class_detail.html:25 templates/training/class_detail.html:105
+msgid "Max"
+msgstr "Max"
+
+#: training/models.py:27
+msgid "Medium"
+msgstr "Medium"
+
+#: templates/team/team_list.html:5
+msgid ""
+"Meet the certified coaching team at FORGE Fitness Studio — strength, conditioning, "
+"mobility and nutrition specialists."
+msgstr ""
+"Meet the certified coaching team at FORGE Fitness Studio — strength, conditioning, "
+"mobility and nutrition specialists."
+
+#: templates/core/home.html:116
+msgid "Meet your trainers"
+msgstr "Meet your trainers"
+
+#: templates/core/home.html:45
+msgid "Members"
+msgstr "Members"
+
+#: core/models.py:136
+msgid "Membership"
+msgstr "Membership"
+
+#: templates/training/pricing.html:43
+msgid "Membership options are being updated. Please contact us for current prices."
+msgstr "Membership options are being updated. Please contact us for current prices."
+
+#: templates/core/home.html:137 templates/partials/_footer.html:33
+#: templates/partials/_navbar.html:35 templates/training/pricing.html:9
+msgid "Memberships"
+msgstr "Memberships"
+
+#: templates/training/pricing.html:4
+msgid "Memberships & pricing"
+msgstr "Memberships & pricing"
+
+#: templates/contact/partials/_contact_success.html:10
+msgid "Message sent"
+msgstr "Message sent"
+
+#: templates/core/about.html:49
+msgid "Milestones"
+msgstr "Milestones"
+
+#: core/models.py:82 training/models.py:11
+msgid "Monday"
+msgstr "Monday"
+
+#: templates/core/about.html:9 templates/core/home.html:92
+msgid "More than a gym"
+msgstr "More than a gym"
+
+#: templates/core/home.html:147 templates/training/pricing.html:19
+msgid "Most popular"
+msgstr "Most popular"
+
+#: templates/core/privacy.html:58
+msgid "Name"
+msgstr "Name"
+
+#: templates/core/privacy.html:68 templates/core/privacy.html:74
+#: templates/core/privacy.html:80 templates/core/privacy.html:86
+msgid "Necessary"
+msgstr "Necessary"
+
+#: templates/contact/booking.html:54
+msgid "Need to change or cancel?"
+msgstr "Need to change or cancel?"
+
+#: templates/blog/partials/_post_grid.html:41
+msgid "Next page"
+msgstr "Next page"
+
+#: templates/training/class_list.html:37
+msgid "No classes match this filter."
+msgstr "No classes match this filter."
+
+#: templates/core/about.html:35
+msgid "No intimidation, no judgement"
+msgstr "No intimidation, no judgement"
+
+#: templates/training/pricing.html:9
+msgid "No joining fee, no lock-in contract, cancel with 30 days' notice."
+msgstr "No joining fee, no lock-in contract, cancel with 30 days' notice."
+
+#: templates/contact/booking.html:9
+msgid ""
+"No membership, no card details, no pressure. Pick a time and we'll confirm it with "
+"you."
+msgstr ""
+"No membership, no card details, no pressure. Pick a time and we'll confirm it with "
+"you."
+
+#: templates/blog/partials/_post_grid.html:16
+msgid "No posts found. Try a different search or category."
+msgstr "No posts found. Try a different search or category."
+
+#: templates/core/faq.html:36
+msgid "No questions have been published yet."
+msgstr "No questions have been published yet."
+
+#: templates/services/service_list.html:34
+msgid "No services in this category yet."
+msgstr "No services in this category yet."
+
+#: templates/services/service_list.html:44
+msgid "Not sure where to start?"
+msgstr "Not sure where to start?"
+
+#: services/models.py:40
+msgid "One item per line."
+msgstr "One item per line."
+
+#: team/models.py:31 training/models.py:35 training/models.py:116
+msgid "One per line."
+msgstr "One per line."
+
+#: templates/partials/_cookie_banner.html:28
+msgid "Only necessary"
+msgstr "Only necessary"
+
+#: templates/contact/contact.html:61 templates/core/home.html:258
+msgid "Open now"
+msgstr "Open now"
+
+#: core/views.py:42
+msgid "Opened with two racks in a converted textile workshop."
+msgstr "Opened with two racks in a converted textile workshop."
+
+#: templates/contact/contact.html:58 templates/partials/_footer.html:67
+msgid "Opening hours"
+msgstr "Opening hours"
+
+#: templates/team/team_detail.html:102
+msgid "Other trainers"
+msgstr "Other trainers"
+
+#: templates/core/about.html:15 templates/core/home.html:94
+msgid "Our story"
+msgstr "Our story"
+
+#: templates/core/about.html:5
+#, python-format
+msgid "Our story, our values and the people behind %(site)s."
+msgstr "Our story, our values and the people behind %(site)s."
+
+#: templates/team/team_list.html:4 templates/team/team_list.html:9
+msgid "Our trainers"
+msgstr "Our trainers"
+
+#: templates/404.html:4
+msgid "Page not found"
+msgstr "Page not found"
+
+#: contact/models.py:31
+msgid "Pending"
+msgstr "Pending"
+
+#: templates/services/service_list.html:5
+msgid ""
+"Personal training, nutrition coaching, physiotherapy and recovery services at FORGE "
+"Fitness Studio."
+msgstr ""
+"Personal training, nutrition coaching, physiotherapy and recovery services at FORGE "
+"Fitness Studio."
+
+#: templates/contact/contact.html:40
+msgid "Phone"
+msgstr "Phone"
+
+#: templates/core/home.html:138
+msgid "Pick your plan"
+msgstr "Pick your plan"
+
+#: templates/core/terms.html:38
+msgid ""
+"Please cancel at least four hours before a booked class so the place can be offered "
+"to someone else. Repeated no-shows may result in booking restrictions."
+msgstr ""
+"Please cancel at least four hours before a booked class so the place can be offered "
+"to someone else. Repeated no-shows may result in booking restrictions."
+
+#: contact/forms.py:110
+msgid "Please choose a date in the future."
+msgstr "Please choose a date in the future."
+
+#: contact/forms.py:70
+msgid "Please write at least 10 characters so we can help properly."
+msgstr "Please write at least 10 characters so we can help properly."
+
+#: templates/blog/post_list.html:9
+msgid "Practical advice from our coaches — no fads, no supplements to sell you."
+msgstr "Practical advice from our coaches — no fads, no supplements to sell you."
+
+#: templates/blog/partials/_post_grid.html:27
+msgid "Previous page"
+msgstr "Previous page"
+
+#: templates/services/service_detail.html:70
+msgid "Price from"
+msgstr "Price from"
+
+#: templates/core/terms.html:57
+msgid ""
+"Prices shown on this site are in Macedonian denars and include VAT. We may change "
+"prices, class timetables and opening hours; the version published on this website at "
+"the time of purchase applies."
+msgstr ""
+"Prices shown on this site are in Macedonian denars and include VAT. We may change "
+"prices, class timetables and opening hours; the version published on this website at "
+"the time of purchase applies."
+
+#: templates/contact/partials/_booking_form.html:33
+#: templates/contact/partials/_contact_form.html:38 templates/core/privacy.html:4
+#: templates/core/privacy.html:9 templates/partials/_footer.html:85
+msgid "Privacy Policy"
+msgstr "Privacy Policy"
+
+#: templates/core/privacy.html:73
+msgid "Protects forms against cross-site request forgery."
+msgstr "Protects forms against cross-site request forgery."
+
+#: templates/core/privacy.html:59
+msgid "Purpose"
+msgstr "Purpose"
+
+#: templates/contact/contact.html:9
+msgid ""
+"Questions about memberships, classes or personal training? We answer within one "
+"working day."
+msgstr ""
+"Questions about memberships, classes or personal training? We answer within one "
+"working day."
+
+#: templates/core/terms.html:84
+msgid "Questions about these terms:"
+msgstr "Questions about these terms:"
+
+#: templates/core/home.html:189
+#, python-format
+msgid "Rated %(n)s out of 5"
+msgstr "Rated %(n)s out of 5"
+
+#: templates/partials/_cookie_banner.html:20
+msgid "Read our Privacy Policy"
+msgstr "Read our Privacy Policy"
+
+#: templates/training/pricing.html:74
+msgid "Read the FAQ"
+msgstr "Read the FAQ"
+
+#: templates/services/service_detail.html:95
+msgid "Related services"
+msgstr "Related services"
+
+#: templates/core/privacy.html:79
+msgid "Remembers whether you chose Macedonian or English."
+msgstr "Remembers whether you chose Macedonian or English."
+
+#: templates/contact/partials/_booking_form.html:28
+msgid "Request booking"
+msgstr "Request booking"
+
+#: templates/training/schedule.html:78
+msgid "Reserve your spot"
+msgstr "Reserve your spot"
+
+#: templates/core/home.html:181
+msgid "Results"
+msgstr "Results"
+
+#: templates/training/class_detail.html:64 templates/training/schedule.html:36
+msgid "Room"
+msgstr "Room"
+
+#: templates/training/schedule.html:9
+msgid "Same timetable every week. Book a place, or just turn up ten minutes early."
+msgstr "Same timetable every week. Book a place, or just turn up ten minutes early."
+
+#: core/models.py:87 training/models.py:16
+msgid "Saturday"
+msgstr "Saturday"
+
+#: templates/partials/_footer.html:32
+msgid "Schedule"
+msgstr "Schedule"
+
+#: templates/blog/post_list.html:46
+msgid "Search"
+msgstr "Search"
+
+#: templates/blog/post_list.html:40
+msgid "Search articles…"
+msgstr "Search articles…"
+
+#: templates/blog/post_list.html:37
+msgid "Search the blog"
+msgstr "Search the blog"
+
+#: templates/training/class_detail.html:111
+msgid "See full schedule"
+msgstr "See full schedule"
+
+#: templates/404.html:20 templates/contact/partials/_booking_success.html:23
+#: templates/core/home.html:31
+msgid "See the schedule"
+msgstr "See the schedule"
+
+#: templates/contact/partials/_contact_form.html:31
+msgid "Send message"
+msgstr "Send message"
+
+#: templates/contact/contact.html:16
+msgid "Send us a message"
+msgstr "Send us a message"
+
+#: templates/core/faq.html:43
+msgid "Send us a message and we'll get back to you within one working day."
+msgstr "Send us a message and we'll get back to you within one working day."
+
+#: templates/partials/_footer.html:34 templates/partials/_navbar.html:42
+#: templates/services/service_detail.html:17 templates/services/service_list.html:4
+#: templates/services/service_list.html:9
+msgid "Services"
+msgstr "Services"
+
+#: templates/services/service_detail.html:74
+msgid "Session length"
+msgstr "Session length"
+
+#: templates/training/pricing.html:9
+msgid "Simple, honest pricing"
+msgstr "Simple, honest pricing"
+
+#: templates/core/home.html:18
+msgid "Since 2019"
+msgstr "Since 2019"
+
+#: templates/base.html:53
+msgid "Skip to content"
+msgstr "Skip to content"
+
+#: templates/contact/booking.html:37
+msgid "So we can show you around and go through the basics."
+msgstr "So we can show you around and go through the basics."
+
+#: core/admin.py:18
+msgid "Social media"
+msgstr "Social media"
+
+#: templates/core/privacy.html:37
+msgid ""
+"Solely to answer your enquiry or confirm your booking. We do not use your details for"
+" marketing unless you ask us to, and we never sell or share them with third parties."
+msgstr ""
+"Solely to answer your enquiry or confirm your booking. We do not use your details for"
+" marketing unless you ask us to, and we never sell or share them with third parties."
+
+#: templates/team/team_detail.html:44
+msgid "Specialties"
+msgstr "Specialties"
+
+#: templates/core/faq.html:41
+msgid "Still have a question?"
+msgstr "Still have a question?"
+
+#: templates/core/privacy.html:85
+msgid "Stores your cookie choice so the banner is not shown again."
+msgstr "Stores your cookie choice so the banner is not shown again."
+
+#: templates/core/terms.html:28
+msgid ""
+"Submitting the booking form is a request, not a confirmed place. A booking is only "
+"confirmed once we contact you by phone or email. Places in group classes are limited "
+"by the capacity shown on each class page."
+msgstr ""
+"Submitting the booking form is a request, not a confirmed place. A booking is only "
+"confirmed once we contact you by phone or email. Places in group classes are limited "
+"by the capacity shown on each class page."
+
+#: core/models.py:88 training/models.py:17
+msgid "Sunday"
+msgstr "Sunday"
+
+#: templates/core/terms.html:5
+msgid ""
+"Terms governing the use of the FORGE Fitness Studio website, memberships and class "
+"bookings."
+msgstr ""
+"Terms governing the use of the FORGE Fitness Studio website, memberships and class "
+"bookings."
+
+#: templates/core/terms.html:4 templates/core/terms.html:9
+#: templates/partials/_footer.html:86
+msgid "Terms of Use"
+msgstr "Terms of Use"
+
+#: contact/views.py:78
+msgid "Thanks — your message has been sent. We'll reply shortly."
+msgstr "Thanks — your message has been sent. We'll reply shortly."
+
+#: templates/training/schedule.html:5
+msgid ""
+"The full weekly class timetable at FORGE Fitness Studio — times, coaches and rooms "
+"for every session."
+msgstr ""
+"The full weekly class timetable at FORGE Fitness Studio — times, coaches and rooms "
+"for every session."
+
+#: templates/404.html:5
+msgid "The page you were looking for does not exist."
+msgstr "The page you were looking for does not exist."
+
+#: templates/404.html:15
+msgid "The page you're looking for doesn't exist or has been moved."
+msgstr "The page you're looking for doesn't exist or has been moved."
+
+#: templates/core/about.html:70 templates/core/home.html:115
+#: templates/team/team_list.html:9
+msgid "The team"
+msgstr "The team"
+
+#: templates/training/schedule.html:15
+msgid "The timetable is being updated. Please check back shortly."
+msgstr "The timetable is being updated. Please check back shortly."
+
+#: templates/contact/partials/_booking_form.html:32
+msgid "This is a request — we'll confirm your place by phone or email."
+msgstr "This is a request — we'll confirm your place by phone or email."
+
+#: templates/404.html:13
+msgid "This page skipped leg day"
+msgstr "This page skipped leg day"
+
+#: templates/core/privacy.html:20
+msgid ""
+"This website is operated by FORGE Fitness Studio. If you have any question about how "
+"your data is handled, contact us using the details at the bottom of this page."
+msgstr ""
+"This website is operated by FORGE Fitness Studio. If you have any question about how "
+"your data is handled, contact us using the details at the bottom of this page."
+
+#: core/models.py:85 training/models.py:14
+msgid "Thursday"
+msgstr "Thursday"
+
+#: templates/training/class_detail.html:63 templates/training/schedule.html:33
+msgid "Time"
+msgstr "Time"
+
+#: templates/training/schedule.html:9
+msgid "Timetable"
+msgstr "Timetable"
+
+#: templates/partials/_navbar.html:13
+msgid "Toggle navigation"
+msgstr "Toggle navigation"
+
+#: templates/training/pricing.html:57
+msgid "Towel service"
+msgstr "Towel service"
+
+#: templates/team/team_detail.html:91
+#, python-format
+msgid "Train with %(name)s"
+msgstr "Train with %(name)s"
+
+#: templates/contact/booking.html:43
+msgid "Train with a coach"
+msgstr "Train with a coach"
+
+#: templates/core/home.html:69 templates/training/class_list.html:9
+msgid "Train with us"
+msgstr "Train with us"
+
+#: templates/team/team_list.html:19
+msgid "Trainer profiles are coming soon."
+msgstr "Trainer profiles are coming soon."
+
+#: templates/partials/_footer.html:35 templates/partials/_navbar.html:48
+#: templates/team/team_detail.html:17
+msgid "Trainers"
+msgstr "Trainers"
+
+#: core/models.py:137
+msgid "Training"
+msgstr "Training"
+
+#: templates/blog/post_list.html:9
+msgid "Training & nutrition blog"
+msgstr "Training & nutrition blog"
+
+#: templates/blog/post_list.html:5
+msgid ""
+"Training advice, nutrition guides and studio news from the coaching team at FORGE "
+"Fitness Studio."
+msgstr ""
+"Training advice, nutrition guides and studio news from the coaching team at FORGE "
+"Fitness Studio."
+
+#: templates/core/terms.html:47
+msgid ""
+"Training carries inherent risk. You train at your own risk and confirm that you are "
+"medically fit to take part. Tell your coach about any injury or condition before a "
+"session. Follow the instructions of staff and the rules displayed in the studio at "
+"all times."
+msgstr ""
+"Training carries inherent risk. You train at your own risk and confirm that you are "
+"medically fit to take part. Tell your coach about any injury or condition before a "
+"session. Follow the instructions of staff and the rules displayed in the studio at "
+"all times."
+
+#: templates/core/home.html:57
+msgid "Training floor"
+msgstr "Training floor"
+
+#: templates/training/pricing.html:5
+msgid ""
+"Transparent membership pricing at FORGE Fitness Studio. No lock-in contracts, no "
+"joining fee."
+msgstr ""
+"Transparent membership pricing at FORGE Fitness Studio. No lock-in contracts, no "
+"joining fee."
+
+#: templates/core/about.html:37
+msgid "Transparent pricing, no lock-in contracts"
+msgstr "Transparent pricing, no lock-in contracts"
+
+#: templates/training/class_list.html:48
+msgid "Try any class on the timetable at no cost, with no membership required."
+msgstr "Try any class on the timetable at no cost, with no membership required."
+
+#: templates/training/pricing.html:68
+msgid "Try before you buy"
+msgstr "Try before you buy"
+
+#: core/models.py:83 training/models.py:12
+msgid "Tuesday"
+msgstr "Tuesday"
+
+#: templates/core/privacy.html:60
+msgid "Type"
+msgstr "Type"
+
+#: templates/partials/_class_card.html:35
+msgid "View class"
+msgstr "View class"
+
+#: templates/contact/contact.html:23
+msgid "Visit the studio"
+msgstr "Visit the studio"
+
+#: templates/team/team_list.html:28
+msgid "Want to coach at FORGE?"
+msgstr "Want to coach at FORGE?"
+
+#: templates/contact/contact.html:79
+msgid "Want to train instead of talk?"
+msgstr "Want to train instead of talk?"
+
+#: templates/contact/booking.html:29
+msgid "We confirm your slot"
+msgstr "We confirm your slot"
+
+#: templates/core/privacy.html:94
+msgid ""
+"We currently set no analytics or advertising cookies. If that changes, they will only"
+" load after you press \"Accept all\" in the cookie banner."
+msgstr ""
+"We currently set no analytics or advertising cookies. If that changes, they will only"
+" load after you press \"Accept all\" in the cookie banner."
+
+#: templates/core/privacy.html:33
+msgid "We do not buy data, and we do not build profiles of visitors."
+msgstr "We do not buy data, and we do not build profiles of visitors."
+
+#: templates/core/privacy.html:28
+msgid "We only collect data you actively send us through a form on this site:"
+msgstr "We only collect data you actively send us through a form on this site:"
+
+#: templates/core/terms.html:75
+msgid ""
+"We take care to keep the information on this site accurate, but we do not accept "
+"liability for loss arising from reliance on it. Nothing in these terms limits "
+"liability where the law does not allow it."
+msgstr ""
+"We take care to keep the information on this site accurate, but we do not accept "
+"liability for loss arising from reliance on it. Nothing in these terms limits "
+"liability where the law does not allow it."
+
+#: templates/partials/_cookie_banner.html:12
+msgid "We use cookies"
+msgstr "We use cookies"
+
+#: templates/partials/_cookie_banner.html:16
+msgid ""
+"We use necessary cookies to make the site work. With your consent we also use "
+"analytics cookies to understand how the site is used."
+msgstr ""
+"We use necessary cookies to make the site work. With your consent we also use "
+"analytics cookies to understand how the site is used."
+
+#: templates/team/team_list.html:30
+msgid ""
+"We're always interested in hearing from certified trainers who put coaching before "
+"selling."
+msgstr ""
+"We're always interested in hearing from certified trainers who put coaching before "
+"selling."
+
+#: core/models.py:84 training/models.py:13
+msgid "Wednesday"
+msgstr "Wednesday"
+
+#: templates/partials/_navbar.html:33 templates/training/class_list.html:27
+#: templates/training/schedule.html:4 templates/training/schedule.html:9
+msgid "Weekly schedule"
+msgstr "Weekly schedule"
+
+#: templates/training/class_detail.html:58
+#, python-format
+msgid "Weekly times for %(name)s"
+msgstr "Weekly times for %(name)s"
+
+#: templates/contact/booking.html:22
+msgid "What happens next"
+msgstr "What happens next"
+
+#: templates/core/home.html:182
+msgid "What our members say"
+msgstr "What our members say"
+
+#: templates/services/service_list.html:9
+msgid "What we offer"
+msgstr "What we offer"
+
+#: templates/core/about.html:31
+msgid "What we stand for"
+msgstr "What we stand for"
+
+#: templates/training/class_detail.html:47
+msgid "What you'll get out of it"
+msgstr "What you'll get out of it"
+
+#: templates/services/service_detail.html:42
+msgid "What's included"
+msgstr "What's included"
+
+#: templates/training/class_detail.html:54
+msgid "When it runs"
+msgstr "When it runs"
+
+#: templates/core/about.html:9 templates/core/home.html:91
+msgid "Who we are"
+msgstr "Who we are"
+
+#: templates/blog/post_detail.html:77
+msgid "Written by"
+msgstr "Written by"
+
+#: templates/core/privacy.html:101
+msgid "You can change your choice at any time:"
+msgstr "You can change your choice at any time:"
+
+#: templates/core/privacy.html:112
+msgid ""
+"You may ask us what data we hold about you, ask for it to be corrected, or ask us to "
+"delete it. Write to the email address below and we will respond within 30 days."
+msgstr ""
+"You may ask us what data we hold about you, ask for it to be corrected, or ask us to "
+"delete it. Write to the email address below and we will respond within 30 days."
+
+#: templates/training/class_detail.html:122
+msgid "You might also like"
+msgstr "You might also like"
+
+#: core/models.py:29 templates/partials/_footer.html:22
+msgid "YouTube"
+msgstr "YouTube"
+
+#: templates/training/class_detail.html:85
+msgid "Your coach"
+msgstr "Your coach"
+
+#: templates/core/home.html:240
+msgid "Your first session is on us"
+msgstr "Your first session is on us"
+
+#: contact/forms.py:58
+msgid "Your message"
+msgstr "Your message"
+
+#: contact/forms.py:49
+msgid "Your name"
+msgstr "Your name"
+
+#: contact/forms.py:39
+msgid "Your submission could not be processed."
+msgstr "Your submission could not be processed."
+
+#: team/models.py:40 training/models.py:52
+msgid "active"
+msgstr "active"
+
+#: core/models.py:141
+msgid "answer"
+msgstr "answer"
+
+#: blog/models.py:50 core/models.py:108
+msgid "author"
+msgstr "author"
+
+#: training/models.py:35
+msgid "benefits"
+msgstr "benefits"
+
+#: team/models.py:24
+msgid "biography"
+msgstr "biography"
+
+#: blog/models.py:15
+msgid "blog categories"
+msgstr "blog categories"
+
+#: blog/models.py:14
+msgid "blog category"
+msgstr "blog category"
+
+#: blog/models.py:37
+msgid "body"
+msgstr "body"
+
+#: contact/models.py:59
+msgid "booking"
+msgstr "booking"
+
+#: contact/models.py:60
+msgid "bookings"
+msgstr "bookings"
+
+#: training/models.py:42
+msgid "capacity"
+msgstr "capacity"
+
+#: services/models.py:77
+msgid "caption"
+msgstr "caption"
+
+#: blog/models.py:42 core/models.py:143 services/models.py:23
+msgid "category"
+msgstr "category"
+
+#: team/models.py:31
+msgid "certifications"
+msgstr "certifications"
+
+#: core/models.py:22
+msgid "city"
+msgstr "city"
+
+#: contact/models.py:42 training/models.py:57 training/models.py:82
+msgid "class"
+msgstr "class"
+
+#: training/models.py:93
+msgid "class session"
+msgstr "class session"
+
+#: training/models.py:94
+msgid "class sessions"
+msgstr "class sessions"
+
+#: training/models.py:58
+msgid "classes"
+msgstr "classes"
+
+#: core/models.py:94
+msgid "closed all day"
+msgstr "closed all day"
+
+#: core/models.py:93
+msgid "closes"
+msgstr "closes"
+
+#: contact/models.py:17
+msgid "contact message"
+msgstr "contact message"
+
+#: contact/models.py:18
+msgid "contact messages"
+msgstr "contact messages"
+
+#: blog/models.py:39
+msgid "cover image"
+msgstr "cover image"
+
+#: contact/models.py:55
+msgid "created"
+msgstr "created"
+
+#: services/models.py:46 training/models.py:41
+msgid "duration (minutes)"
+msgstr "duration (minutes)"
+
+#: contact/models.py:7 contact/models.py:37 core/models.py:25 team/models.py:37
+msgid "email"
+msgstr "email"
+
+#: blog/models.py:36
+msgid "excerpt"
+msgstr "excerpt"
+
+#: core/models.py:113
+msgid "featured"
+msgstr "featured"
+
+#: services/models.py:49
+msgid "featured on homepage"
+msgstr "featured on homepage"
+
+#: training/models.py:116
+msgid "features"
+msgstr "features"
+
+#: templates/partials/_service_card.html:19
+msgid "from"
+msgstr "from"
+
+#: services/models.py:38 training/models.py:34
+msgid "full description"
+msgstr "full description"
+
+#: team/models.py:20
+msgid "full name"
+msgstr "full name"
+
+#: core/models.py:19
+msgid "hero image"
+msgstr "hero image"
+
+#: training/models.py:117
+msgid "highlight this plan"
+msgstr "highlight this plan"
+
+#: services/models.py:32
+msgid "icon"
+msgstr "icon"
+
+#: services/models.py:48 services/models.py:76 training/models.py:37
+msgid "image"
+msgstr "image"
+
+#: templates/training/class_detail.html:23 training/models.py:39
+msgid "intensity"
+msgstr "intensity"
+
+#: core/models.py:18
+msgid "logo"
+msgstr "logo"
+
+#: core/models.py:31
+msgid "map latitude"
+msgstr "map latitude"
+
+#: core/models.py:32
+msgid "map longitude"
+msgstr "map longitude"
+
+#: training/models.py:122
+msgid "membership plan"
+msgstr "membership plan"
+
+#: training/models.py:123
+msgid "membership plans"
+msgstr "membership plans"
+
+#: contact/models.py:10
+msgid "message"
+msgstr "message"
+
+#: templates/partials/_class_card.html:14 templates/training/class_detail.html:24
+msgid "min"
+msgstr "min"
+
+#: templates/blog/post_detail.html:43 templates/partials/_post_card.html:20
+msgid "min read"
+msgstr "min read"
+
+#: templates/services/service_detail.html:75 templates/training/class_detail.html:101
+msgid "minutes"
+msgstr "minutes"
+
+#: blog/models.py:8 contact/models.py:6 contact/models.py:36 core/models.py:14
+#: services/models.py:7 team/models.py:7 training/models.py:109
+msgid "name"
+msgstr "name"
+
+#: contact/models.py:50
+msgid "notes"
+msgstr "notes"
+
+#: core/models.py:98 core/models.py:99
+msgid "opening hours"
+msgstr "opening hours"
+
+#: core/models.py:92
+msgid "opens"
+msgstr "opens"
+
+#: blog/models.py:10 core/models.py:114 core/models.py:145 services/models.py:9
+#: services/models.py:50 services/models.py:78 team/models.py:41 training/models.py:53
+#: training/models.py:118
+msgid "order"
+msgstr "order"
+
+#: templates/training/class_detail.html:105
+msgid "people"
+msgstr "people"
+
+#: training/models.py:115
+msgid "period"
+msgstr "period"
+
+#: contact/models.py:8 contact/models.py:38 core/models.py:24
+msgid "phone"
+msgstr "phone"
+
+#: core/models.py:112 team/models.py:26
+msgid "photo"
+msgstr "photo"
+
+#: blog/models.py:66
+msgid "post"
+msgstr "post"
+
+#: core/models.py:23
+msgid "postal code"
+msgstr "postal code"
+
+#: blog/models.py:67
+msgid "posts"
+msgstr "posts"
+
+#: contact/models.py:48
+msgid "preferred date"
+msgstr "preferred date"
+
+#: contact/models.py:49
+msgid "preferred time"
+msgstr "preferred time"
+
+#: training/models.py:112
+msgid "price (MKD)"
+msgstr "price (MKD)"
+
+#: services/models.py:43
+msgid "price from (MKD)"
+msgstr "price from (MKD)"
+
+#: blog/models.py:58
+msgid "published"
+msgstr "published"
+
+#: blog/models.py:57
+msgid "published at"
+msgstr "published at"
+
+#: core/models.py:140
+msgid "question"
+msgstr "question"
+
+#: core/models.py:111
+msgid "rating"
+msgstr "rating"
+
+#: contact/models.py:13
+msgid "read"
+msgstr "read"
+
+#: contact/models.py:12
+msgid "received"
+msgstr "received"
+
+#: core/models.py:109 team/models.py:22
+msgid "role"
+msgstr "role"
+
+#: training/models.py:88
+msgid "room"
+msgstr "room"
+
+#: services/models.py:54 services/models.py:72
+msgid "service"
+msgstr "service"
+
+#: services/models.py:14
+msgid "service categories"
+msgstr "service categories"
+
+#: services/models.py:13
+msgid "service category"
+msgstr "service category"
+
+#: services/models.py:82
+msgid "service image"
+msgstr "service image"
+
+#: services/models.py:83
+msgid "service images"
+msgstr "service images"
+
+#: services/models.py:55
+msgid "services"
+msgstr "services"
+
+#: templates/training/schedule.html:23
+msgid "sessions"
+msgstr "sessions"
+
+#: core/models.py:16
+msgid "short about"
+msgstr "short about"
+
+#: team/models.py:23
+msgid "short bio"
+msgstr "short bio"
+
+#: services/models.py:37 training/models.py:33
+msgid "short description"
+msgstr "short description"
+
+#: core/models.py:35 core/models.py:36
+msgid "site settings"
+msgstr "site settings"
+
+#: blog/models.py:9 blog/models.py:35 services/models.py:8 services/models.py:30
+#: team/models.py:8 team/models.py:21 training/models.py:32 training/models.py:110
+msgid "slug"
+msgstr "slug"
+
+#: team/models.py:13 team/models.py:28
+msgid "specialties"
+msgstr "specialties"
+
+#: team/models.py:12
+msgid "specialty"
+msgstr "specialty"
+
+#: training/models.py:87
+msgid "start time"
+msgstr "start time"
+
+#: contact/models.py:53
+msgid "status"
+msgstr "status"
+
+#: core/models.py:21
+msgid "street"
+msgstr "street"
+
+#: contact/models.py:9
+msgid "subject"
+msgstr "subject"
+
+#: core/models.py:15 training/models.py:111
+msgid "tagline"
+msgstr "tagline"
+
+#: team/models.py:45
+msgid "team member"
+msgstr "team member"
+
+#: team/models.py:46
+msgid "team members"
+msgstr "team members"
+
+#: core/models.py:118
+msgid "testimonial"
+msgstr "testimonial"
+
+#: core/models.py:119
+msgid "testimonials"
+msgstr "testimonials"
+
+#: core/models.py:110
+msgid "text"
+msgstr "text"
+
+#: blog/models.py:34 services/models.py:29 training/models.py:31
+msgid "title"
+msgstr "title"
+
+#: training/models.py:45
+msgid "trainer"
+msgstr "trainer"
+
+#: templates/contact/booking.html:52
+msgid "training clothes, indoor shoes, a water bottle and a towel."
+msgstr "training clothes, indoor shoes, a water bottle and a towel."
+
+#: contact/models.py:63
+msgid "trial session"
+msgstr "trial session"
+
+#: blog/models.py:59
+msgid "views"
+msgstr "views"
+
+#: core/models.py:91 training/models.py:86
+msgid "weekday"
+msgstr "weekday"
+
+#: services/models.py:40
+msgid "what's included"
+msgstr "what's included"
+
+#: templates/team/team_detail.html:41
+msgid "years"
+msgstr "years"
+
+#: team/models.py:34
+msgid "years of experience"
+msgstr "years of experience"
+

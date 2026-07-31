@@ -5,6 +5,10 @@
   so both paths render identical markup.
 {% endcomment %}
 <div id="postGrid">
+  <h2 class="visually-hidden">
+    {% if active_category %}{{ active_category.name }}{% else %}{% trans "All articles" %}{% endif %}
+  </h2>
+
   <div class="row g-4">
     {% for post in posts %}
       <div class="col-md-6 col-lg-4 d-flex">

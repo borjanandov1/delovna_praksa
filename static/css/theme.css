@@ -209,6 +209,18 @@ h3, .h3 { font-size: clamp(1.5rem, 3vw, 2.125rem); }
 .navbar-forge .nav-link:hover,
 .navbar-forge .nav-link.active { color: var(--forge-black); }
 
+/* The Classes dropdown toggle is a <button> (no dead href="#"), so strip the
+   button chrome and make it sit exactly like the sibling <a> nav links. */
+.navbar-forge button.nav-link {
+  border: 0;
+  background: none;
+  text-decoration: none;
+  font-family: inherit;
+  line-height: inherit;
+  padding-block: .5rem;
+}
+.navbar-forge button.nav-link:hover { transform: none; }
+
 /* Lime underline on the current page */
 .navbar-forge .nav-link.active::after {
   content: "";
@@ -444,9 +456,13 @@ h3, .h3 { font-size: clamp(1.5rem, 3vw, 2.125rem); }
   color: rgba(255,255,255,.62);
   padding-block: 4rem 2rem;
 }
-.footer h5 {
+/* Footer column headings are <h2> for a correct document outline (an <h5>
+   after page content at h2/h3 is a heading-level skip). Styled small here. */
+.footer h2 {
   color: #fff;
   font-size: .8125rem;
+  font-family: var(--bs-body-font-family);
+  font-weight: 700;
   letter-spacing: .14em;
   text-transform: uppercase;
   margin-bottom: 1.25rem;

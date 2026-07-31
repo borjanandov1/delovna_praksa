@@ -23,8 +23,11 @@
     <div class="col-12">{{ form.message|as_crispy_field }}</div>
   </div>
 
-  {# Honeypot: off-screen, never focusable, invisible to screen readers. #}
-  <div class="hp-field" aria-hidden="true">{{ form.website }}</div>
+  {# Honeypot: off-screen, out of tab order, but with a real label for AT. #}
+  <div class="hp-field">
+    <label for="{{ form.website.id_for_label }}">{{ form.website.label }}</label>
+    {{ form.website }}
+  </div>
 
   <button type="submit" class="btn btn-accent btn-lg mt-4">
     <span class="htmx-indicator spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>

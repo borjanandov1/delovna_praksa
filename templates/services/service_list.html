@@ -24,6 +24,11 @@
       </nav>
     {% endif %}
 
+    {# Names the grid so the outline runs h1 - h2 - h3 without skipping a level. #}
+    <h2 class="visually-hidden">
+      {% if active_category %}{{ active_category.name }}{% else %}{% trans "All services" %}{% endif %}
+    </h2>
+
     <div class="row g-4">
       {% for service in services %}
         <div class="col-md-6 col-lg-4 d-flex">
