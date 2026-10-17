@@ -43,8 +43,6 @@ class ClassDetailView(DetailView):
 
 
 class ScheduleView(TemplateView):
-    """Weekly timetable, grouped one block per weekday."""
-
     template_name = "training/schedule.html"
 
     def get_context_data(self, **kwargs):
@@ -59,7 +57,6 @@ class ScheduleView(TemplateView):
         for session in sessions:
             by_day[session.weekday].append(session)
 
-        # List of (label, sessions) so the template can just loop.
         ctx["schedule"] = [(label, by_day[value]) for value, label in WEEKDAYS]
         ctx["has_sessions"] = sessions.exists()
         return ctx

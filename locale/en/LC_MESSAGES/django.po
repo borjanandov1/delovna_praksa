@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FORGE Fitness Studio VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-08-01 00:27+0200\n"
+"POT-Creation-Date: 2026-10-17 18:24+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -32,7 +32,7 @@ msgstr "1. Using this website"
 msgid "1. Who we are"
 msgstr "1. Who we are"
 
-#: core/views.py:45
+#: core/views.py:42
 msgid "1200 members and a coaching team of eight."
 msgstr "1200 members and a coaching team of eight."
 
@@ -118,7 +118,7 @@ msgstr "About"
 msgid "About us"
 msgstr "About us"
 
-#: templates/partials/_cookie_banner.html:25
+#: templates/partials/_cookie_banner.html:19
 msgid "Accept all"
 msgstr "Accept all"
 
@@ -130,7 +130,12 @@ msgstr "Address"
 msgid "All"
 msgstr "All"
 
-#: templates/core/home.html:72 templates/partials/_navbar.html:32
+#: templates/blog/partials/_post_grid.html:4
+msgid "All articles"
+msgstr "All articles"
+
+#: templates/core/home.html:69 templates/partials/_navbar.html:34
+#: templates/training/class_list.html:32
 msgid "All classes"
 msgstr "All classes"
 
@@ -138,13 +143,17 @@ msgstr "All classes"
 msgid "All levels"
 msgstr "All levels"
 
-#: templates/core/home.html:220
+#: templates/core/home.html:212
 msgid "All posts"
 msgstr "All posts"
 
 #: templates/partials/_footer.html:83
 msgid "All rights reserved."
 msgstr "All rights reserved."
+
+#: templates/services/service_list.html:28
+msgid "All services"
+msgstr "All services"
 
 #: templates/core/terms.html:66
 msgid ""
@@ -154,7 +163,7 @@ msgstr ""
 "All text, photographs and the FORGE name and logo on this site belong to FORGE "
 "Fitness Studio and may not be reused without written permission."
 
-#: templates/core/about.html:73 templates/core/home.html:118
+#: templates/core/about.html:72 templates/core/home.html:113
 msgid "All trainers"
 msgstr "All trainers"
 
@@ -184,11 +193,11 @@ msgid "Back to homepage"
 msgstr "Back to homepage"
 
 #: templates/blog/post_detail.html:22 templates/blog/post_list.html:4
-#: templates/partials/_footer.html:36 templates/partials/_navbar.html:54
+#: templates/partials/_footer.html:36 templates/partials/_navbar.html:56
 msgid "Blog"
 msgstr "Blog"
 
-#: templates/blog/partials/_post_grid.html:22
+#: templates/blog/partials/_post_grid.html:21
 msgid "Blog pagination"
 msgstr "Blog pagination"
 
@@ -196,7 +205,7 @@ msgstr "Blog pagination"
 msgid "Book a class"
 msgstr "Book a class"
 
-#: templates/services/service_list.html:46
+#: templates/services/service_list.html:50
 msgid ""
 "Book a free consultation and we'll put together a plan that fits your goals and your "
 "schedule."
@@ -205,13 +214,13 @@ msgstr ""
 "schedule."
 
 #: templates/contact/booking.html:4 templates/contact/contact.html:82
-#: templates/core/about.html:90 templates/core/home.html:28 templates/core/home.html:262
-#: templates/services/service_list.html:48 templates/training/class_list.html:50
+#: templates/core/about.html:89 templates/core/home.html:27 templates/core/home.html:253
+#: templates/services/service_list.html:52 templates/training/class_list.html:54
 #: templates/training/pricing.html:73
 msgid "Book a free trial"
 msgstr "Book a free trial"
 
-#: templates/core/about.html:88
+#: templates/core/about.html:87
 msgid "Book a free trial session and train with us before you decide."
 msgstr "Book a free trial session and train with us before you decide."
 
@@ -247,7 +256,7 @@ msgstr ""
 "Booking form: your name, email address, phone number, chosen class and preferred date"
 " and time."
 
-#: contact/views.py:102
+#: contact/views.py:88
 msgid "Booking received. We'll confirm your session by phone or email."
 msgstr "Booking received. We'll confirm your session by phone or email."
 
@@ -259,7 +268,7 @@ msgstr "Booking requested"
 msgid "Bootstrap Icons class, e.g. bi-heart-pulse"
 msgstr "Bootstrap Icons class, e.g. bi-heart-pulse"
 
-#: templates/blog/post_detail.html:19 templates/partials/_page_header.html:13
+#: templates/blog/post_detail.html:19 templates/partials/_page_header.html:5
 #: templates/services/service_detail.html:14 templates/team/team_detail.html:14
 #: templates/training/class_detail.html:14
 msgid "Breadcrumb"
@@ -269,7 +278,7 @@ msgstr "Breadcrumb"
 msgid "Bring"
 msgstr "Bring"
 
-#: templates/core/home.html:20
+#: templates/core/home.html:19
 msgid "Build the body.<br>Forge the <span class=\"mark-lime\">mindset</span>."
 msgstr "Build the body.<br>Forge the <span class=\"mark-lime\">mindset</span>."
 
@@ -277,7 +286,7 @@ msgstr "Build the body.<br>Forge the <span class=\"mark-lime\">mindset</span>."
 msgid "By phone or email, usually within a few hours."
 msgstr "By phone or email, usually within a few hours."
 
-#: templates/contact/partials/_contact_form.html:35
+#: templates/contact/partials/_contact_form.html:33
 msgid "By sending this form you agree to us storing your details so we can reply."
 msgstr "By sending this form you agree to us storing your details so we can reply."
 
@@ -289,11 +298,11 @@ msgstr ""
 "By using this website you agree to these terms. The content is provided for "
 "information about our studio, classes and memberships."
 
-#: contact/admin.py:45
+#: contact/admin.py:44
 msgid "Cancel selected bookings"
 msgstr "Cancel selected bookings"
 
-#: contact/models.py:33
+#: contact/models.py:31
 msgid "Cancelled"
 msgstr "Cancelled"
 
@@ -313,11 +322,11 @@ msgstr ""
 "Certified coaches who write your programme, correct your technique and remember your "
 "name."
 
-#: core/views.py:44
+#: core/views.py:41
 msgid "Certified strength & conditioning programme launched."
 msgstr "Certified strength & conditioning programme launched."
 
-#: templates/core/home.html:49
+#: templates/core/home.html:47
 msgid "Certified trainers"
 msgstr "Certified trainers"
 
@@ -329,7 +338,7 @@ msgstr "Class"
 msgid "Class size"
 msgstr "Class size"
 
-#: templates/partials/_footer.html:31 templates/partials/_navbar.html:29
+#: templates/partials/_footer.html:31 templates/partials/_navbar.html:31
 #: templates/training/class_detail.html:4 templates/training/class_detail.html:17
 msgid "Classes"
 msgstr "Classes"
@@ -347,7 +356,7 @@ msgstr "Classes led by"
 msgid "Classes on %(day_label)s"
 msgstr "Classes on %(day_label)s"
 
-#: templates/core/home.html:53
+#: templates/core/home.html:51
 msgid "Classes per week"
 msgstr "Classes per week"
 
@@ -360,7 +369,7 @@ msgstr "Closed"
 msgid "Coach"
 msgstr "Coach"
 
-#: templates/core/about.html:71
+#: templates/core/about.html:70
 msgid "Coaches who show up"
 msgstr "Coaches who show up"
 
@@ -372,28 +381,28 @@ msgstr "Coaching first — every member gets a plan"
 msgid "Coaching, recovery and nutrition support — built around what you actually need."
 msgstr "Coaching, recovery and nutrition support — built around what you actually need."
 
-#: templates/core/home.html:239
+#: templates/core/home.html:230
 msgid "Come by"
 msgstr "Come by"
 
-#: templates/core/about.html:86
+#: templates/core/about.html:85
 msgid "Come see the place"
 msgstr "Come see the place"
 
-#: templates/core/home.html:170
+#: templates/core/home.html:164
 msgid "Compare all membership options"
 msgstr "Compare all membership options"
 
-#: contact/admin.py:41
+#: contact/admin.py:40
 msgid "Confirm selected bookings"
 msgstr "Confirm selected bookings"
 
-#: contact/models.py:32
+#: contact/models.py:30
 msgid "Confirmed"
 msgstr "Confirmed"
 
 #: core/admin.py:17 templates/partials/_footer.html:38 templates/partials/_footer.html:43
-#: templates/partials/_navbar.html:60
+#: templates/partials/_navbar.html:62
 msgid "Contact"
 msgstr "Contact"
 
@@ -418,7 +427,7 @@ msgstr "Cookie settings"
 msgid "Cookies used on this website"
 msgstr "Cookies used on this website"
 
-#: templates/core/home.html:258
+#: templates/core/home.html:249
 msgid "Currently closed"
 msgstr "Currently closed"
 
@@ -426,7 +435,7 @@ msgstr "Currently closed"
 msgid "Day"
 msgstr "Day"
 
-#: templates/core/home.html:242
+#: templates/core/home.html:233
 msgid ""
 "Drop in for a free trial, meet the trainers and see the floor before you commit to "
 "anything."
@@ -454,7 +463,7 @@ msgstr "Every membership starts with a free trial session and a fitness assessme
 msgid "Everything people usually ask before their first session."
 msgstr "Everything people usually ask before their first session."
 
-#: core/views.py:43
+#: core/views.py:40
 msgid "Expanded to 1400m² and added the group-class studio."
 msgstr "Expanded to 1400m² and added the group-class studio."
 
@@ -466,11 +475,11 @@ msgstr "Experience"
 msgid "Explore"
 msgstr "Explore"
 
-#: core/models.py:149 templates/partials/_footer.html:37
+#: core/models.py:131 templates/partials/_footer.html:37
 msgid "FAQ"
 msgstr "FAQ"
 
-#: core/models.py:150
+#: core/models.py:132
 msgid "FAQs"
 msgstr "FAQs"
 
@@ -486,7 +495,7 @@ msgstr ""
 " intimidation. Today we run a 1400m² floor, forty classes a week and a coaching team "
 "that still knows every member by name."
 
-#: core/models.py:27 templates/partials/_footer.html:14
+#: core/models.py:19 templates/partials/_footer.html:14
 msgid "Facebook"
 msgstr "Facebook"
 
@@ -502,7 +511,11 @@ msgstr "Filter posts by category"
 msgid "Filter services by category"
 msgstr "Filter services by category"
 
-#: templates/training/class_list.html:46
+#: templates/training/class_list.html:32
+msgid "Filtered classes"
+msgstr "Filtered classes"
+
+#: templates/training/class_list.html:50
 msgid "First class is free"
 msgstr "First class is free"
 
@@ -518,11 +531,11 @@ msgstr ""
 msgid "Free induction session"
 msgstr "Free induction session"
 
-#: templates/contact/booking.html:9 templates/partials/_navbar.html:79
+#: templates/contact/booking.html:9 templates/partials/_navbar.html:80
 msgid "Free trial"
 msgstr "Free trial"
 
-#: contact/forms.py:102
+#: contact/forms.py:88
 msgid "Free trial session (any class)"
 msgstr "Free trial session (any class)"
 
@@ -534,7 +547,7 @@ msgstr "Freeze your membership up to 2 months"
 msgid "Frequently asked questions"
 msgstr "Frequently asked questions"
 
-#: core/models.py:86 training/models.py:15
+#: core/models.py:69 training/models.py:10
 msgid "Friday"
 msgstr "Friday"
 
@@ -542,12 +555,12 @@ msgstr "Friday"
 msgid "Gallery"
 msgstr "Gallery"
 
-#: core/models.py:135
+#: core/models.py:117
 msgid "General"
 msgstr "General"
 
 #: templates/contact/contact.html:9 templates/team/team_detail.html:50
-#: templates/team/team_list.html:32
+#: templates/team/team_list.html:34
 msgid "Get in touch"
 msgstr "Get in touch"
 
@@ -559,11 +572,11 @@ msgstr ""
 "Get in touch with FORGE Fitness Studio — address, phone, email, opening hours and a "
 "contact form."
 
-#: templates/core/home.html:163 templates/training/pricing.html:38
+#: templates/core/home.html:157 templates/training/pricing.html:38
 msgid "Get started"
 msgstr "Get started"
 
-#: templates/core/home.html:70 templates/training/class_list.html:4
+#: templates/core/home.html:67 templates/training/class_list.html:4
 #: templates/training/class_list.html:9
 msgid "Group classes"
 msgstr "Group classes"
@@ -580,11 +593,11 @@ msgstr ""
 msgid "Help"
 msgstr "Help"
 
-#: training/models.py:28
+#: training/models.py:23
 msgid "High"
 msgstr "High"
 
-#: templates/blog/post_detail.html:21 templates/partials/_page_header.html:15
+#: templates/blog/post_detail.html:21 templates/partials/_page_header.html:7
 #: templates/services/service_detail.html:16 templates/team/team_detail.html:16
 #: templates/training/class_detail.html:16
 msgid "Home"
@@ -598,11 +611,11 @@ msgstr ""
 "How FORGE Fitness Studio collects, uses and stores personal data, and which cookies "
 "the site sets."
 
-#: contact/forms.py:57
+#: contact/forms.py:43
 msgid "How can we help?"
 msgstr "How can we help?"
 
-#: templates/core/about.html:50
+#: templates/core/about.html:49
 msgid "How we got here"
 msgstr "How we got here"
 
@@ -614,7 +627,7 @@ msgstr "Identity"
 msgid "Included with every membership"
 msgstr "Included with every membership"
 
-#: core/models.py:28 team/models.py:38 templates/partials/_footer.html:18
+#: core/models.py:20 team/models.py:38 templates/partials/_footer.html:18
 msgid "Instagram"
 msgstr "Instagram"
 
@@ -622,11 +635,11 @@ msgstr "Instagram"
 msgid "Intensity"
 msgstr "Intensity"
 
-#: templates/team/team_list.html:27
+#: templates/team/team_list.html:29
 msgid "Join us"
 msgstr "Join us"
 
-#: templates/blog/post_list.html:9 templates/core/home.html:217
+#: templates/blog/post_list.html:9 templates/core/home.html:209
 msgid "Journal"
 msgstr "Journal"
 
@@ -642,11 +655,11 @@ msgstr "Keeps a logged-in administrator signed in."
 msgid "Last updated"
 msgstr "Last updated"
 
-#: templates/core/home.html:218
+#: templates/core/home.html:210
 msgid "Latest from the blog"
 msgstr "Latest from the blog"
 
-#: contact/forms.py:25
+#: contact/forms.py:16
 msgid "Leave this field empty"
 msgstr "Leave this field empty"
 
@@ -658,11 +671,11 @@ msgstr "Legal"
 msgid "Locker and shower access"
 msgstr "Locker and shower access"
 
-#: training/models.py:26
+#: training/models.py:21
 msgid "Low"
 msgstr "Low"
 
-#: templates/core/home.html:155 templates/partials/_service_card.html:19
+#: templates/core/home.html:149 templates/partials/_service_card.html:19
 #: templates/services/service_detail.html:71 templates/training/pricing.html:30
 msgid "MKD"
 msgstr "MKD"
@@ -679,15 +692,15 @@ msgstr "Manage the website"
 msgid "Map"
 msgstr "Map"
 
-#: templates/contact/contact.html:93 templates/core/home.html:268
+#: templates/contact/contact.html:93 templates/core/home.html:259
 msgid "Map showing the location of the gym"
 msgstr "Map showing the location of the gym"
 
-#: contact/admin.py:21
+#: contact/admin.py:20
 msgid "Mark selected messages as read"
 msgstr "Mark selected messages as read"
 
-#: contact/admin.py:25
+#: contact/admin.py:24
 msgid "Mark selected messages as unread"
 msgstr "Mark selected messages as unread"
 
@@ -695,7 +708,7 @@ msgstr "Mark selected messages as unread"
 msgid "Max"
 msgstr "Max"
 
-#: training/models.py:27
+#: training/models.py:22
 msgid "Medium"
 msgstr "Medium"
 
@@ -707,15 +720,15 @@ msgstr ""
 "Meet the certified coaching team at FORGE Fitness Studio — strength, conditioning, "
 "mobility and nutrition specialists."
 
-#: templates/core/home.html:116
+#: templates/core/home.html:111
 msgid "Meet your trainers"
 msgstr "Meet your trainers"
 
-#: templates/core/home.html:45
+#: templates/core/home.html:43
 msgid "Members"
 msgstr "Members"
 
-#: core/models.py:136
+#: core/models.py:118
 msgid "Membership"
 msgstr "Membership"
 
@@ -723,8 +736,8 @@ msgstr "Membership"
 msgid "Membership options are being updated. Please contact us for current prices."
 msgstr "Membership options are being updated. Please contact us for current prices."
 
-#: templates/core/home.html:137 templates/partials/_footer.html:33
-#: templates/partials/_navbar.html:35 templates/training/pricing.html:9
+#: templates/core/home.html:131 templates/partials/_footer.html:33
+#: templates/partials/_navbar.html:37 templates/training/pricing.html:9
 msgid "Memberships"
 msgstr "Memberships"
 
@@ -736,19 +749,19 @@ msgstr "Memberships & pricing"
 msgid "Message sent"
 msgstr "Message sent"
 
-#: templates/core/about.html:49
+#: templates/core/about.html:48
 msgid "Milestones"
 msgstr "Milestones"
 
-#: core/models.py:82 training/models.py:11
+#: core/models.py:65 training/models.py:6
 msgid "Monday"
 msgstr "Monday"
 
-#: templates/core/about.html:9 templates/core/home.html:92
+#: templates/core/about.html:9 templates/core/home.html:88
 msgid "More than a gym"
 msgstr "More than a gym"
 
-#: templates/core/home.html:147 templates/training/pricing.html:19
+#: templates/core/home.html:141 templates/training/pricing.html:19
 msgid "Most popular"
 msgstr "Most popular"
 
@@ -765,11 +778,11 @@ msgstr "Necessary"
 msgid "Need to change or cancel?"
 msgstr "Need to change or cancel?"
 
-#: templates/blog/partials/_post_grid.html:41
+#: templates/blog/partials/_post_grid.html:40
 msgid "Next page"
 msgstr "Next page"
 
-#: templates/training/class_list.html:37
+#: templates/training/class_list.html:41
 msgid "No classes match this filter."
 msgstr "No classes match this filter."
 
@@ -789,7 +802,7 @@ msgstr ""
 "No membership, no card details, no pressure. Pick a time and we'll confirm it with "
 "you."
 
-#: templates/blog/partials/_post_grid.html:16
+#: templates/blog/partials/_post_grid.html:15
 msgid "No posts found. Try a different search or category."
 msgstr "No posts found. Try a different search or category."
 
@@ -797,11 +810,11 @@ msgstr "No posts found. Try a different search or category."
 msgid "No questions have been published yet."
 msgstr "No questions have been published yet."
 
-#: templates/services/service_list.html:34
+#: templates/services/service_list.html:38
 msgid "No services in this category yet."
 msgstr "No services in this category yet."
 
-#: templates/services/service_list.html:44
+#: templates/services/service_list.html:48
 msgid "Not sure where to start?"
 msgstr "Not sure where to start?"
 
@@ -809,19 +822,19 @@ msgstr "Not sure where to start?"
 msgid "One item per line."
 msgstr "One item per line."
 
-#: team/models.py:31 training/models.py:35 training/models.py:116
+#: team/models.py:31 training/models.py:30 training/models.py:106
 msgid "One per line."
 msgstr "One per line."
 
-#: templates/partials/_cookie_banner.html:28
+#: templates/partials/_cookie_banner.html:22
 msgid "Only necessary"
 msgstr "Only necessary"
 
-#: templates/contact/contact.html:61 templates/core/home.html:258
+#: templates/contact/contact.html:61 templates/core/home.html:249
 msgid "Open now"
 msgstr "Open now"
 
-#: core/views.py:42
+#: core/views.py:39
 msgid "Opened with two racks in a converted textile workshop."
 msgstr "Opened with two racks in a converted textile workshop."
 
@@ -833,7 +846,7 @@ msgstr "Opening hours"
 msgid "Other trainers"
 msgstr "Other trainers"
 
-#: templates/core/about.html:15 templates/core/home.html:94
+#: templates/core/about.html:15 templates/core/home.html:90
 msgid "Our story"
 msgstr "Our story"
 
@@ -850,7 +863,7 @@ msgstr "Our trainers"
 msgid "Page not found"
 msgstr "Page not found"
 
-#: contact/models.py:31
+#: contact/models.py:29
 msgid "Pending"
 msgstr "Pending"
 
@@ -866,7 +879,7 @@ msgstr ""
 msgid "Phone"
 msgstr "Phone"
 
-#: templates/core/home.html:138
+#: templates/core/home.html:132
 msgid "Pick your plan"
 msgstr "Pick your plan"
 
@@ -878,11 +891,11 @@ msgstr ""
 "Please cancel at least four hours before a booked class so the place can be offered "
 "to someone else. Repeated no-shows may result in booking restrictions."
 
-#: contact/forms.py:110
+#: contact/forms.py:95
 msgid "Please choose a date in the future."
 msgstr "Please choose a date in the future."
 
-#: contact/forms.py:70
+#: contact/forms.py:56
 msgid "Please write at least 10 characters so we can help properly."
 msgstr "Please write at least 10 characters so we can help properly."
 
@@ -890,7 +903,7 @@ msgstr "Please write at least 10 characters so we can help properly."
 msgid "Practical advice from our coaches — no fads, no supplements to sell you."
 msgstr "Practical advice from our coaches — no fads, no supplements to sell you."
 
-#: templates/blog/partials/_post_grid.html:27
+#: templates/blog/partials/_post_grid.html:26
 msgid "Previous page"
 msgstr "Previous page"
 
@@ -908,8 +921,8 @@ msgstr ""
 "prices, class timetables and opening hours; the version published on this website at "
 "the time of purchase applies."
 
-#: templates/contact/partials/_booking_form.html:33
-#: templates/contact/partials/_contact_form.html:38 templates/core/privacy.html:4
+#: templates/contact/partials/_booking_form.html:36
+#: templates/contact/partials/_contact_form.html:36 templates/core/privacy.html:4
 #: templates/core/privacy.html:9 templates/partials/_footer.html:85
 msgid "Privacy Policy"
 msgstr "Privacy Policy"
@@ -934,12 +947,12 @@ msgstr ""
 msgid "Questions about these terms:"
 msgstr "Questions about these terms:"
 
-#: templates/core/home.html:189
+#: templates/core/home.html:182
 #, python-format
 msgid "Rated %(n)s out of 5"
 msgstr "Rated %(n)s out of 5"
 
-#: templates/partials/_cookie_banner.html:20
+#: templates/partials/_cookie_banner.html:14
 msgid "Read our Privacy Policy"
 msgstr "Read our Privacy Policy"
 
@@ -955,7 +968,7 @@ msgstr "Related services"
 msgid "Remembers whether you chose Macedonian or English."
 msgstr "Remembers whether you chose Macedonian or English."
 
-#: templates/contact/partials/_booking_form.html:28
+#: templates/contact/partials/_booking_form.html:31
 msgid "Request booking"
 msgstr "Request booking"
 
@@ -963,7 +976,7 @@ msgstr "Request booking"
 msgid "Reserve your spot"
 msgstr "Reserve your spot"
 
-#: templates/core/home.html:181
+#: templates/core/home.html:174
 msgid "Results"
 msgstr "Results"
 
@@ -975,7 +988,7 @@ msgstr "Room"
 msgid "Same timetable every week. Book a place, or just turn up ten minutes early."
 msgstr "Same timetable every week. Book a place, or just turn up ten minutes early."
 
-#: core/models.py:87 training/models.py:16
+#: core/models.py:70 training/models.py:11
 msgid "Saturday"
 msgstr "Saturday"
 
@@ -1000,11 +1013,11 @@ msgid "See full schedule"
 msgstr "See full schedule"
 
 #: templates/404.html:20 templates/contact/partials/_booking_success.html:23
-#: templates/core/home.html:31
+#: templates/core/home.html:30
 msgid "See the schedule"
 msgstr "See the schedule"
 
-#: templates/contact/partials/_contact_form.html:31
+#: templates/contact/partials/_contact_form.html:29
 msgid "Send message"
 msgstr "Send message"
 
@@ -1016,7 +1029,7 @@ msgstr "Send us a message"
 msgid "Send us a message and we'll get back to you within one working day."
 msgstr "Send us a message and we'll get back to you within one working day."
 
-#: templates/partials/_footer.html:34 templates/partials/_navbar.html:42
+#: templates/partials/_footer.html:34 templates/partials/_navbar.html:44
 #: templates/services/service_detail.html:17 templates/services/service_list.html:4
 #: templates/services/service_list.html:9
 msgid "Services"
@@ -1030,11 +1043,11 @@ msgstr "Session length"
 msgid "Simple, honest pricing"
 msgstr "Simple, honest pricing"
 
-#: templates/core/home.html:18
+#: templates/core/home.html:17
 msgid "Since 2019"
 msgstr "Since 2019"
 
-#: templates/base.html:53
+#: templates/base.html:47
 msgid "Skip to content"
 msgstr "Skip to content"
 
@@ -1076,7 +1089,7 @@ msgstr ""
 "confirmed once we contact you by phone or email. Places in group classes are limited "
 "by the capacity shown on each class page."
 
-#: core/models.py:88 training/models.py:17
+#: core/models.py:71 training/models.py:12
 msgid "Sunday"
 msgstr "Sunday"
 
@@ -1093,9 +1106,13 @@ msgstr ""
 msgid "Terms of Use"
 msgstr "Terms of Use"
 
-#: contact/views.py:78
+#: contact/views.py:64
 msgid "Thanks — your message has been sent. We'll reply shortly."
 msgstr "Thanks — your message has been sent. We'll reply shortly."
+
+#: templates/team/team_list.html:13
+msgid "The coaching team"
+msgstr "The coaching team"
 
 #: templates/training/schedule.html:5
 msgid ""
@@ -1113,7 +1130,7 @@ msgstr "The page you were looking for does not exist."
 msgid "The page you're looking for doesn't exist or has been moved."
 msgstr "The page you're looking for doesn't exist or has been moved."
 
-#: templates/core/about.html:70 templates/core/home.html:115
+#: templates/core/about.html:69 templates/core/home.html:110
 #: templates/team/team_list.html:9
 msgid "The team"
 msgstr "The team"
@@ -1122,7 +1139,7 @@ msgstr "The team"
 msgid "The timetable is being updated. Please check back shortly."
 msgstr "The timetable is being updated. Please check back shortly."
 
-#: templates/contact/partials/_booking_form.html:32
+#: templates/contact/partials/_booking_form.html:35
 msgid "This is a request — we'll confirm your place by phone or email."
 msgstr "This is a request — we'll confirm your place by phone or email."
 
@@ -1138,7 +1155,7 @@ msgstr ""
 "This website is operated by FORGE Fitness Studio. If you have any question about how "
 "your data is handled, contact us using the details at the bottom of this page."
 
-#: core/models.py:85 training/models.py:14
+#: core/models.py:68 training/models.py:9
 msgid "Thursday"
 msgstr "Thursday"
 
@@ -1167,20 +1184,20 @@ msgstr "Train with %(name)s"
 msgid "Train with a coach"
 msgstr "Train with a coach"
 
-#: templates/core/home.html:69 templates/training/class_list.html:9
+#: templates/core/home.html:66 templates/training/class_list.html:9
 msgid "Train with us"
 msgstr "Train with us"
 
-#: templates/team/team_list.html:19
+#: templates/team/team_list.html:21
 msgid "Trainer profiles are coming soon."
 msgstr "Trainer profiles are coming soon."
 
-#: templates/partials/_footer.html:35 templates/partials/_navbar.html:48
+#: templates/partials/_footer.html:35 templates/partials/_navbar.html:50
 #: templates/team/team_detail.html:17
 msgid "Trainers"
 msgstr "Trainers"
 
-#: core/models.py:137
+#: core/models.py:119
 msgid "Training"
 msgstr "Training"
 
@@ -1208,7 +1225,7 @@ msgstr ""
 "session. Follow the instructions of staff and the rules displayed in the studio at "
 "all times."
 
-#: templates/core/home.html:57
+#: templates/core/home.html:55
 msgid "Training floor"
 msgstr "Training floor"
 
@@ -1224,7 +1241,7 @@ msgstr ""
 msgid "Transparent pricing, no lock-in contracts"
 msgstr "Transparent pricing, no lock-in contracts"
 
-#: templates/training/class_list.html:48
+#: templates/training/class_list.html:52
 msgid "Try any class on the timetable at no cost, with no membership required."
 msgstr "Try any class on the timetable at no cost, with no membership required."
 
@@ -1232,7 +1249,7 @@ msgstr "Try any class on the timetable at no cost, with no membership required."
 msgid "Try before you buy"
 msgstr "Try before you buy"
 
-#: core/models.py:83 training/models.py:12
+#: core/models.py:66 training/models.py:7
 msgid "Tuesday"
 msgstr "Tuesday"
 
@@ -1248,7 +1265,7 @@ msgstr "View class"
 msgid "Visit the studio"
 msgstr "Visit the studio"
 
-#: templates/team/team_list.html:28
+#: templates/team/team_list.html:30
 msgid "Want to coach at FORGE?"
 msgstr "Want to coach at FORGE?"
 
@@ -1286,19 +1303,19 @@ msgstr ""
 "liability for loss arising from reliance on it. Nothing in these terms limits "
 "liability where the law does not allow it."
 
-#: templates/partials/_cookie_banner.html:12
+#: templates/partials/_cookie_banner.html:6
 msgid "We use cookies"
 msgstr "We use cookies"
 
-#: templates/partials/_cookie_banner.html:16
+#: templates/partials/_cookie_banner.html:10
 msgid ""
-"We use necessary cookies to make the site work. With your consent we also use "
-"analytics cookies to understand how the site is used."
+"We use necessary cookies to make the site work. We set no analytics cookies today — "
+"if we ever add them, they will only load after you accept."
 msgstr ""
-"We use necessary cookies to make the site work. With your consent we also use "
-"analytics cookies to understand how the site is used."
+"We use necessary cookies to make the site work. We set no analytics cookies today — "
+"if we ever add them, they will only load after you accept."
 
-#: templates/team/team_list.html:30
+#: templates/team/team_list.html:32
 msgid ""
 "We're always interested in hearing from certified trainers who put coaching before "
 "selling."
@@ -1306,11 +1323,11 @@ msgstr ""
 "We're always interested in hearing from certified trainers who put coaching before "
 "selling."
 
-#: core/models.py:84 training/models.py:13
+#: core/models.py:67 training/models.py:8
 msgid "Wednesday"
 msgstr "Wednesday"
 
-#: templates/partials/_navbar.html:33 templates/training/class_list.html:27
+#: templates/partials/_navbar.html:35 templates/training/class_list.html:27
 #: templates/training/schedule.html:4 templates/training/schedule.html:9
 msgid "Weekly schedule"
 msgstr "Weekly schedule"
@@ -1324,7 +1341,7 @@ msgstr "Weekly times for %(name)s"
 msgid "What happens next"
 msgstr "What happens next"
 
-#: templates/core/home.html:182
+#: templates/core/home.html:175
 msgid "What our members say"
 msgstr "What our members say"
 
@@ -1348,7 +1365,7 @@ msgstr "What's included"
 msgid "When it runs"
 msgstr "When it runs"
 
-#: templates/core/about.html:9 templates/core/home.html:91
+#: templates/core/about.html:9 templates/core/home.html:87
 msgid "Who we are"
 msgstr "Who we are"
 
@@ -1372,7 +1389,7 @@ msgstr ""
 msgid "You might also like"
 msgstr "You might also like"
 
-#: core/models.py:29 templates/partials/_footer.html:22
+#: core/models.py:21 templates/partials/_footer.html:22
 msgid "YouTube"
 msgstr "YouTube"
 
@@ -1380,35 +1397,35 @@ msgstr "YouTube"
 msgid "Your coach"
 msgstr "Your coach"
 
-#: templates/core/home.html:240
+#: templates/core/home.html:231
 msgid "Your first session is on us"
 msgstr "Your first session is on us"
 
-#: contact/forms.py:58
+#: contact/forms.py:44
 msgid "Your message"
 msgstr "Your message"
 
-#: contact/forms.py:49
+#: contact/forms.py:35
 msgid "Your name"
 msgstr "Your name"
 
-#: contact/forms.py:39
+#: contact/forms.py:25
 msgid "Your submission could not be processed."
 msgstr "Your submission could not be processed."
 
-#: team/models.py:40 training/models.py:52
+#: team/models.py:40 training/models.py:47
 msgid "active"
 msgstr "active"
 
-#: core/models.py:141
+#: core/models.py:123
 msgid "answer"
 msgstr "answer"
 
-#: blog/models.py:50 core/models.py:108
+#: blog/models.py:50 core/models.py:91
 msgid "author"
 msgstr "author"
 
-#: training/models.py:35
+#: training/models.py:30
 msgid "benefits"
 msgstr "benefits"
 
@@ -1428,23 +1445,23 @@ msgstr "blog category"
 msgid "body"
 msgstr "body"
 
-#: contact/models.py:59
+#: contact/models.py:57
 msgid "booking"
 msgstr "booking"
 
-#: contact/models.py:60
+#: contact/models.py:58
 msgid "bookings"
 msgstr "bookings"
 
-#: training/models.py:42
+#: training/models.py:37
 msgid "capacity"
 msgstr "capacity"
 
-#: services/models.py:77
+#: services/models.py:76
 msgid "caption"
 msgstr "caption"
 
-#: blog/models.py:42 core/models.py:143 services/models.py:23
+#: blog/models.py:42 core/models.py:125 services/models.py:23
 msgid "category"
 msgstr "category"
 
@@ -1452,31 +1469,31 @@ msgstr "category"
 msgid "certifications"
 msgstr "certifications"
 
-#: core/models.py:22
+#: core/models.py:14
 msgid "city"
 msgstr "city"
 
-#: contact/models.py:42 training/models.py:57 training/models.py:82
+#: contact/models.py:40 training/models.py:52 training/models.py:75
 msgid "class"
 msgstr "class"
 
-#: training/models.py:93
+#: training/models.py:86
 msgid "class session"
 msgstr "class session"
 
-#: training/models.py:94
+#: training/models.py:87
 msgid "class sessions"
 msgstr "class sessions"
 
-#: training/models.py:58
+#: training/models.py:53
 msgid "classes"
 msgstr "classes"
 
-#: core/models.py:94
+#: core/models.py:77
 msgid "closed all day"
 msgstr "closed all day"
 
-#: core/models.py:93
+#: core/models.py:76
 msgid "closes"
 msgstr "closes"
 
@@ -1492,15 +1509,15 @@ msgstr "contact messages"
 msgid "cover image"
 msgstr "cover image"
 
-#: contact/models.py:55
+#: contact/models.py:53
 msgid "created"
 msgstr "created"
 
-#: services/models.py:46 training/models.py:41
+#: services/models.py:46 training/models.py:36
 msgid "duration (minutes)"
 msgstr "duration (minutes)"
 
-#: contact/models.py:7 contact/models.py:37 core/models.py:25 team/models.py:37
+#: contact/models.py:7 contact/models.py:35 core/models.py:17 team/models.py:37
 msgid "email"
 msgstr "email"
 
@@ -1508,7 +1525,7 @@ msgstr "email"
 msgid "excerpt"
 msgstr "excerpt"
 
-#: core/models.py:113
+#: core/models.py:96
 msgid "featured"
 msgstr "featured"
 
@@ -1516,7 +1533,7 @@ msgstr "featured"
 msgid "featured on homepage"
 msgstr "featured on homepage"
 
-#: training/models.py:116
+#: training/models.py:106
 msgid "features"
 msgstr "features"
 
@@ -1524,7 +1541,7 @@ msgstr "features"
 msgid "from"
 msgstr "from"
 
-#: services/models.py:38 training/models.py:34
+#: services/models.py:38 training/models.py:29
 msgid "full description"
 msgstr "full description"
 
@@ -1532,11 +1549,11 @@ msgstr "full description"
 msgid "full name"
 msgstr "full name"
 
-#: core/models.py:19
+#: core/models.py:11
 msgid "hero image"
 msgstr "hero image"
 
-#: training/models.py:117
+#: training/models.py:107
 msgid "highlight this plan"
 msgstr "highlight this plan"
 
@@ -1544,31 +1561,31 @@ msgstr "highlight this plan"
 msgid "icon"
 msgstr "icon"
 
-#: services/models.py:48 services/models.py:76 training/models.py:37
+#: services/models.py:48 services/models.py:75 training/models.py:32
 msgid "image"
 msgstr "image"
 
-#: templates/training/class_detail.html:23 training/models.py:39
+#: templates/training/class_detail.html:23 training/models.py:34
 msgid "intensity"
 msgstr "intensity"
 
-#: core/models.py:18
+#: core/models.py:10
 msgid "logo"
 msgstr "logo"
 
-#: core/models.py:31
+#: core/models.py:23
 msgid "map latitude"
 msgstr "map latitude"
 
-#: core/models.py:32
+#: core/models.py:24
 msgid "map longitude"
 msgstr "map longitude"
 
-#: training/models.py:122
+#: training/models.py:112
 msgid "membership plan"
 msgstr "membership plan"
 
-#: training/models.py:123
+#: training/models.py:113
 msgid "membership plans"
 msgstr "membership plans"
 
@@ -1580,7 +1597,7 @@ msgstr "message"
 msgid "min"
 msgstr "min"
 
-#: templates/blog/post_detail.html:43 templates/partials/_post_card.html:20
+#: templates/blog/post_detail.html:43 templates/partials/_post_card.html:21
 msgid "min read"
 msgstr "min read"
 
@@ -1588,26 +1605,26 @@ msgstr "min read"
 msgid "minutes"
 msgstr "minutes"
 
-#: blog/models.py:8 contact/models.py:6 contact/models.py:36 core/models.py:14
-#: services/models.py:7 team/models.py:7 training/models.py:109
+#: blog/models.py:8 contact/models.py:6 contact/models.py:34 core/models.py:6
+#: services/models.py:7 team/models.py:7 training/models.py:101
 msgid "name"
 msgstr "name"
 
-#: contact/models.py:50
+#: contact/models.py:48
 msgid "notes"
 msgstr "notes"
 
-#: core/models.py:98 core/models.py:99
+#: core/models.py:81 core/models.py:82
 msgid "opening hours"
 msgstr "opening hours"
 
-#: core/models.py:92
+#: core/models.py:75
 msgid "opens"
 msgstr "opens"
 
-#: blog/models.py:10 core/models.py:114 core/models.py:145 services/models.py:9
-#: services/models.py:50 services/models.py:78 team/models.py:41 training/models.py:53
-#: training/models.py:118
+#: blog/models.py:10 core/models.py:97 core/models.py:127 services/models.py:9
+#: services/models.py:50 services/models.py:77 team/models.py:41 training/models.py:48
+#: training/models.py:108
 msgid "order"
 msgstr "order"
 
@@ -1615,15 +1632,15 @@ msgstr "order"
 msgid "people"
 msgstr "people"
 
-#: training/models.py:115
+#: training/models.py:105
 msgid "period"
 msgstr "period"
 
-#: contact/models.py:8 contact/models.py:38 core/models.py:24
+#: contact/models.py:8 contact/models.py:36 core/models.py:16
 msgid "phone"
 msgstr "phone"
 
-#: core/models.py:112 team/models.py:26
+#: core/models.py:95 team/models.py:26
 msgid "photo"
 msgstr "photo"
 
@@ -1631,7 +1648,7 @@ msgstr "photo"
 msgid "post"
 msgstr "post"
 
-#: core/models.py:23
+#: core/models.py:15
 msgid "postal code"
 msgstr "postal code"
 
@@ -1639,15 +1656,15 @@ msgstr "postal code"
 msgid "posts"
 msgstr "posts"
 
-#: contact/models.py:48
+#: contact/models.py:46
 msgid "preferred date"
 msgstr "preferred date"
 
-#: contact/models.py:49
+#: contact/models.py:47
 msgid "preferred time"
 msgstr "preferred time"
 
-#: training/models.py:112
+#: training/models.py:104
 msgid "price (MKD)"
 msgstr "price (MKD)"
 
@@ -1663,11 +1680,11 @@ msgstr "published"
 msgid "published at"
 msgstr "published at"
 
-#: core/models.py:140
+#: core/models.py:122
 msgid "question"
 msgstr "question"
 
-#: core/models.py:111
+#: core/models.py:94
 msgid "rating"
 msgstr "rating"
 
@@ -1679,15 +1696,15 @@ msgstr "read"
 msgid "received"
 msgstr "received"
 
-#: core/models.py:109 team/models.py:22
+#: core/models.py:92 team/models.py:22
 msgid "role"
 msgstr "role"
 
-#: training/models.py:88
+#: training/models.py:81
 msgid "room"
 msgstr "room"
 
-#: services/models.py:54 services/models.py:72
+#: services/models.py:54 services/models.py:71
 msgid "service"
 msgstr "service"
 
@@ -1699,11 +1716,11 @@ msgstr "service categories"
 msgid "service category"
 msgstr "service category"
 
-#: services/models.py:82
+#: services/models.py:81
 msgid "service image"
 msgstr "service image"
 
-#: services/models.py:83
+#: services/models.py:82
 msgid "service images"
 msgstr "service images"
 
@@ -1715,7 +1732,7 @@ msgstr "services"
 msgid "sessions"
 msgstr "sessions"
 
-#: core/models.py:16
+#: core/models.py:8
 msgid "short about"
 msgstr "short about"
 
@@ -1723,16 +1740,16 @@ msgstr "short about"
 msgid "short bio"
 msgstr "short bio"
 
-#: services/models.py:37 training/models.py:33
+#: services/models.py:37 training/models.py:28
 msgid "short description"
 msgstr "short description"
 
-#: core/models.py:35 core/models.py:36
+#: core/models.py:27 core/models.py:28
 msgid "site settings"
 msgstr "site settings"
 
 #: blog/models.py:9 blog/models.py:35 services/models.py:8 services/models.py:30
-#: team/models.py:8 team/models.py:21 training/models.py:32 training/models.py:110
+#: team/models.py:8 team/models.py:21 training/models.py:27 training/models.py:102
 msgid "slug"
 msgstr "slug"
 
@@ -1744,15 +1761,15 @@ msgstr "specialties"
 msgid "specialty"
 msgstr "specialty"
 
-#: training/models.py:87
+#: training/models.py:80
 msgid "start time"
 msgstr "start time"
 
-#: contact/models.py:53
+#: contact/models.py:51
 msgid "status"
 msgstr "status"
 
-#: core/models.py:21
+#: core/models.py:13
 msgid "street"
 msgstr "street"
 
@@ -1760,7 +1777,7 @@ msgstr "street"
 msgid "subject"
 msgstr "subject"
 
-#: core/models.py:15 training/models.py:111
+#: core/models.py:7 training/models.py:103
 msgid "tagline"
 msgstr "tagline"
 
@@ -1772,23 +1789,23 @@ msgstr "team member"
 msgid "team members"
 msgstr "team members"
 
-#: core/models.py:118
+#: core/models.py:101
 msgid "testimonial"
 msgstr "testimonial"
 
-#: core/models.py:119
+#: core/models.py:102
 msgid "testimonials"
 msgstr "testimonials"
 
-#: core/models.py:110
+#: core/models.py:93
 msgid "text"
 msgstr "text"
 
-#: blog/models.py:34 services/models.py:29 training/models.py:31
+#: blog/models.py:34 services/models.py:29 training/models.py:26
 msgid "title"
 msgstr "title"
 
-#: training/models.py:45
+#: training/models.py:40
 msgid "trainer"
 msgstr "trainer"
 
@@ -1796,7 +1813,7 @@ msgstr "trainer"
 msgid "training clothes, indoor shoes, a water bottle and a towel."
 msgstr "training clothes, indoor shoes, a water bottle and a towel."
 
-#: contact/models.py:63
+#: contact/models.py:61
 msgid "trial session"
 msgstr "trial session"
 
@@ -1804,7 +1821,7 @@ msgstr "trial session"
 msgid "views"
 msgstr "views"
 
-#: core/models.py:91 training/models.py:86
+#: core/models.py:74 training/models.py:79
 msgid "weekday"
 msgstr "weekday"
 

@@ -1,19 +1,3 @@
-"""
-Extract translatable strings and compile .mo files WITHOUT GNU gettext.
-
-Django's own `makemessages` / `compilemessages` shell out to xgettext and
-msgfmt, which are not installed by default on Windows. This script covers the
-same ground using Babel (pip-installable, lives in the venv).
-
-    python scripts/i18n_tools.py extract   # scan sources -> locale/*/django.po
-    python scripts/i18n_tools.py compile   # locale/*/django.po -> django.mo
-    python scripts/i18n_tools.py stats     # how much is still untranslated
-
-If you later install GNU gettext (winget install mlocati.GettextIconv) the
-standard `manage.py makemessages -l mk -l en` and `compilemessages` will work
-as normal and this script becomes optional. The .po files are compatible.
-"""
-
 import re
 import sys
 from pathlib import Path
@@ -29,9 +13,6 @@ LANGUAGES = ["mk", "en"]
 SCAN_DIRS = ["templates", "core", "services", "team", "training", "blog", "contact"]
 SKIP_PARTS = {"migrations", "__pycache__", "node_modules", ".git"}
 
-# --- Patterns --------------------------------------------------------------
-# Deliberately simple and explicit rather than a full template parser: this
-# project only ever uses these four forms.
 
 TRANS_RE = re.compile(r"""\{%\s*trans(?:late)?\s+(["'])(.*?)\1""", re.S)
 BLOCKTRANS_RE = re.compile(
@@ -40,15 +21,11 @@ BLOCKTRANS_RE = re.compile(
 PY_GETTEXT_RE = re.compile(r"""\b_\(\s*(["'])(.*?)\1\s*\)""", re.S)
 TEMPLATE_UNDERSCORE_RE = re.compile(r"""=_\((["'])(.*?)\1\)""", re.S)
 
-# {{ name }} inside blocktrans becomes %(name)s in the msgid.
 BLOCKTRANS_VAR_RE = re.compile(r"\{\{\s*(\w+)\s*\}\}")
 
 
 def normalise_blocktrans(body: str) -> str:
-    """Turn a blocktrans body into the exact msgid Django will look up."""
     body = BLOCKTRANS_VAR_RE.sub(lambda m: f"%({m.group(1)})s", body)
-    # `trimmed` collapses leading/trailing whitespace on every line and joins
-    # them with single spaces. All our blocktrans blocks use trimmed.
     lines = [line.strip() for line in body.strip().splitlines()]
     return " ".join(line for line in lines if line)
 
@@ -67,8 +44,7 @@ def iter_files():
 
 
 def extract():
-    """Collect every msgid with the locations it appears in."""
-    found = {}  # msgid -> set of "path:line"
+    found = {}
 
     def add(msgid, path, offset, text):
         msgid = msgid.strip()
@@ -99,7 +75,6 @@ def extract():
         out_dir.mkdir(parents=True, exist_ok=True)
         po_path = out_dir / "django.po"
 
-        # Keep translations that already exist.
         existing = {}
         if po_path.exists():
             with po_path.open("rb") as fh:
@@ -114,9 +89,6 @@ def extract():
             charset="utf-8",
         )
         for msgid in sorted(found):
-            # English is the source language, so every English msgstr is the
-            # msgid itself — that keeps the catalog complete and lets Django
-            # fall through cleanly.
             default = msgid if lang == "en" else ""
             catalog.add(
                 msgid,
@@ -133,7 +105,6 @@ def extract():
 
 
 def apply_translations():
-    """Merge scripts/mk_translations.py into locale/mk/LC_MESSAGES/django.po."""
     sys.path.insert(0, str(BASE_DIR / "scripts"))
     from mk_translations import MK
 

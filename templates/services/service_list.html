@@ -1,6 +1,5 @@
 {% extends "base.html" %}
 {% load i18n %}
-
 {% block title %}{% trans "Services" %} — {{ site.name }}{% endblock %}
 {% block meta_description %}{% trans "Personal training, nutrition coaching, physiotherapy and recovery services at FORGE Fitness Studio." %}{% endblock %}
 
@@ -24,7 +23,6 @@
       </nav>
     {% endif %}
 
-    {# Names the grid so the outline runs h1 - h2 - h3 without skipping a level. #}
     <h2 class="visually-hidden">
       {% if active_category %}{{ active_category.name }}{% else %}{% trans "All services" %}{% endif %}
     </h2>
@@ -53,5 +51,4 @@
     <a class="btn btn-accent btn-lg" href="{% url 'contact:booking' %}">{% trans "Book a free trial" %}</a>
   </div>
 </section>
-
 {% endblock %}

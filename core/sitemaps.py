@@ -1,11 +1,3 @@
-"""
-sitemap.xml generation.
-
-Every Sitemap sets i18n = True, so each URL is emitted once per language with
-the right /mk/ and /en/ prefix. That matters for the automated grading crawler:
-it proves both locales exist and are reachable.
-"""
-
 from django.contrib.sitemaps import Sitemap
 from django.urls import reverse
 

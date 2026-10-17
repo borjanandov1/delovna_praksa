@@ -23,8 +23,6 @@ class ServiceAdmin(TranslationAdmin):
     list_editable = ("is_featured", "order")
     list_filter = ("category", "is_featured")
     search_fields = ("title", "short_desc", "full_desc")
-    # modeltranslation renames `title` to title_mk/title_en, so prepopulate
-    # the slug from the default-language field explicitly.
     prepopulated_fields = {"slug": ("title_mk",)}
     inlines = [ServiceImageInline]
     list_select_related = ("category",)

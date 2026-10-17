@@ -22,8 +22,6 @@ class ContactMessage(models.Model):
 
 
 class Booking(models.Model):
-    """A trial-session / class booking request. Confirmed manually by staff."""
-
     PENDING = "pending"
     CONFIRMED = "confirmed"
     CANCELLED = "cancelled"

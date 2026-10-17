@@ -1,12 +1,10 @@
 {% extends "base.html" %}
 {% load i18n static %}
-
 {% block title %}{{ site.name }} — {{ site.tagline }}{% endblock %}
 {% block meta_description %}{{ site.short_about|truncatechars:155 }}{% endblock %}
 
 {% block content %}
 
-{# ------------------------------------------------------------------ Hero #}
 <section class="hero">
   {% if site.hero_image %}
     <img class="hero-media" src="{{ site.hero_image.url }}" alt="" fetchpriority="high" width="1920" height="1080">
@@ -22,7 +20,6 @@
           {% endblocktrans %}
         </h1>
         <p class="lead mb-4">{{ site.tagline }}</p>
-
         <div class="d-flex flex-wrap gap-3">
           <a class="btn btn-accent btn-lg" href="{% url 'contact:booking' %}">
             {% trans "Book a free trial" %}
@@ -36,7 +33,6 @@
   </div>
 </section>
 
-{# --------------------------------------------------------- Stats strip #}
 <section class="section-dark py-4 border-top" style="border-color:rgba(255,255,255,.08)!important">
   <div class="container">
     <div class="row text-center g-4">
@@ -60,7 +56,6 @@
   </div>
 </section>
 
-{# ----------------------------------------------------------- Classes #}
 {% if featured_classes %}
 <section class="section">
   <div class="container">
@@ -83,7 +78,6 @@
 </section>
 {% endif %}
 
-{# ------------------------------------------------------------- About #}
 <section class="section section-cream">
   <div class="container">
     <div class="row align-items-center g-5">
@@ -106,7 +100,6 @@
   </div>
 </section>
 
-{# ---------------------------------------------------------- Trainers #}
 {% if trainers %}
 <section class="section">
   <div class="container">
@@ -129,7 +122,6 @@
 </section>
 {% endif %}
 
-{# --------------------------------------------------------- Pricing #}
 {% if plans %}
 <section class="section section-cream">
   <div class="container">
@@ -149,7 +141,6 @@
             {% endif %}
             <h3 class="h4 mb-1" style="font-family:var(--bs-body-font-family);font-weight:700;text-transform:none">{{ plan.name }}</h3>
             <p class="text-muted small mb-4">{{ plan.tagline }}</p>
-
             <div class="d-flex align-items-baseline gap-2 mb-4">
               <span class="price-amount">{{ plan.price }}</span>
               <span class="price-period">{% trans "MKD" %} / {{ plan.period }}</span>
@@ -173,7 +164,6 @@
 </section>
 {% endif %}
 
-{# ----------------------------------------------------- Testimonials #}
 {% if testimonials %}
 <section class="section section-dark">
   <div class="container">
@@ -208,7 +198,6 @@
 </section>
 {% endif %}
 
-{# ---------------------------------------------------------- Blog #}
 {% if latest_posts %}
 <section class="section">
   <div class="container">
@@ -231,7 +220,6 @@
 </section>
 {% endif %}
 
-{# ------------------------------------------------------ CTA + map #}
 <section class="section section-cream">
   <div class="container">
     <div class="row g-5 align-items-center">
@@ -263,7 +251,6 @@
       </div>
 
       <div class="col-lg-7">
-        {# OpenStreetMap embed: no API key, no billing account, no tracking. #}
         <iframe
           title="{% trans 'Map showing the location of the gym' %}"
           class="w-100 rounded-4 border-0"
@@ -276,5 +263,4 @@
     </div>
   </div>
 </section>
-
 {% endblock %}

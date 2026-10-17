@@ -1,9 +1,4 @@
-{% load static %}<!--
-  Deliberately standalone: does NOT extend base.html.
-  A 500 often means the database or a context processor is the thing that broke,
-  so this page must render without {{ site }}, without any DB query, and without
-  the sitewide partials. Only static assets.
--->
+{% load static %}
 <!doctype html>
 <html lang="mk">
 <head>

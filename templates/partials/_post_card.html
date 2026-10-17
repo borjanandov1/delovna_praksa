@@ -1,5 +1,4 @@
 {% load i18n %}
-{# Expects: post #}
 <article class="card-forge position-relative reveal d-flex flex-column">
   <div class="card-media">
     {% if post.cover_image %}
@@ -13,11 +12,12 @@
   </div>
 
   <div class="p-4 d-flex flex-column flex-grow-1">
-    <div class="d-flex align-items-center gap-2 mb-2 small text-muted">
+    <div class="d-flex flex-wrap align-items-center gap-2 mb-2 small text-muted">
       {% if post.category %}<span class="badge-lime">{{ post.category.name }}</span>{% endif %}
-      <time datetime="{{ post.published_at|date:'Y-m-d' }}">{{ post.published_at|date:"j M Y" }}</time>
-      <span aria-hidden="true">·</span>
-      <span>{{ post.reading_time }} {% trans "min read" %}</span>
+      <span class="post-meta">
+        <time datetime="{{ post.published_at|date:'Y-m-d' }}">{{ post.published_at|date:"j M Y" }}</time>
+        <span>{{ post.reading_time }} {% trans "min read" %}</span>
+      </span>
     </div>
 
     <h3 class="h5 mb-2" style="font-family:var(--bs-body-font-family);font-weight:700;text-transform:none">

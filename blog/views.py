@@ -37,7 +37,6 @@ class PostListView(ListView):
         return ctx
 
     def get_template_names(self):
-        # HTMX requests get just the results grid, not the whole page.
         if self.request.headers.get("HX-Request"):
             return ["blog/partials/_post_grid.html"]
         return [self.template_name]
@@ -53,8 +52,6 @@ class PostDetailView(DetailView):
 
     def get_object(self, queryset=None):
         obj = super().get_object(queryset)
-        # F() avoids a read-modify-write race and does not touch updated
-        # timestamps or trigger a full save.
         Post.objects.filter(pk=obj.pk).update(views=F("views") + 1)
         return obj
 

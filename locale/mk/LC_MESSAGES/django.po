@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FORGE Fitness Studio VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-08-01 00:27+0200\n"
+"POT-Creation-Date: 2026-10-17 18:24+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: mk\n"
@@ -32,7 +32,7 @@ msgstr "1. Користење на веб-страницата"
 msgid "1. Who we are"
 msgstr "1. Кои сме ние"
 
-#: core/views.py:45
+#: core/views.py:42
 msgid "1200 members and a coaching team of eight."
 msgstr "1200 члена и тренерски тим од осум луѓе."
 
@@ -118,7 +118,7 @@ msgstr "За нас"
 msgid "About us"
 msgstr "За нас"
 
-#: templates/partials/_cookie_banner.html:25
+#: templates/partials/_cookie_banner.html:19
 msgid "Accept all"
 msgstr "Прифати ги сите"
 
@@ -130,7 +130,12 @@ msgstr "Адреса"
 msgid "All"
 msgstr "Сите"
 
-#: templates/core/home.html:72 templates/partials/_navbar.html:32
+#: templates/blog/partials/_post_grid.html:4
+msgid "All articles"
+msgstr "Сите статии"
+
+#: templates/core/home.html:69 templates/partials/_navbar.html:34
+#: templates/training/class_list.html:32
 msgid "All classes"
 msgstr "Сите часови"
 
@@ -138,13 +143,17 @@ msgstr "Сите часови"
 msgid "All levels"
 msgstr "Сите нивоа"
 
-#: templates/core/home.html:220
+#: templates/core/home.html:212
 msgid "All posts"
 msgstr "Сите објави"
 
 #: templates/partials/_footer.html:83
 msgid "All rights reserved."
 msgstr "Сите права задржани."
+
+#: templates/services/service_list.html:28
+msgid "All services"
+msgstr "Сите услуги"
 
 #: templates/core/terms.html:66
 msgid ""
@@ -154,7 +163,7 @@ msgstr ""
 "Целиот текст, фотографиите и името и логото FORGE на оваа страница се сопственост на "
 "FORGE Fitness Studio и не смеат да се користат без писмена дозвола."
 
-#: templates/core/about.html:73 templates/core/home.html:118
+#: templates/core/about.html:72 templates/core/home.html:113
 msgid "All trainers"
 msgstr "Сите тренери"
 
@@ -184,11 +193,11 @@ msgid "Back to homepage"
 msgstr "Назад на почетна"
 
 #: templates/blog/post_detail.html:22 templates/blog/post_list.html:4
-#: templates/partials/_footer.html:36 templates/partials/_navbar.html:54
+#: templates/partials/_footer.html:36 templates/partials/_navbar.html:56
 msgid "Blog"
 msgstr "Блог"
 
-#: templates/blog/partials/_post_grid.html:22
+#: templates/blog/partials/_post_grid.html:21
 msgid "Blog pagination"
 msgstr "Страничење на блогот"
 
@@ -196,7 +205,7 @@ msgstr "Страничење на блогот"
 msgid "Book a class"
 msgstr "Резервирај час"
 
-#: templates/services/service_list.html:46
+#: templates/services/service_list.html:50
 msgid ""
 "Book a free consultation and we'll put together a plan that fits your goals and your "
 "schedule."
@@ -205,13 +214,13 @@ msgstr ""
 "распоред."
 
 #: templates/contact/booking.html:4 templates/contact/contact.html:82
-#: templates/core/about.html:90 templates/core/home.html:28 templates/core/home.html:262
-#: templates/services/service_list.html:48 templates/training/class_list.html:50
+#: templates/core/about.html:89 templates/core/home.html:27 templates/core/home.html:253
+#: templates/services/service_list.html:52 templates/training/class_list.html:54
 #: templates/training/pricing.html:73
 msgid "Book a free trial"
 msgstr "Закажи бесплатен тренинг"
 
-#: templates/core/about.html:88
+#: templates/core/about.html:87
 msgid "Book a free trial session and train with us before you decide."
 msgstr "Закажи бесплатен тренинг и тренирај со нас пред да одлучиш."
 
@@ -245,7 +254,7 @@ msgid ""
 " and time."
 msgstr "Формулар за резервација: име, е-пошта, телефон, избран час и посакуван датум и време."
 
-#: contact/views.py:102
+#: contact/views.py:88
 msgid "Booking received. We'll confirm your session by phone or email."
 msgstr "Ја примивме резервацијата. Ќе го потврдиме терминот по телефон или е-пошта."
 
@@ -257,7 +266,7 @@ msgstr "Резервацијата е побарана"
 msgid "Bootstrap Icons class, e.g. bi-heart-pulse"
 msgstr "Bootstrap Icons класа, на пр. bi-heart-pulse"
 
-#: templates/blog/post_detail.html:19 templates/partials/_page_header.html:13
+#: templates/blog/post_detail.html:19 templates/partials/_page_header.html:5
 #: templates/services/service_detail.html:14 templates/team/team_detail.html:14
 #: templates/training/class_detail.html:14
 msgid "Breadcrumb"
@@ -267,15 +276,15 @@ msgstr "Патека на движење"
 msgid "Bring"
 msgstr "Понеси"
 
-#: templates/core/home.html:20
+#: templates/core/home.html:19
 msgid "Build the body.<br>Forge the <span class=\"mark-lime\">mindset</span>."
-msgstr "Изгради тело.<br>Искови <span class=\"mark-lime\">карактер</span>."
+msgstr "Изгради тело.<br>Изгради <span class=\"mark-lime\">карактер</span>."
 
 #: templates/contact/booking.html:30
 msgid "By phone or email, usually within a few hours."
 msgstr "По телефон или е-пошта, обично во рок од неколку часа."
 
-#: templates/contact/partials/_contact_form.html:35
+#: templates/contact/partials/_contact_form.html:33
 msgid "By sending this form you agree to us storing your details so we can reply."
 msgstr ""
 "Со испраќање на формуларот се согласуваш да ги зачуваме твоите податоци за да можеме "
@@ -289,11 +298,11 @@ msgstr ""
 "Со користење на оваа страница се согласуваш со овие услови. Содржината е наменета за "
 "информирање за нашето студио, часовите и членарините."
 
-#: contact/admin.py:45
+#: contact/admin.py:44
 msgid "Cancel selected bookings"
 msgstr "Откажи ги избраните резервации"
 
-#: contact/models.py:33
+#: contact/models.py:31
 msgid "Cancelled"
 msgstr "Откажано"
 
@@ -313,11 +322,11 @@ msgstr ""
 "Сертифицирани тренери што ја пишуваат твојата програма, ја коригираат техниката и го "
 "паметат твоето име."
 
-#: core/views.py:44
+#: core/views.py:41
 msgid "Certified strength & conditioning programme launched."
 msgstr "Започна сертифицираната програма за сила и кондиција."
 
-#: templates/core/home.html:49
+#: templates/core/home.html:47
 msgid "Certified trainers"
 msgstr "Сертифицирани тренери"
 
@@ -329,7 +338,7 @@ msgstr "Час"
 msgid "Class size"
 msgstr "Големина на групата"
 
-#: templates/partials/_footer.html:31 templates/partials/_navbar.html:29
+#: templates/partials/_footer.html:31 templates/partials/_navbar.html:31
 #: templates/training/class_detail.html:4 templates/training/class_detail.html:17
 msgid "Classes"
 msgstr "Часови"
@@ -347,7 +356,7 @@ msgstr "Часови што ги води"
 msgid "Classes on %(day_label)s"
 msgstr "Часови во %(day_label)s"
 
-#: templates/core/home.html:53
+#: templates/core/home.html:51
 msgid "Classes per week"
 msgstr "Часови неделно"
 
@@ -360,7 +369,7 @@ msgstr "Затворено"
 msgid "Coach"
 msgstr "Тренер"
 
-#: templates/core/about.html:71
+#: templates/core/about.html:70
 msgid "Coaches who show up"
 msgstr "Тренери што се тука"
 
@@ -374,28 +383,28 @@ msgstr ""
 "Коучинг, опоравување и поддршка во исхраната — прилагодени на тоа што навистина ти "
 "треба."
 
-#: templates/core/home.html:239
+#: templates/core/home.html:230
 msgid "Come by"
 msgstr "Намини"
 
-#: templates/core/about.html:86
+#: templates/core/about.html:85
 msgid "Come see the place"
 msgstr "Дојди да го видиш просторот"
 
-#: templates/core/home.html:170
+#: templates/core/home.html:164
 msgid "Compare all membership options"
 msgstr "Спореди ги сите пакети"
 
-#: contact/admin.py:41
+#: contact/admin.py:40
 msgid "Confirm selected bookings"
 msgstr "Потврди ги избраните резервации"
 
-#: contact/models.py:32
+#: contact/models.py:30
 msgid "Confirmed"
 msgstr "Потврдено"
 
 #: core/admin.py:17 templates/partials/_footer.html:38 templates/partials/_footer.html:43
-#: templates/partials/_navbar.html:60
+#: templates/partials/_navbar.html:62
 msgid "Contact"
 msgstr "Контакт"
 
@@ -420,7 +429,7 @@ msgstr "Поставки за колачиња"
 msgid "Cookies used on this website"
 msgstr "Колачиња што се користат на оваа страница"
 
-#: templates/core/home.html:258
+#: templates/core/home.html:249
 msgid "Currently closed"
 msgstr "Моментално затворено"
 
@@ -428,7 +437,7 @@ msgstr "Моментално затворено"
 msgid "Day"
 msgstr "Ден"
 
-#: templates/core/home.html:242
+#: templates/core/home.html:233
 msgid ""
 "Drop in for a free trial, meet the trainers and see the floor before you commit to "
 "anything."
@@ -456,7 +465,7 @@ msgstr "Секое членство почнува со бесплатен тр�
 msgid "Everything people usually ask before their first session."
 msgstr "Сè што луѓето обично прашуваат пред првиот тренинг."
 
-#: core/views.py:43
+#: core/views.py:40
 msgid "Expanded to 1400m² and added the group-class studio."
 msgstr "Се проширивме на 1400м² и додадовме студио за групни часови."
 
@@ -468,11 +477,11 @@ msgstr "Искуство"
 msgid "Explore"
 msgstr "Истражи"
 
-#: core/models.py:149 templates/partials/_footer.html:37
+#: core/models.py:131 templates/partials/_footer.html:37
 msgid "FAQ"
 msgstr "Прашања"
 
-#: core/models.py:150
+#: core/models.py:132
 msgid "FAQs"
 msgstr "Често поставувани прашања"
 
@@ -488,7 +497,7 @@ msgstr ""
 "пристапен, стручно воден и без чувство на непријатност. Денес имаме сала од 1400м², "
 "четириесет часа неделно и тренерски тим што сè уште го знае секој член по име."
 
-#: core/models.py:27 templates/partials/_footer.html:14
+#: core/models.py:19 templates/partials/_footer.html:14
 msgid "Facebook"
 msgstr "Facebook"
 
@@ -504,7 +513,11 @@ msgstr "Филтрирај објави по категорија"
 msgid "Filter services by category"
 msgstr "Филтрирај услуги по категорија"
 
-#: templates/training/class_list.html:46
+#: templates/training/class_list.html:32
+msgid "Filtered classes"
+msgstr "Филтрирани часови"
+
+#: templates/training/class_list.html:50
 msgid "First class is free"
 msgstr "Првиот час е бесплатен"
 
@@ -520,11 +533,11 @@ msgstr ""
 msgid "Free induction session"
 msgstr "Бесплатна воведна сесија"
 
-#: templates/contact/booking.html:9 templates/partials/_navbar.html:79
+#: templates/contact/booking.html:9 templates/partials/_navbar.html:80
 msgid "Free trial"
 msgstr "Бесплатен тренинг"
 
-#: contact/forms.py:102
+#: contact/forms.py:88
 msgid "Free trial session (any class)"
 msgstr "Бесплатен пробен тренинг (кој било час)"
 
@@ -536,7 +549,7 @@ msgstr "Замрзнување на членството до 2 месеци"
 msgid "Frequently asked questions"
 msgstr "Често поставувани прашања"
 
-#: core/models.py:86 training/models.py:15
+#: core/models.py:69 training/models.py:10
 msgid "Friday"
 msgstr "Петок"
 
@@ -544,12 +557,12 @@ msgstr "Петок"
 msgid "Gallery"
 msgstr "Галерија"
 
-#: core/models.py:135
+#: core/models.py:117
 msgid "General"
 msgstr "Општо"
 
 #: templates/contact/contact.html:9 templates/team/team_detail.html:50
-#: templates/team/team_list.html:32
+#: templates/team/team_list.html:34
 msgid "Get in touch"
 msgstr "Јави се"
 
@@ -561,11 +574,11 @@ msgstr ""
 "Контактирај го FORGE Fitness Studio — адреса, телефон, е-пошта, работно време и "
 "формулар за контакт."
 
-#: templates/core/home.html:163 templates/training/pricing.html:38
+#: templates/core/home.html:157 templates/training/pricing.html:38
 msgid "Get started"
 msgstr "Започни"
 
-#: templates/core/home.html:70 templates/training/class_list.html:4
+#: templates/core/home.html:67 templates/training/class_list.html:4
 #: templates/training/class_list.html:9
 msgid "Group classes"
 msgstr "Групни часови"
@@ -582,11 +595,11 @@ msgstr ""
 msgid "Help"
 msgstr "Помош"
 
-#: training/models.py:28
+#: training/models.py:23
 msgid "High"
 msgstr "Висок"
 
-#: templates/blog/post_detail.html:21 templates/partials/_page_header.html:15
+#: templates/blog/post_detail.html:21 templates/partials/_page_header.html:7
 #: templates/services/service_detail.html:16 templates/team/team_detail.html:16
 #: templates/training/class_detail.html:16
 msgid "Home"
@@ -600,11 +613,11 @@ msgstr ""
 "Како FORGE Fitness Studio собира, користи и чува лични податоци и кои колачиња ги "
 "поставува страницата."
 
-#: contact/forms.py:57
+#: contact/forms.py:43
 msgid "How can we help?"
 msgstr "Како можеме да помогнеме?"
 
-#: templates/core/about.html:50
+#: templates/core/about.html:49
 msgid "How we got here"
 msgstr "Како стигнавме дотука"
 
@@ -616,7 +629,7 @@ msgstr "Идентитет"
 msgid "Included with every membership"
 msgstr "Вклучено во секој пакет"
 
-#: core/models.py:28 team/models.py:38 templates/partials/_footer.html:18
+#: core/models.py:20 team/models.py:38 templates/partials/_footer.html:18
 msgid "Instagram"
 msgstr "Instagram"
 
@@ -624,11 +637,11 @@ msgstr "Instagram"
 msgid "Intensity"
 msgstr "Интензитет"
 
-#: templates/team/team_list.html:27
+#: templates/team/team_list.html:29
 msgid "Join us"
 msgstr "Придружи ни се"
 
-#: templates/blog/post_list.html:9 templates/core/home.html:217
+#: templates/blog/post_list.html:9 templates/core/home.html:209
 msgid "Journal"
 msgstr "Дневник"
 
@@ -644,11 +657,11 @@ msgstr "Го одржува најавен администраторот."
 msgid "Last updated"
 msgstr "Последно ажурирано"
 
-#: templates/core/home.html:218
+#: templates/core/home.html:210
 msgid "Latest from the blog"
 msgstr "Најново од блогот"
 
-#: contact/forms.py:25
+#: contact/forms.py:16
 msgid "Leave this field empty"
 msgstr "Остави го ова поле празно"
 
@@ -660,11 +673,11 @@ msgstr "Правни информации"
 msgid "Locker and shower access"
 msgstr "Пристап до гардероба и туш"
 
-#: training/models.py:26
+#: training/models.py:21
 msgid "Low"
 msgstr "Низок"
 
-#: templates/core/home.html:155 templates/partials/_service_card.html:19
+#: templates/core/home.html:149 templates/partials/_service_card.html:19
 #: templates/services/service_detail.html:71 templates/training/pricing.html:30
 msgid "MKD"
 msgstr "ден."
@@ -681,15 +694,15 @@ msgstr "Управувај со страницата"
 msgid "Map"
 msgstr "Мапа"
 
-#: templates/contact/contact.html:93 templates/core/home.html:268
+#: templates/contact/contact.html:93 templates/core/home.html:259
 msgid "Map showing the location of the gym"
 msgstr "Мапа со локацијата на салата"
 
-#: contact/admin.py:21
+#: contact/admin.py:20
 msgid "Mark selected messages as read"
 msgstr "Означи ги избраните пораки како прочитани"
 
-#: contact/admin.py:25
+#: contact/admin.py:24
 msgid "Mark selected messages as unread"
 msgstr "Означи ги избраните пораки како непрочитани"
 
@@ -697,7 +710,7 @@ msgstr "Означи ги избраните пораки како непроч�
 msgid "Max"
 msgstr "Најмногу"
 
-#: training/models.py:27
+#: training/models.py:22
 msgid "Medium"
 msgstr "Среден"
 
@@ -709,15 +722,15 @@ msgstr ""
 "Запознај го сертифицираниот тренерски тим на FORGE Fitness Studio — специјалисти за "
 "сила, кондиција, мобилност и исхрана."
 
-#: templates/core/home.html:116
+#: templates/core/home.html:111
 msgid "Meet your trainers"
 msgstr "Запознај ги тренерите"
 
-#: templates/core/home.html:45
+#: templates/core/home.html:43
 msgid "Members"
 msgstr "Членови"
 
-#: core/models.py:136
+#: core/models.py:118
 msgid "Membership"
 msgstr "Членство"
 
@@ -725,8 +738,8 @@ msgstr "Членство"
 msgid "Membership options are being updated. Please contact us for current prices."
 msgstr "Пакетите се ажурираат. Контактирај нè за актуелните цени."
 
-#: templates/core/home.html:137 templates/partials/_footer.html:33
-#: templates/partials/_navbar.html:35 templates/training/pricing.html:9
+#: templates/core/home.html:131 templates/partials/_footer.html:33
+#: templates/partials/_navbar.html:37 templates/training/pricing.html:9
 msgid "Memberships"
 msgstr "Членарини"
 
@@ -738,19 +751,19 @@ msgstr "Членарини и цени"
 msgid "Message sent"
 msgstr "Пораката е испратена"
 
-#: templates/core/about.html:49
+#: templates/core/about.html:48
 msgid "Milestones"
 msgstr "Пресвртници"
 
-#: core/models.py:82 training/models.py:11
+#: core/models.py:65 training/models.py:6
 msgid "Monday"
 msgstr "Понеделник"
 
-#: templates/core/about.html:9 templates/core/home.html:92
+#: templates/core/about.html:9 templates/core/home.html:88
 msgid "More than a gym"
 msgstr "Повеќе од сала"
 
-#: templates/core/home.html:147 templates/training/pricing.html:19
+#: templates/core/home.html:141 templates/training/pricing.html:19
 msgid "Most popular"
 msgstr "Најпопуларен"
 
@@ -767,11 +780,11 @@ msgstr "Неопходно"
 msgid "Need to change or cancel?"
 msgstr "Треба да промениш или откажеш?"
 
-#: templates/blog/partials/_post_grid.html:41
+#: templates/blog/partials/_post_grid.html:40
 msgid "Next page"
 msgstr "Следна страница"
 
-#: templates/training/class_list.html:37
+#: templates/training/class_list.html:41
 msgid "No classes match this filter."
 msgstr "Ниту еден час не одговара на овој филтер."
 
@@ -793,7 +806,7 @@ msgstr ""
 "Без членство, без податоци за картичка, без притисок. Избери термин и ќе го потврдиме"
 " со тебе."
 
-#: templates/blog/partials/_post_grid.html:16
+#: templates/blog/partials/_post_grid.html:15
 msgid "No posts found. Try a different search or category."
 msgstr "Нема пронајдени објави. Пробај друго пребарување или категорија."
 
@@ -801,11 +814,11 @@ msgstr "Нема пронајдени објави. Пробај друго пр
 msgid "No questions have been published yet."
 msgstr "Сè уште не се објавени прашања."
 
-#: templates/services/service_list.html:34
+#: templates/services/service_list.html:38
 msgid "No services in this category yet."
 msgstr "Сè уште нема услуги во оваа категорија."
 
-#: templates/services/service_list.html:44
+#: templates/services/service_list.html:48
 msgid "Not sure where to start?"
 msgstr "Не си сигурен од каде да почнеш?"
 
@@ -813,19 +826,19 @@ msgstr "Не си сигурен од каде да почнеш?"
 msgid "One item per line."
 msgstr "Една ставка по ред."
 
-#: team/models.py:31 training/models.py:35 training/models.py:116
+#: team/models.py:31 training/models.py:30 training/models.py:106
 msgid "One per line."
 msgstr "Едно по ред."
 
-#: templates/partials/_cookie_banner.html:28
+#: templates/partials/_cookie_banner.html:22
 msgid "Only necessary"
 msgstr "Само неопходни"
 
-#: templates/contact/contact.html:61 templates/core/home.html:258
+#: templates/contact/contact.html:61 templates/core/home.html:249
 msgid "Open now"
 msgstr "Отворено сега"
 
-#: core/views.py:42
+#: core/views.py:39
 msgid "Opened with two racks in a converted textile workshop."
 msgstr "Отворивме со две конструкции во преуредена текстилна работилница."
 
@@ -837,7 +850,7 @@ msgstr "Работно време"
 msgid "Other trainers"
 msgstr "Други тренери"
 
-#: templates/core/about.html:15 templates/core/home.html:94
+#: templates/core/about.html:15 templates/core/home.html:90
 msgid "Our story"
 msgstr "Нашата приказна"
 
@@ -854,7 +867,7 @@ msgstr "Нашите тренери"
 msgid "Page not found"
 msgstr "Страницата не е пронајдена"
 
-#: contact/models.py:31
+#: contact/models.py:29
 msgid "Pending"
 msgstr "Во очекување"
 
@@ -870,7 +883,7 @@ msgstr ""
 msgid "Phone"
 msgstr "Телефон"
 
-#: templates/core/home.html:138
+#: templates/core/home.html:132
 msgid "Pick your plan"
 msgstr "Избери пакет"
 
@@ -882,11 +895,11 @@ msgstr ""
 "Откажи најмалку четири часа пред резервираниот час за местото да може да се понуди на"
 " друг. Повторено недоаѓање може да доведе до ограничување на резервациите."
 
-#: contact/forms.py:110
+#: contact/forms.py:95
 msgid "Please choose a date in the future."
 msgstr "Избери датум во иднина."
 
-#: contact/forms.py:70
+#: contact/forms.py:56
 msgid "Please write at least 10 characters so we can help properly."
 msgstr "Напиши барем 10 карактери за да можеме да помогнеме како треба."
 
@@ -894,7 +907,7 @@ msgstr "Напиши барем 10 карактери за да можеме д�
 msgid "Practical advice from our coaches — no fads, no supplements to sell you."
 msgstr "Практични совети од нашите тренери — без модни трендови и без продажба на суплементи."
 
-#: templates/blog/partials/_post_grid.html:27
+#: templates/blog/partials/_post_grid.html:26
 msgid "Previous page"
 msgstr "Претходна страница"
 
@@ -912,8 +925,8 @@ msgstr ""
 "распоредот и работното време; важи верзијата објавена на страницата во моментот на "
 "купување."
 
-#: templates/contact/partials/_booking_form.html:33
-#: templates/contact/partials/_contact_form.html:38 templates/core/privacy.html:4
+#: templates/contact/partials/_booking_form.html:36
+#: templates/contact/partials/_contact_form.html:36 templates/core/privacy.html:4
 #: templates/core/privacy.html:9 templates/partials/_footer.html:85
 msgid "Privacy Policy"
 msgstr "Политика за приватност"
@@ -938,12 +951,12 @@ msgstr ""
 msgid "Questions about these terms:"
 msgstr "Прашања за овие услови:"
 
-#: templates/core/home.html:189
+#: templates/core/home.html:182
 #, python-format
 msgid "Rated %(n)s out of 5"
 msgstr "Оценка %(n)s од 5"
 
-#: templates/partials/_cookie_banner.html:20
+#: templates/partials/_cookie_banner.html:14
 msgid "Read our Privacy Policy"
 msgstr "Прочитај ја Политиката за приватност"
 
@@ -959,7 +972,7 @@ msgstr "Слични услуги"
 msgid "Remembers whether you chose Macedonian or English."
 msgstr "Памти дали си избрал македонски или англиски."
 
-#: templates/contact/partials/_booking_form.html:28
+#: templates/contact/partials/_booking_form.html:31
 msgid "Request booking"
 msgstr "Побарај резервација"
 
@@ -967,7 +980,7 @@ msgstr "Побарај резервација"
 msgid "Reserve your spot"
 msgstr "Резервирај го своето место"
 
-#: templates/core/home.html:181
+#: templates/core/home.html:174
 msgid "Results"
 msgstr "Резултати"
 
@@ -979,7 +992,7 @@ msgstr "Сала"
 msgid "Same timetable every week. Book a place, or just turn up ten minutes early."
 msgstr "Ист распоред секоја недела. Резервирај место или едноставно дојди десет минути порано."
 
-#: core/models.py:87 training/models.py:16
+#: core/models.py:70 training/models.py:11
 msgid "Saturday"
 msgstr "Сабота"
 
@@ -1004,11 +1017,11 @@ msgid "See full schedule"
 msgstr "Види го целиот распоред"
 
 #: templates/404.html:20 templates/contact/partials/_booking_success.html:23
-#: templates/core/home.html:31
+#: templates/core/home.html:30
 msgid "See the schedule"
 msgstr "Види го распоредот"
 
-#: templates/contact/partials/_contact_form.html:31
+#: templates/contact/partials/_contact_form.html:29
 msgid "Send message"
 msgstr "Испрати порака"
 
@@ -1020,7 +1033,7 @@ msgstr "Испрати ни порака"
 msgid "Send us a message and we'll get back to you within one working day."
 msgstr "Испрати ни порака и ќе ти одговориме во рок од еден работен ден."
 
-#: templates/partials/_footer.html:34 templates/partials/_navbar.html:42
+#: templates/partials/_footer.html:34 templates/partials/_navbar.html:44
 #: templates/services/service_detail.html:17 templates/services/service_list.html:4
 #: templates/services/service_list.html:9
 msgid "Services"
@@ -1032,13 +1045,13 @@ msgstr "Времетраење на сесија"
 
 #: templates/training/pricing.html:9
 msgid "Simple, honest pricing"
-msgstr "Едноставни и чесни цени"
+msgstr "Ниски и фер цени"
 
-#: templates/core/home.html:18
+#: templates/core/home.html:17
 msgid "Since 2019"
 msgstr "Од 2019"
 
-#: templates/base.html:53
+#: templates/base.html:47
 msgid "Skip to content"
 msgstr "Прескокни до содржината"
 
@@ -1082,7 +1095,7 @@ msgstr ""
 "Местата на групните часови се ограничени според капацитетот наведен на страницата на "
 "секој час."
 
-#: core/models.py:88 training/models.py:17
+#: core/models.py:71 training/models.py:12
 msgid "Sunday"
 msgstr "Недела"
 
@@ -1099,9 +1112,13 @@ msgstr ""
 msgid "Terms of Use"
 msgstr "Услови за користење"
 
-#: contact/views.py:78
+#: contact/views.py:64
 msgid "Thanks — your message has been sent. We'll reply shortly."
 msgstr "Ти благодариме — пораката е испратена. Ќе одговориме наскоро."
+
+#: templates/team/team_list.html:13
+msgid "The coaching team"
+msgstr "Тренерскиот тим"
 
 #: templates/training/schedule.html:5
 msgid ""
@@ -1119,7 +1136,7 @@ msgstr "Страницата што ја бараше не постои."
 msgid "The page you're looking for doesn't exist or has been moved."
 msgstr "Страницата што ја бараш не постои или е преместена."
 
-#: templates/core/about.html:70 templates/core/home.html:115
+#: templates/core/about.html:69 templates/core/home.html:110
 #: templates/team/team_list.html:9
 msgid "The team"
 msgstr "Тимот"
@@ -1128,7 +1145,7 @@ msgstr "Тимот"
 msgid "The timetable is being updated. Please check back shortly."
 msgstr "Распоредот се ажурира. Провери повторно наскоро."
 
-#: templates/contact/partials/_booking_form.html:32
+#: templates/contact/partials/_booking_form.html:35
 msgid "This is a request — we'll confirm your place by phone or email."
 msgstr "Ова е барање — местото ќе го потврдиме по телефон или е-пошта."
 
@@ -1144,7 +1161,7 @@ msgstr ""
 "Оваа веб-страница ја управува FORGE Fitness Studio. Ако имаш прашање за тоа како се "
 "обработуваат твоите податоци, контактирај нè на податоците подолу."
 
-#: core/models.py:85 training/models.py:14
+#: core/models.py:68 training/models.py:9
 msgid "Thursday"
 msgstr "Четврток"
 
@@ -1173,20 +1190,20 @@ msgstr "Тренирај со %(name)s"
 msgid "Train with a coach"
 msgstr "Тренирај со тренер"
 
-#: templates/core/home.html:69 templates/training/class_list.html:9
+#: templates/core/home.html:66 templates/training/class_list.html:9
 msgid "Train with us"
 msgstr "Тренирај со нас"
 
-#: templates/team/team_list.html:19
+#: templates/team/team_list.html:21
 msgid "Trainer profiles are coming soon."
 msgstr "Профилите на тренерите наскоро."
 
-#: templates/partials/_footer.html:35 templates/partials/_navbar.html:48
+#: templates/partials/_footer.html:35 templates/partials/_navbar.html:50
 #: templates/team/team_detail.html:17
 msgid "Trainers"
 msgstr "Тренери"
 
-#: core/models.py:137
+#: core/models.py:119
 msgid "Training"
 msgstr "Тренинг"
 
@@ -1214,7 +1231,7 @@ msgstr ""
 "пред тренингот. Секогаш следи ги упатствата на персоналот и правилата истакнати во "
 "студиото."
 
-#: templates/core/home.html:57
+#: templates/core/home.html:55
 msgid "Training floor"
 msgstr "Простор за тренинг"
 
@@ -1230,7 +1247,7 @@ msgstr ""
 msgid "Transparent pricing, no lock-in contracts"
 msgstr "Транспарентни цени, без обврзувачки договори"
 
-#: templates/training/class_list.html:48
+#: templates/training/class_list.html:52
 msgid "Try any class on the timetable at no cost, with no membership required."
 msgstr "Пробај кој било час од распоредот бесплатно, без потреба од членство."
 
@@ -1238,7 +1255,7 @@ msgstr "Пробај кој било час од распоредот беспл
 msgid "Try before you buy"
 msgstr "Пробај пред да платиш"
 
-#: core/models.py:83 training/models.py:12
+#: core/models.py:66 training/models.py:7
 msgid "Tuesday"
 msgstr "Вторник"
 
@@ -1254,7 +1271,7 @@ msgstr "Види го часот"
 msgid "Visit the studio"
 msgstr "Посети го студиото"
 
-#: templates/team/team_list.html:28
+#: templates/team/team_list.html:30
 msgid "Want to coach at FORGE?"
 msgstr "Сакаш да тренираш во FORGE?"
 
@@ -1292,19 +1309,19 @@ msgstr ""
 "за штета настаната од потпирање на нив. Ништо во овие услови не ја ограничува "
 "одговорноста таму каде што законот тоа не го дозволува."
 
-#: templates/partials/_cookie_banner.html:12
+#: templates/partials/_cookie_banner.html:6
 msgid "We use cookies"
 msgstr "Користиме колачиња"
 
-#: templates/partials/_cookie_banner.html:16
+#: templates/partials/_cookie_banner.html:10
 msgid ""
-"We use necessary cookies to make the site work. With your consent we also use "
-"analytics cookies to understand how the site is used."
+"We use necessary cookies to make the site work. We set no analytics cookies today — "
+"if we ever add them, they will only load after you accept."
 msgstr ""
-"Користиме неопходни колачиња за да функционира страницата. Со твоја согласност "
-"користиме и аналитички колачиња за да разбереме како се користи страницата."
+"Користиме неопходни колачиња за да функционира страницата. Моментално не поставуваме "
+"аналитички колачиња — ако некогаш ги додадеме, ќе се вчитаат само откако ќе прифатиш."
 
-#: templates/team/team_list.html:30
+#: templates/team/team_list.html:32
 msgid ""
 "We're always interested in hearing from certified trainers who put coaching before "
 "selling."
@@ -1312,11 +1329,11 @@ msgstr ""
 "Секогаш сме заинтересирани за сертифицирани тренери кои го ставаат коучингот пред "
 "продажбата."
 
-#: core/models.py:84 training/models.py:13
+#: core/models.py:67 training/models.py:8
 msgid "Wednesday"
 msgstr "Среда"
 
-#: templates/partials/_navbar.html:33 templates/training/class_list.html:27
+#: templates/partials/_navbar.html:35 templates/training/class_list.html:27
 #: templates/training/schedule.html:4 templates/training/schedule.html:9
 msgid "Weekly schedule"
 msgstr "Неделен распоред"
@@ -1330,7 +1347,7 @@ msgstr "Неделни термини за %(name)s"
 msgid "What happens next"
 msgstr "Што следува"
 
-#: templates/core/home.html:182
+#: templates/core/home.html:175
 msgid "What our members say"
 msgstr "Што велат нашите членови"
 
@@ -1354,7 +1371,7 @@ msgstr "Што е вклучено"
 msgid "When it runs"
 msgstr "Кога се одржува"
 
-#: templates/core/about.html:9 templates/core/home.html:91
+#: templates/core/about.html:9 templates/core/home.html:87
 msgid "Who we are"
 msgstr "Кои сме ние"
 
@@ -1378,7 +1395,7 @@ msgstr ""
 msgid "You might also like"
 msgstr "Можеби ќе ти се допадне и"
 
-#: core/models.py:29 templates/partials/_footer.html:22
+#: core/models.py:21 templates/partials/_footer.html:22
 msgid "YouTube"
 msgstr "YouTube"
 
@@ -1386,35 +1403,35 @@ msgstr "YouTube"
 msgid "Your coach"
 msgstr "Твојот тренер"
 
-#: templates/core/home.html:240
+#: templates/core/home.html:231
 msgid "Your first session is on us"
 msgstr "Првиот тренинг е на наша сметка"
 
-#: contact/forms.py:58
+#: contact/forms.py:44
 msgid "Your message"
 msgstr "Твојата порака"
 
-#: contact/forms.py:49
+#: contact/forms.py:35
 msgid "Your name"
 msgstr "Твоето име"
 
-#: contact/forms.py:39
+#: contact/forms.py:25
 msgid "Your submission could not be processed."
 msgstr "Твоето барање не можеше да се обработи."
 
-#: team/models.py:40 training/models.py:52
+#: team/models.py:40 training/models.py:47
 msgid "active"
 msgstr "активен"
 
-#: core/models.py:141
+#: core/models.py:123
 msgid "answer"
 msgstr "одговор"
 
-#: blog/models.py:50 core/models.py:108
+#: blog/models.py:50 core/models.py:91
 msgid "author"
 msgstr "автор"
 
-#: training/models.py:35
+#: training/models.py:30
 msgid "benefits"
 msgstr "придобивки"
 
@@ -1434,23 +1451,23 @@ msgstr "категорија на блог"
 msgid "body"
 msgstr "содржина"
 
-#: contact/models.py:59
+#: contact/models.py:57
 msgid "booking"
 msgstr "резервација"
 
-#: contact/models.py:60
+#: contact/models.py:58
 msgid "bookings"
 msgstr "резервации"
 
-#: training/models.py:42
+#: training/models.py:37
 msgid "capacity"
 msgstr "капацитет"
 
-#: services/models.py:77
+#: services/models.py:76
 msgid "caption"
 msgstr "опис на слика"
 
-#: blog/models.py:42 core/models.py:143 services/models.py:23
+#: blog/models.py:42 core/models.py:125 services/models.py:23
 msgid "category"
 msgstr "категорија"
 
@@ -1458,31 +1475,31 @@ msgstr "категорија"
 msgid "certifications"
 msgstr "сертификати"
 
-#: core/models.py:22
+#: core/models.py:14
 msgid "city"
 msgstr "град"
 
-#: contact/models.py:42 training/models.py:57 training/models.py:82
+#: contact/models.py:40 training/models.py:52 training/models.py:75
 msgid "class"
 msgstr "час"
 
-#: training/models.py:93
+#: training/models.py:86
 msgid "class session"
 msgstr "термин"
 
-#: training/models.py:94
+#: training/models.py:87
 msgid "class sessions"
 msgstr "термини"
 
-#: training/models.py:58
+#: training/models.py:53
 msgid "classes"
 msgstr "часови"
 
-#: core/models.py:94
+#: core/models.py:77
 msgid "closed all day"
 msgstr "затворено цел ден"
 
-#: core/models.py:93
+#: core/models.py:76
 msgid "closes"
 msgstr "затвора"
 
@@ -1498,15 +1515,15 @@ msgstr "пораки"
 msgid "cover image"
 msgstr "насловна слика"
 
-#: contact/models.py:55
+#: contact/models.py:53
 msgid "created"
 msgstr "креирано"
 
-#: services/models.py:46 training/models.py:41
+#: services/models.py:46 training/models.py:36
 msgid "duration (minutes)"
 msgstr "времетраење (минути)"
 
-#: contact/models.py:7 contact/models.py:37 core/models.py:25 team/models.py:37
+#: contact/models.py:7 contact/models.py:35 core/models.py:17 team/models.py:37
 msgid "email"
 msgstr "е-пошта"
 
@@ -1514,7 +1531,7 @@ msgstr "е-пошта"
 msgid "excerpt"
 msgstr "извадок"
 
-#: core/models.py:113
+#: core/models.py:96
 msgid "featured"
 msgstr "истакнато"
 
@@ -1522,7 +1539,7 @@ msgstr "истакнато"
 msgid "featured on homepage"
 msgstr "истакнато на почетна"
 
-#: training/models.py:116
+#: training/models.py:106
 msgid "features"
 msgstr "карактеристики"
 
@@ -1530,7 +1547,7 @@ msgstr "карактеристики"
 msgid "from"
 msgstr "од"
 
-#: services/models.py:38 training/models.py:34
+#: services/models.py:38 training/models.py:29
 msgid "full description"
 msgstr "целосен опис"
 
@@ -1538,11 +1555,11 @@ msgstr "целосен опис"
 msgid "full name"
 msgstr "име и презиме"
 
-#: core/models.py:19
+#: core/models.py:11
 msgid "hero image"
 msgstr "главна слика"
 
-#: training/models.py:117
+#: training/models.py:107
 msgid "highlight this plan"
 msgstr "истакни го овој пакет"
 
@@ -1550,31 +1567,31 @@ msgstr "истакни го овој пакет"
 msgid "icon"
 msgstr "икона"
 
-#: services/models.py:48 services/models.py:76 training/models.py:37
+#: services/models.py:48 services/models.py:75 training/models.py:32
 msgid "image"
 msgstr "слика"
 
-#: templates/training/class_detail.html:23 training/models.py:39
+#: templates/training/class_detail.html:23 training/models.py:34
 msgid "intensity"
 msgstr "интензитет"
 
-#: core/models.py:18
+#: core/models.py:10
 msgid "logo"
 msgstr "лого"
 
-#: core/models.py:31
+#: core/models.py:23
 msgid "map latitude"
 msgstr "географска ширина"
 
-#: core/models.py:32
+#: core/models.py:24
 msgid "map longitude"
 msgstr "географска должина"
 
-#: training/models.py:122
+#: training/models.py:112
 msgid "membership plan"
 msgstr "пакет"
 
-#: training/models.py:123
+#: training/models.py:113
 msgid "membership plans"
 msgstr "пакети"
 
@@ -1586,7 +1603,7 @@ msgstr "порака"
 msgid "min"
 msgstr "мин"
 
-#: templates/blog/post_detail.html:43 templates/partials/_post_card.html:20
+#: templates/blog/post_detail.html:43 templates/partials/_post_card.html:21
 msgid "min read"
 msgstr "мин читање"
 
@@ -1594,26 +1611,26 @@ msgstr "мин читање"
 msgid "minutes"
 msgstr "минути"
 
-#: blog/models.py:8 contact/models.py:6 contact/models.py:36 core/models.py:14
-#: services/models.py:7 team/models.py:7 training/models.py:109
+#: blog/models.py:8 contact/models.py:6 contact/models.py:34 core/models.py:6
+#: services/models.py:7 team/models.py:7 training/models.py:101
 msgid "name"
 msgstr "име"
 
-#: contact/models.py:50
+#: contact/models.py:48
 msgid "notes"
 msgstr "белешки"
 
-#: core/models.py:98 core/models.py:99
+#: core/models.py:81 core/models.py:82
 msgid "opening hours"
 msgstr "работно време"
 
-#: core/models.py:92
+#: core/models.py:75
 msgid "opens"
 msgstr "отвора"
 
-#: blog/models.py:10 core/models.py:114 core/models.py:145 services/models.py:9
-#: services/models.py:50 services/models.py:78 team/models.py:41 training/models.py:53
-#: training/models.py:118
+#: blog/models.py:10 core/models.py:97 core/models.py:127 services/models.py:9
+#: services/models.py:50 services/models.py:77 team/models.py:41 training/models.py:48
+#: training/models.py:108
 msgid "order"
 msgstr "редослед"
 
@@ -1621,15 +1638,15 @@ msgstr "редослед"
 msgid "people"
 msgstr "луѓе"
 
-#: training/models.py:115
+#: training/models.py:105
 msgid "period"
 msgstr "период"
 
-#: contact/models.py:8 contact/models.py:38 core/models.py:24
+#: contact/models.py:8 contact/models.py:36 core/models.py:16
 msgid "phone"
 msgstr "телефон"
 
-#: core/models.py:112 team/models.py:26
+#: core/models.py:95 team/models.py:26
 msgid "photo"
 msgstr "фотографија"
 
@@ -1637,7 +1654,7 @@ msgstr "фотографија"
 msgid "post"
 msgstr "објава"
 
-#: core/models.py:23
+#: core/models.py:15
 msgid "postal code"
 msgstr "поштенски број"
 
@@ -1645,15 +1662,15 @@ msgstr "поштенски број"
 msgid "posts"
 msgstr "објави"
 
-#: contact/models.py:48
+#: contact/models.py:46
 msgid "preferred date"
 msgstr "посакуван датум"
 
-#: contact/models.py:49
+#: contact/models.py:47
 msgid "preferred time"
 msgstr "посакувано време"
 
-#: training/models.py:112
+#: training/models.py:104
 msgid "price (MKD)"
 msgstr "цена (ден.)"
 
@@ -1669,11 +1686,11 @@ msgstr "објавено"
 msgid "published at"
 msgstr "објавено на"
 
-#: core/models.py:140
+#: core/models.py:122
 msgid "question"
 msgstr "прашање"
 
-#: core/models.py:111
+#: core/models.py:94
 msgid "rating"
 msgstr "оценка"
 
@@ -1685,15 +1702,15 @@ msgstr "прочитано"
 msgid "received"
 msgstr "примено"
 
-#: core/models.py:109 team/models.py:22
+#: core/models.py:92 team/models.py:22
 msgid "role"
 msgstr "улога"
 
-#: training/models.py:88
+#: training/models.py:81
 msgid "room"
 msgstr "сала"
 
-#: services/models.py:54 services/models.py:72
+#: services/models.py:54 services/models.py:71
 msgid "service"
 msgstr "услуга"
 
@@ -1705,11 +1722,11 @@ msgstr "категории на услуги"
 msgid "service category"
 msgstr "категорија на услуга"
 
-#: services/models.py:82
+#: services/models.py:81
 msgid "service image"
 msgstr "слика на услуга"
 
-#: services/models.py:83
+#: services/models.py:82
 msgid "service images"
 msgstr "слики на услуги"
 
@@ -1721,7 +1738,7 @@ msgstr "услуги"
 msgid "sessions"
 msgstr "часа"
 
-#: core/models.py:16
+#: core/models.py:8
 msgid "short about"
 msgstr "краток опис"
 
@@ -1729,16 +1746,16 @@ msgstr "краток опис"
 msgid "short bio"
 msgstr "кратка биографија"
 
-#: services/models.py:37 training/models.py:33
+#: services/models.py:37 training/models.py:28
 msgid "short description"
 msgstr "краток опис"
 
-#: core/models.py:35 core/models.py:36
+#: core/models.py:27 core/models.py:28
 msgid "site settings"
 msgstr "поставки на страницата"
 
 #: blog/models.py:9 blog/models.py:35 services/models.py:8 services/models.py:30
-#: team/models.py:8 team/models.py:21 training/models.py:32 training/models.py:110
+#: team/models.py:8 team/models.py:21 training/models.py:27 training/models.py:102
 msgid "slug"
 msgstr "URL-ознака"
 
@@ -1750,15 +1767,15 @@ msgstr "специјалности"
 msgid "specialty"
 msgstr "специјалност"
 
-#: training/models.py:87
+#: training/models.py:80
 msgid "start time"
 msgstr "почеток"
 
-#: contact/models.py:53
+#: contact/models.py:51
 msgid "status"
 msgstr "статус"
 
-#: core/models.py:21
+#: core/models.py:13
 msgid "street"
 msgstr "улица"
 
@@ -1766,7 +1783,7 @@ msgstr "улица"
 msgid "subject"
 msgstr "наслов"
 
-#: core/models.py:15 training/models.py:111
+#: core/models.py:7 training/models.py:103
 msgid "tagline"
 msgstr "слоган"
 
@@ -1778,23 +1795,23 @@ msgstr "член на тимот"
 msgid "team members"
 msgstr "членови на тимот"
 
-#: core/models.py:118
+#: core/models.py:101
 msgid "testimonial"
 msgstr "препорака"
 
-#: core/models.py:119
+#: core/models.py:102
 msgid "testimonials"
 msgstr "препораки"
 
-#: core/models.py:110
+#: core/models.py:93
 msgid "text"
 msgstr "текст"
 
-#: blog/models.py:34 services/models.py:29 training/models.py:31
+#: blog/models.py:34 services/models.py:29 training/models.py:26
 msgid "title"
 msgstr "наслов"
 
-#: training/models.py:45
+#: training/models.py:40
 msgid "trainer"
 msgstr "тренер"
 
@@ -1802,7 +1819,7 @@ msgstr "тренер"
 msgid "training clothes, indoor shoes, a water bottle and a towel."
 msgstr "спортска облека, патики за внатре, шише вода и пешкир."
 
-#: contact/models.py:63
+#: contact/models.py:61
 msgid "trial session"
 msgstr "пробен тренинг"
 
@@ -1810,7 +1827,7 @@ msgstr "пробен тренинг"
 msgid "views"
 msgstr "прегледи"
 
-#: core/models.py:91 training/models.py:86
+#: core/models.py:74 training/models.py:79
 msgid "weekday"
 msgstr "ден во неделата"
 

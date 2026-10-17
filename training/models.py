@@ -1,8 +1,3 @@
-"""
-The gym-specific part of the site: group classes, the weekly schedule, and
-membership plans. This is what makes the project more than a generic template.
-"""
-
 from django.db import models
 from django.urls import reverse
 from django.utils.translation import gettext_lazy as _
@@ -75,8 +70,6 @@ class GymClass(models.Model):
 
 
 class ClassSession(models.Model):
-    """A recurring weekly slot, e.g. 'HIIT, Tuesday 18:00, Studio A'."""
-
     gym_class = models.ForeignKey(
         GymClass,
         verbose_name=_("class"),
@@ -98,7 +91,6 @@ class ClassSession(models.Model):
 
     @property
     def end_time(self):
-        """Derived from the class duration so it can never drift out of sync."""
         from datetime import datetime, timedelta
 
         base = datetime.combine(datetime.today(), self.start_time)
@@ -110,9 +102,7 @@ class MembershipPlan(models.Model):
     slug = models.SlugField(_("slug"), max_length=100, unique=True)
     tagline = models.CharField(_("tagline"), max_length=160, blank=True)
     price = models.DecimalField(_("price (MKD)"), max_digits=8, decimal_places=0)
-    # Plain string default: a lazy translation here would be baked into the
-    # migration file. The field itself is translated via modeltranslation.
-    period = models.CharField(_("period"), max_length=40, default="месечно")
+    period = models.CharField(_("period"), max_length=40)
     features = models.TextField(_("features"), help_text=_("One per line."))
     is_featured = models.BooleanField(_("highlight this plan"), default=False)
     order = models.PositiveIntegerField(_("order"), default=0)

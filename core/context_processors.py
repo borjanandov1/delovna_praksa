@@ -1,6 +1,3 @@
-"""Makes site-wide data available to every template without repeating it in
-every view. Registered in TEMPLATES['OPTIONS']['context_processors']."""
-
 from datetime import datetime
 
 from django.db.utils import OperationalError, ProgrammingError
@@ -15,17 +12,12 @@ def _is_open_now(hours_by_day):
     if not today or today.is_closed or not today.opens or not today.closes:
         return False
     current = now.time()
-    if today.closes <= today.opens:  # spans midnight
+    if today.closes <= today.opens:
         return current >= today.opens or current < today.closes
     return today.opens <= current < today.closes
 
 
 def site_settings(request):
-    """Provides {{ site }}, {{ opening_hours }} and {{ is_open_now }} everywhere.
-
-    Wrapped in try/except so `migrate` and `collectstatic` still work on a fresh
-    checkout where the tables do not exist yet.
-    """
     try:
         site = SiteSettings.load()
         hours = list(OpeningHours.objects.all())

@@ -1,8 +1,4 @@
 {% load i18n crispy_forms_tags %}
-{% comment %}
-  Posts via HTMX and swaps itself out for the success partial.
-  Without JS it degrades to a normal POST → redirect → success message.
-{% endcomment %}
 <form id="contactForm" method="post" action="{% url 'contact:contact' %}"
       hx-post="{% url 'contact:contact' %}"
       hx-target="#contactForm"
@@ -23,7 +19,6 @@
     <div class="col-12">{{ form.message|as_crispy_field }}</div>
   </div>
 
-  {# Honeypot: off-screen, out of tab order, but with a real label for AT. #}
   <div class="hp-field">
     <label for="{{ form.website.id_for_label }}">{{ form.website.label }}</label>
     {{ form.website }}

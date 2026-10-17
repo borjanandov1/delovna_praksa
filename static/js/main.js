@@ -1,11 +1,5 @@
-/* FORGE Fitness Studio — site behaviour.
-   Kept dependency-free on purpose: Bootstrap's bundle handles the navbar and
-   accordions, HTMX handles form posts, and this file covers the rest. */
-
 (function () {
   "use strict";
-
-  /* ------------------------------------------------------------ Cookies -- */
 
   var CONSENT_KEY = "forge_cookie_consent";
 
@@ -13,7 +7,6 @@
     try {
       return window.localStorage.getItem(CONSENT_KEY);
     } catch (e) {
-      // Private browsing can throw on localStorage access; fall back to cookie.
       var m = document.cookie.match(/(?:^|;\s*)forge_cookie_consent=([^;]*)/);
       return m ? decodeURIComponent(m[1]) : null;
     }
@@ -22,9 +15,8 @@
   function writeConsent(value) {
     try {
       window.localStorage.setItem(CONSENT_KEY, value);
-    } catch (e) { /* ignore — the cookie below is the fallback */ }
+    } catch (e) {}
 
-    // One year, readable by the server, not sent on cross-site requests.
     var secure = window.location.protocol === "https:" ? "; Secure" : "";
     document.cookie =
       CONSENT_KEY + "=" + encodeURIComponent(value) +
@@ -37,7 +29,7 @@
 
     function show() {
       banner.hidden = false;
-      // Next frame, so the CSS transition actually runs.
+
       requestAnimationFrame(function () {
         requestAnimationFrame(function () { banner.classList.add("is-visible"); });
       });
@@ -69,15 +61,10 @@
     if (readConsent() === "all") enableAnalytics();
   }
 
-  /* Analytics only ever loads after explicit consent. No analytics provider is
-     wired up yet — this is the hook where the script tag would be injected. */
   function enableAnalytics() {
     if (window.__forgeAnalyticsLoaded) return;
     window.__forgeAnalyticsLoaded = true;
-    // e.g. inject a <script> for Plausible/GA here.
   }
-
-  /* ------------------------------------------------------ Scroll reveal -- */
 
   function initReveal() {
     var items = document.querySelectorAll(".reveal");
@@ -98,13 +85,10 @@
     }, { rootMargin: "0px 0px -10% 0px", threshold: 0.1 });
 
     items.forEach(function (el, i) {
-      // Small stagger so grids cascade instead of popping in together.
       el.style.transitionDelay = (i % 4) * 70 + "ms";
       io.observe(el);
     });
   }
-
-  /* --------------------------------------------------- Mobile menu close -- */
 
   function initNav() {
     var collapse = document.getElementById("mainNav");
@@ -118,8 +102,6 @@
     });
   }
 
-  /* ------------------------------------------------------------- Boot ---- */
-
   function boot() {
     initCookies();
     initReveal();
@@ -132,6 +114,5 @@
     boot();
   }
 
-  // Re-run reveal on HTMX-swapped content (e.g. blog "load more").
   document.body.addEventListener("htmx:afterSwap", initReveal);
 })();

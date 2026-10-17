@@ -15,7 +15,7 @@ VALID_CONTACT = {
     "phone": "+389 70 123 456",
     "subject": "Прашање за членство",
     "message": "Дали има попуст за студенти со важечки индекс?",
-    "website": "",  # honeypot, must stay empty
+    "website": "",
 }
 
 
@@ -41,10 +41,9 @@ class ContactFormTests(TestCase):
         self.assertIn("Прашање за членство", mail.outbox[0].subject)
 
     def test_honeypot_blocks_bots(self):
-        """A filled honeypot must be rejected, and nothing may be stored."""
         resp = self.client.post(self.url, {**VALID_CONTACT, "website": "http://spam.example"})
 
-        self.assertEqual(resp.status_code, 200)  # re-rendered with errors
+        self.assertEqual(resp.status_code, 200)
         self.assertEqual(ContactMessage.objects.count(), 0)
 
     def test_short_message_rejected(self):
@@ -74,11 +73,8 @@ class ContactFormTests(TestCase):
         self.assertTemplateUsed(resp, "contact/partials/_contact_form.html")
 
     def test_email_failure_does_not_break_the_page(self):
-        """SMTP being down on the server must not cost the visitor their message."""
         with self.settings(EMAIL_BACKEND="django.core.mail.backends.smtp.EmailBackend",
                            EMAIL_HOST="invalid.invalid", EMAIL_PORT=1):
-            # assertLogs captures the expected logger.exception so the failure
-            # is asserted rather than dumped into the test output.
             with self.assertLogs("contact.views", level="ERROR") as logs:
                 resp = self.client.post(self.url, VALID_CONTACT)
 

@@ -1,6 +1,5 @@
 {% extends "base.html" %}
 {% load i18n %}
-
 {% block title %}{% trans "Group classes" %} — {{ site.name }}{% endblock %}
 {% block meta_description %}{% trans "HIIT, strength, spinning, yoga and mobility classes at FORGE Fitness Studio — forty sessions every week." %}{% endblock %}
 
@@ -10,7 +9,6 @@
 
 <section class="section">
   <div class="container">
-
     <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 mb-5">
       <nav class="d-flex flex-wrap gap-2" aria-label="{% trans 'Filter classes by intensity' %}">
         <a class="btn btn-sm {% if not active_intensity %}btn-primary{% else %}btn-outline-dark{% endif %}"
@@ -54,5 +52,4 @@
     <a class="btn btn-accent btn-lg" href="{% url 'contact:booking' %}">{% trans "Book a free trial" %}</a>
   </div>
 </section>
-
 {% endblock %}

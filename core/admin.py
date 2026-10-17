@@ -20,7 +20,6 @@ class SiteSettingsAdmin(TranslationAdmin):
     )
 
     def has_add_permission(self, request):
-        # Singleton: exactly one row, created on first access.
         return not SiteSettings.objects.exists()
 
     def has_delete_permission(self, request, obj=None):

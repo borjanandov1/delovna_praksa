@@ -1,28 +1,3 @@
-"""
-Pre-submission crawler. Walks every internal link and audits each page against
-the things an automated grader checks.
-
-    python scripts/crawl_check.py                      # in-process, no server needed
-    python scripts/crawl_check.py http://127.0.0.1:8000
-    python scripts/crawl_check.py https://your.finki.ukim.mk/forge
-
-Checks per page:
-  * HTTP status is 200
-  * exactly one <h1>, and heading levels never skip (h2 -> h4)
-  * <title> present, non-empty, and unique across the site
-  * <meta name="description"> present and non-empty
-  * every <img> has an alt attribute
-  * every form control has a <label for>, aria-label or aria-labelledby
-  * no placeholder links (href="#", href="", javascript:void(0))
-  * <html lang> is set
-
-Site-wide:
-  * every internal link resolves (no 404s)
-  * both /mk/ and /en/ trees are reachable
-
-Exit code is non-zero if anything fails, so it can gate a submission.
-"""
-
 import re
 import sys
 from collections import defaultdict
@@ -38,8 +13,6 @@ PLACEHOLDER_HREFS = {"#", "", "javascript:void(0)", "javascript:;"}
 
 
 class Fetcher:
-    """Fetches pages either over HTTP or through Django's test client."""
-
     def __init__(self, base_url=None):
         self.base_url = (base_url or "").rstrip("/")
         self.live = bool(base_url)
@@ -72,7 +45,6 @@ class Fetcher:
             self.base_url = "http://testserver"
 
     def get(self, path):
-        """Return (status_code, html_text)."""
         if self.live:
             resp = self.session.get(urljoin(self.base_url + "/", path.lstrip("/")),
                                     timeout=20, allow_redirects=True)
@@ -92,31 +64,24 @@ def is_internal(href, base_netloc):
 
 
 def audit_page(path, html, titles):
-    """Return a list of problem strings for one page."""
     problems = []
     soup = BeautifulSoup(html, "html.parser")
 
-    # --- lang -------------------------------------------------------------
     html_tag = soup.find("html")
     if not (html_tag and html_tag.get("lang")):
         problems.append("<html> has no lang attribute")
 
-    # --- title ------------------------------------------------------------
     title = soup.find("title")
     title_text = title.get_text(strip=True) if title else ""
     if not title_text:
         problems.append("missing or empty <title>")
     else:
-        # Key on the path only. /services/ and /services/?category=x are the
-        # same page filtered, so sharing a title is correct, not a duplicate.
         titles[title_text].add(urlparse(path).path)
 
-    # --- meta description -------------------------------------------------
     desc = soup.find("meta", attrs={"name": "description"})
     if not (desc and desc.get("content", "").strip()):
         problems.append("missing or empty meta description")
 
-    # --- headings ---------------------------------------------------------
     h1s = soup.find_all("h1")
     if len(h1s) == 0:
         problems.append("no <h1>")
@@ -129,13 +94,11 @@ def audit_page(path, html, titles):
             problems.append(f"heading level skips h{prev} -> h{curr}")
             break
 
-    # --- images -----------------------------------------------------------
     for img in soup.find_all("img"):
         if img.get("alt") is None:
             src = (img.get("src") or "?")[:60]
             problems.append(f"<img> without alt: {src}")
 
-    # --- form controls ----------------------------------------------------
     labelled = {lbl.get("for") for lbl in soup.find_all("label") if lbl.get("for")}
     for field in soup.find_all(["input", "select", "textarea"]):
         ftype = (field.get("type") or "").lower()
@@ -150,7 +113,6 @@ def audit_page(path, html, titles):
         name = field.get("name") or field.get("id") or field.name
         problems.append(f"form control without a label: {name}")
 
-    # --- placeholder links ------------------------------------------------
     for a in soup.find_all("a"):
         href = (a.get("href") or "").strip()
         if href in PLACEHOLDER_HREFS:
@@ -175,12 +137,6 @@ def extract_links(html, current_path, base_netloc):
 
 
 def check_template_comments():
-    """
-    Django only treats {# #} as a comment when it is on ONE line. A multi-line
-    {# #} is rendered as literal text, and any tag inside it actually executes.
-    That has already caused an infinite self-include and a batch of fake
-    href="#" links in this project, so it is checked automatically.
-    """
     bad = []
     pattern = re.compile(r"\{#(?:(?!#\}).)*$", re.M)
     for path in (BASE_DIR / "templates").rglob("*.html"):
@@ -225,7 +181,6 @@ def main():
             if link not in seen:
                 queue.append(link)
 
-    # --- report -----------------------------------------------------------
     print("\n" + "=" * 70)
     print(f"Crawled {len(seen)} pages.")
 

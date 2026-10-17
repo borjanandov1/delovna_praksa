@@ -3,14 +3,6 @@ from django.utils.translation import gettext_lazy as _
 
 
 class SiteSettings(models.Model):
-    """
-    Singleton holding everything the gym owner should be able to edit without a
-    developer: contact details, socials, map position, hero copy.
-
-    Always fetched with SiteSettings.load(); the row is forced to pk=1 so there
-    can never be a second one.
-    """
-
     name = models.CharField(_("name"), max_length=100, default="FORGE Fitness Studio")
     tagline = models.CharField(_("tagline"), max_length=200, blank=True)
     short_about = models.TextField(_("short about"), blank=True)
@@ -19,7 +11,7 @@ class SiteSettings(models.Model):
     hero_image = models.ImageField(_("hero image"), upload_to="brand/", blank=True)
 
     street = models.CharField(_("street"), max_length=150, blank=True)
-    city = models.CharField(_("city"), max_length=80, default="Скопје")
+    city = models.CharField(_("city"), max_length=80, blank=True)
     postal_code = models.CharField(_("postal code"), max_length=20, blank=True)
     phone = models.CharField(_("phone"), max_length=40, blank=True)
     email = models.EmailField(_("email"), blank=True)
@@ -28,8 +20,8 @@ class SiteSettings(models.Model):
     instagram = models.URLField(_("Instagram"), blank=True)
     youtube = models.URLField(_("YouTube"), blank=True)
 
-    map_lat = models.FloatField(_("map latitude"), default=41.9981)
-    map_lng = models.FloatField(_("map longitude"), default=21.4254)
+    map_lat = models.FloatField(_("map latitude"), default=42.0030)
+    map_lng = models.FloatField(_("map longitude"), default=21.4008)
 
     class Meta:
         verbose_name = _("site settings")
@@ -43,7 +35,6 @@ class SiteSettings(models.Model):
         super().save(*args, **kwargs)
 
     def delete(self, *args, **kwargs):  # pragma: no cover - guard only
-        """Refuse deletion; every template assumes this row exists."""
         return
 
     @classmethod
@@ -58,12 +49,6 @@ class SiteSettings(models.Model):
 
     @property
     def map_embed_url(self):
-        """
-        OpenStreetMap iframe URL — no API key, no billing account, no tracking.
-
-        Built here rather than in the template because Django's `add` filter
-        coerces to int first and silently string-concatenates floats.
-        """
         d_lng, d_lat = 0.006, 0.004
         bbox = (
             f"{self.map_lng - d_lng},{self.map_lat - d_lat},"
@@ -76,8 +61,6 @@ class SiteSettings(models.Model):
 
 
 class OpeningHours(models.Model):
-    """One row per weekday. Drives the 'Open now / Closed' badge in the header."""
-
     DAYS = [
         (0, _("Monday")),
         (1, _("Tuesday")),
@@ -123,7 +106,6 @@ class Testimonial(models.Model):
 
     @property
     def stars(self):
-        """Template helper: `{% for _ in t.stars %}` renders one filled star each."""
         return range(self.rating)
 
 

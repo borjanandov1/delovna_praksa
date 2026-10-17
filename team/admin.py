@@ -17,6 +17,5 @@ class TeamMemberAdmin(TranslationAdmin):
     list_editable = ("is_active", "order")
     list_filter = ("is_active", "specialties")
     search_fields = ("name", "role", "bio")
-    # `name` is not translated, so it can prepopulate the slug directly.
     prepopulated_fields = {"slug": ("name",)}
     filter_horizontal = ("specialties",)

@@ -1,18 +1,4 @@
-# -*- coding: utf-8 -*-
-"""
-Macedonian translations for every UI string in the project.
-
-Source strings are English (that is what `{% trans %}` contains), and the site's
-default language is Macedonian — so this catalogue is what visitors actually see
-by default. Applied to locale/mk/LC_MESSAGES/django.po by:
-
-    python scripts/i18n_tools.py apply
-
-Placeholders like %(name)s and inline HTML must be preserved exactly.
-"""
-
 MK = {
-    # --- Numbered legal headings ------------------------------------------
     "1. Using this website": "1. Користење на веб-страницата",
     "1. Who we are": "1. Кои сме ние",
     "2. Bookings": "2. Резервации",
@@ -31,13 +17,16 @@ MK = {
     "1 year": "1 година",
     "2 weeks": "2 недели",
 
-    # --- Navigation & chrome ----------------------------------------------
     "Home": "Почетна",
     "About": "За нас",
     "About us": "За нас",
     "Classes": "Часови",
     "All classes": "Сите часови",
+    "Filtered classes": "Филтрирани часови",
     "Services": "Услуги",
+    "All services": "Сите услуги",
+    "All articles": "Сите статии",
+    "The coaching team": "Тренерскиот тим",
     "Trainers": "Тренери",
     "Blog": "Блог",
     "Contact": "Контакт",
@@ -58,10 +47,9 @@ MK = {
     "Legal": "Правни информации",
     "Help": "Помош",
 
-    # --- Homepage ----------------------------------------------------------
     "Since 2019": "Од 2019",
     'Build the body.<br>Forge the <span class="mark-lime">mindset</span>.':
-        'Изгради тело.<br>Искови <span class="mark-lime">карактер</span>.',
+        'Изгради тело.<br>Изгради <span class="mark-lime">карактер</span>.',
     "Book a free trial": "Закажи бесплатен тренинг",
     "See the schedule": "Види го распоредот",
     "Members": "Членови",
@@ -94,7 +82,6 @@ MK = {
     "Map showing the location of the gym": "Мапа со локацијата на салата",
     "Rated %(n)s out of 5": "Оценка %(n)s од 5",
 
-    # --- About page --------------------------------------------------------
     "Our story, our values and the people behind %(site)s.":
         "Нашата приказна, нашите вредности и луѓето зад %(site)s.",
     "FORGE opened in a converted textile workshop in 2019 with two squat racks and a "
@@ -127,7 +114,6 @@ MK = {
     "Book a free trial session and train with us before you decide.":
         "Закажи бесплатен тренинг и тренирај со нас пред да одлучиш.",
 
-    # --- Services ----------------------------------------------------------
     "What we offer": "Што нудиме",
     "Coaching, recovery and nutrition support — built around what you actually need.":
         "Коучинг, опоравување и поддршка во исхраната — прилагодени на тоа што навистина ти треба.",
@@ -151,7 +137,6 @@ MK = {
     "Related services": "Слични услуги",
     "MKD": "ден.",
 
-    # --- Team --------------------------------------------------------------
     "Our trainers": "Нашите тренери",
     "Certified coaches who write your programme, correct your technique and remember your name.":
         "Сертифицирани тренери што ја пишуваат твојата програма, ја коригираат техниката и го паметат твоето име.",
@@ -173,7 +158,6 @@ MK = {
     "Other trainers": "Други тренери",
     "Email": "Е-пошта",
 
-    # --- Classes -----------------------------------------------------------
     "HIIT, strength, spinning, yoga and mobility classes at FORGE Fitness Studio — "
     "forty sessions every week.":
         "HIIT, сила, спининг, јога и мобилност во FORGE Fitness Studio — четириесет часа "
@@ -210,7 +194,6 @@ MK = {
     "You might also like": "Можеби ќе ти се допадне и",
     "Weekly times for %(name)s": "Неделни термини за %(name)s",
 
-    # --- Schedule ----------------------------------------------------------
     "Timetable": "Распоред",
     "Same timetable every week. Book a place, or just turn up ten minutes early.":
         "Ист распоред секоја недела. Резервирај место или едноставно дојди десет минути порано.",
@@ -235,9 +218,8 @@ MK = {
     "Sunday": "Недела",
     "Closed": "Затворено",
 
-    # --- Pricing -----------------------------------------------------------
     "Memberships & pricing": "Членарини и цени",
-    "Simple, honest pricing": "Едноставни и чесни цени",
+    "Simple, honest pricing": "Ниски и фер цени",
     "No joining fee, no lock-in contract, cancel with 30 days' notice.":
         "Без трошок за зачленување, без обврзувачки договор, откажување со известување од 30 дена.",
     "Transparent membership pricing at FORGE Fitness Studio. No lock-in contracts, no joining fee.":
@@ -254,7 +236,6 @@ MK = {
         "Секое членство почнува со бесплатен тренинг и фитнес проценка.",
     "Read the FAQ": "Прочитај ги прашањата",
 
-    # --- Blog --------------------------------------------------------------
     "Training & nutrition blog": "Блог за тренинг и исхрана",
     "Practical advice from our coaches — no fads, no supplements to sell you.":
         "Практични совети од нашите тренери — без модни трендови и без продажба на суплементи.",
@@ -274,7 +255,6 @@ MK = {
     "Written by": "Напишано од",
     "Keep reading": "Продолжи со читање",
 
-    # --- Contact & booking -------------------------------------------------
     "Get in touch with FORGE Fitness Studio — address, phone, email, opening hours and a contact form.":
         "Контактирај го FORGE Fitness Studio — адреса, телефон, е-пошта, работно време и формулар за контакт.",
     "Questions about memberships, classes or personal training? We answer within one working day.":
@@ -330,7 +310,6 @@ MK = {
     "Please choose a date in the future.": "Избери датум во иднина.",
     "Your submission could not be processed.": "Твоето барање не можеше да се обработи.",
 
-    # --- FAQ ---------------------------------------------------------------
     "Frequently asked questions": "Често поставувани прашања",
     "Everything people usually ask before their first session.":
         "Сè што луѓето обично прашуваат пред првиот тренинг.",
@@ -341,12 +320,12 @@ MK = {
     "Membership": "Членство",
     "Training": "Тренинг",
 
-    # --- Cookies & legal ---------------------------------------------------
     "We use cookies": "Користиме колачиња",
-    "We use necessary cookies to make the site work. With your consent we also use "
-    "analytics cookies to understand how the site is used.":
-        "Користиме неопходни колачиња за да функционира страницата. Со твоја согласност "
-        "користиме и аналитички колачиња за да разбереме како се користи страницата.",
+    "We use necessary cookies to make the site work. We set no analytics cookies "
+    "today — if we ever add them, they will only load after you accept.":
+        "Користиме неопходни колачиња за да функционира страницата. Моментално не "
+        "поставуваме аналитички колачиња — ако некогаш ги додадеме, ќе се вчитаат "
+        "само откако ќе прифатиш.",
     "Read our Privacy Policy": "Прочитај ја Политиката за приватност",
     "Accept all": "Прифати ги сите",
     "Only necessary": "Само неопходни",
@@ -444,14 +423,12 @@ MK = {
         "одговорноста таму каде што законот тоа не го дозволува.",
     "Questions about these terms:": "Прашања за овие услови:",
 
-    # --- Error pages -------------------------------------------------------
     "Page not found": "Страницата не е пронајдена",
     "This page skipped leg day": "Оваа страница го прескокна тренингот за нозе",
     "The page you're looking for doesn't exist or has been moved.":
         "Страницата што ја бараш не постои или е преместена.",
     "The page you were looking for does not exist.": "Страницата што ја бараше не постои.",
 
-    # --- Admin: model & field labels --------------------------------------
     "Manage the website": "Управувај со страницата",
     "Identity": "Идентитет",
     "Social media": "Социјални мрежи",

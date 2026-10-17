@@ -62,7 +62,6 @@ class Service(models.Model):
 
     @property
     def included_items(self):
-        """`what_included` is a textarea, one item per line — split for the template."""
         return [line.strip() for line in self.what_included.splitlines() if line.strip()]
 
 

@@ -1,6 +1,5 @@
 {% extends "base.html" %}
 {% load i18n %}
-
 {% block title %}{% trans "Our trainers" %} — {{ site.name }}{% endblock %}
 {% block meta_description %}{% trans "Meet the certified coaching team at FORGE Fitness Studio — strength, conditioning, mobility and nutrition specialists." %}{% endblock %}
 
@@ -11,7 +10,6 @@
 <section class="section">
   <div class="container">
     <h2 class="visually-hidden">{% trans "The coaching team" %}</h2>
-
     <div class="row g-4">
       {% for member in members %}
         <div class="col-6 col-lg-3 d-flex">
@@ -34,5 +32,4 @@
     <a class="btn btn-primary btn-lg" href="{% url 'contact:contact' %}">{% trans "Get in touch" %}</a>
   </div>
 </section>
-
 {% endblock %}

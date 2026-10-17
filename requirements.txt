@@ -9,3 +9,7 @@ django-environ==0.14.0
 # Used only by scripts/crawl_check.py (the pre-submission link crawler).
 requests==2.34.2
 beautifulsoup4==4.15.0
+
+# Used only by scripts/i18n_tools.py, which extracts and compiles the message
+# catalogues without GNU gettext installed.
+babel==2.18.0

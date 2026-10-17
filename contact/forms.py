@@ -8,25 +8,12 @@ from .models import Booking, ContactMessage
 
 
 class HoneypotMixin:
-    """
-    Adds a decoy field that real users never see (moved off-screen by CSS, not
-    display:none — some bots skip hidden fields). If it comes back filled in,
-    the submission is a bot.
-
-    Deliberately not a captcha: the assignment forbids nothing here, but a
-    captcha would add a third-party dependency and hurt accessibility.
-    """
-
     HONEYPOT = "website"
 
     def _add_honeypot(self):
         self.fields[self.HONEYPOT] = forms.CharField(
             required=False,
             label=_("Leave this field empty"),
-            # No aria-hidden: the field keeps a visible-to-AT label reading
-            # "Leave this field empty", which is the accessible honeypot
-            # pattern. aria-hidden on a focusable control is itself a
-            # violation, and tabindex=-1 already keeps it out of tab order.
             widget=forms.TextInput(
                 attrs={"autocomplete": "off", "tabindex": "-1"}
             ),
@@ -100,7 +87,6 @@ class BookingForm(HoneypotMixin, forms.ModelForm):
         self.fields["gym_class"].queryset = GymClass.objects.filter(is_active=True)
         self.fields["gym_class"].empty_label = _("Free trial session (any class)")
         self.fields["gym_class"].required = False
-        # Stop the browser offering past dates in the native picker.
         self.fields["preferred_date"].widget.attrs["min"] = timezone.localdate().isoformat()
 
     def clean_preferred_date(self):

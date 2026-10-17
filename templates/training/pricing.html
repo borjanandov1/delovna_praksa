@@ -1,6 +1,5 @@
 {% extends "base.html" %}
 {% load i18n %}
-
 {% block title %}{% trans "Memberships & pricing" %} — {{ site.name }}{% endblock %}
 {% block meta_description %}{% trans "Transparent membership pricing at FORGE Fitness Studio. No lock-in contracts, no joining fee." %}{% endblock %}
 
@@ -24,7 +23,6 @@
               {{ plan.name }}
             </h2>
             <p class="text-muted small mb-4">{{ plan.tagline }}</p>
-
             <div class="d-flex align-items-baseline gap-2 mb-4">
               <span class="price-amount">{{ plan.price }}</span>
               <span class="price-period">{% trans "MKD" %} / {{ plan.period }}</span>
@@ -75,5 +73,4 @@
     </div>
   </div>
 </section>
-
 {% endblock %}
