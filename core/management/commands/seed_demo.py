@@ -1,29 +1,20 @@
-"""
-Populate the site with realistic bilingual content.
-
-    python manage.py seed_demo
-    python manage.py seed_demo --flush   # wipe content tables first
-
-Idempotent: every object is keyed on its slug (or weekday / author), so
-re-running updates rather than duplicating. Images are deliberately left empty —
-drop real photos in through the admin; every template has an icon fallback.
-"""
-
 from datetime import time
+from pathlib import Path
 
+from django.conf import settings
+from django.core.files import File
 from django.core.management.base import BaseCommand
 from django.db import transaction
 from django.utils import timezone
 
 from blog.models import Category, Post
 from core.models import FAQ, OpeningHours, SiteSettings, Testimonial
-from services.models import Service, ServiceCategory
+from services.models import Service, ServiceCategory, ServiceImage
 from team.models import Specialty, TeamMember
 from training.models import ClassSession, GymClass, MembershipPlan
 
-# --------------------------------------------------------------------------- #
-# Content. Each tuple carries the Macedonian value first, English second.
-# --------------------------------------------------------------------------- #
+SEED_ASSETS = Path(settings.BASE_DIR) / "seed_assets"
+
 
 SITE = {
     "name": "FORGE Fitness Studio",
@@ -50,8 +41,8 @@ SITE = {
     "facebook": "https://www.facebook.com/",
     "instagram": "https://www.instagram.com/",
     "youtube": "https://www.youtube.com/",
-    "map_lat": 41.9993,
-    "map_lng": 21.4160,
+    "map_lat": 42.0030,
+    "map_lng": 21.4008,
 }
 
 HOURS = [
@@ -317,6 +308,7 @@ TRAINERS = [
     {
         "slug": "marko-stefanovski",
         "name": "Марко Стефановски",
+        "name_en": "Marko Stefanovski",
         "years": 12,
         "specialties": ["sila", "olimpisko-krevanje"],
         "email": "marko@forgefitness.mk",
@@ -345,6 +337,7 @@ TRAINERS = [
     {
         "slug": "ana-petrovska",
         "name": "Ана Петровска",
+        "name_en": "Ana Petrovska",
         "years": 8,
         "specialties": ["kondicija", "boks"],
         "email": "ana@forgefitness.mk",
@@ -372,6 +365,7 @@ TRAINERS = [
     {
         "slug": "damjan-ilievski",
         "name": "Дамјан Илиевски",
+        "name_en": "Damjan Ilievski",
         "years": 15,
         "specialties": ["olimpisko-krevanje", "sila"],
         "email": "damjan@forgefitness.mk",
@@ -399,6 +393,7 @@ TRAINERS = [
     {
         "slug": "elena-naumova",
         "name": "Елена Наумова",
+        "name_en": "Elena Naumova",
         "years": 9,
         "specialties": ["joga", "mobilnost", "rehabilitacija"],
         "email": "elena@forgefitness.mk",
@@ -426,6 +421,7 @@ TRAINERS = [
     {
         "slug": "viktor-trajkovski",
         "name": "Виктор Трајковски",
+        "name_en": "Viktor Trajkovski",
         "years": 6,
         "specialties": ["sila", "kondicija"],
         "email": "viktor@forgefitness.mk",
@@ -451,6 +447,7 @@ TRAINERS = [
     {
         "slug": "sara-jovanova",
         "name": "Сара Јованова",
+        "name_en": "Sara Jovanova",
         "years": 7,
         "specialties": ["ishrana"],
         "email": "sara@forgefitness.mk",
@@ -472,6 +469,15 @@ TRAINERS = [
         ),
     },
 ]
+
+ROOMS_EN = {
+    "Студио А": "Studio A",
+    "Студио Б": "Studio B",
+    "Сала за сила": "Strength room",
+    "Спининг сала": "Spin room",
+    "Функционална зона": "Functional zone",
+    "Платформи": "Platforms",
+}
 
 CLASSES = [
     {
@@ -1094,6 +1100,7 @@ POSTS = [
 TESTIMONIALS = [
     {
         "author": "Ивана Ристеска",
+        "author_en": "Ivana Risteska",
         "rating": 5,
         "featured": True,
         "order": 1,
@@ -1108,6 +1115,7 @@ TESTIMONIALS = [
     },
     {
         "author": "Стефан Ангеловски",
+        "author_en": "Stefan Angelovski",
         "rating": 5,
         "featured": True,
         "order": 2,
@@ -1122,6 +1130,7 @@ TESTIMONIALS = [
     },
     {
         "author": "Марија Костова",
+        "author_en": "Marija Kostova",
         "rating": 5,
         "featured": True,
         "order": 3,
@@ -1136,6 +1145,7 @@ TESTIMONIALS = [
     },
     {
         "author": "Дарко Николовски",
+        "author_en": "Darko Nikolovski",
         "rating": 5,
         "featured": False,
         "order": 4,
@@ -1150,6 +1160,7 @@ TESTIMONIALS = [
     },
     {
         "author": "Ана Здравковска",
+        "author_en": "Ana Zdravkovska",
         "rating": 4,
         "featured": False,
         "order": 5,
@@ -1163,6 +1174,7 @@ TESTIMONIALS = [
     },
     {
         "author": "Филип Митревски",
+        "author_en": "Filip Mitrevski",
         "rating": 5,
         "featured": False,
         "order": 6,
@@ -1292,20 +1304,19 @@ class Command(BaseCommand):
         self._blog(trainers)
         self._testimonials()
         self._faqs()
+        self._images()
 
         self.stdout.write(self.style.SUCCESS("\nSeed complete."))
         self.stdout.write(
-            "Images are intentionally empty — upload real photos through the admin.\n"
+            "Photos are placeholders from seed_assets/ — see seed_assets/CREDITS.md.\n"
             "Create a login with:  python manage.py createsuperuser"
         )
 
-    # -- individual sections ------------------------------------------------
 
     def _site(self):
         site = SiteSettings.load()
         for field, value in SITE.items():
             setattr(site, field, value)
-        # The bare fields back the default language.
         site.tagline = SITE["tagline_mk"]
         site.short_about = SITE["short_about_mk"]
         site.street = SITE["street_mk"]
@@ -1370,7 +1381,7 @@ class Command(BaseCommand):
             member, _ = TeamMember.objects.update_or_create(
                 slug=t["slug"],
                 defaults={
-                    "name": t["name"],
+                    "name": t["name"], "name_mk": t["name"], "name_en": t["name_en"],
                     "years_experience": t["years"],
                     "email": t["email"],
                     "order": i,
@@ -1412,7 +1423,10 @@ class Command(BaseCommand):
                     gym_class=gym_class,
                     weekday=weekday,
                     start_time=start,
-                    defaults={"room": room, "room_mk": room, "room_en": room},
+                    defaults={
+                        "room": room, "room_mk": room,
+                        "room_en": ROOMS_EN[room],
+                    },
                 )
                 sessions += 1
         self.stdout.write(f"  {len(CLASSES)} classes, {sessions} weekly sessions")
@@ -1472,6 +1486,7 @@ class Command(BaseCommand):
                     "rating": t["rating"],
                     "is_featured": t["featured"],
                     "order": t["order"],
+                    "author_mk": t["author"], "author_en": t["author_en"],
                     "role": mk_role, "role_mk": mk_role, "role_en": en_role,
                     "text": mk_text, "text_mk": mk_text, "text_en": en_text,
                 },
@@ -1492,3 +1507,52 @@ class Command(BaseCommand):
                 },
             )
         self.stdout.write(f"  {len(FAQS)} FAQs")
+
+    def _attach(self, obj, field, asset):
+        src = SEED_ASSETS / f"{asset}.webp"
+        if not src.exists():
+            return False
+
+        current = getattr(obj, field)
+        filename = f"{asset}.webp"
+        target = current.field.generate_filename(obj, filename)
+        if current.name == target and current.storage.exists(target):
+            return False
+
+        if current.storage.exists(target):
+            current.storage.delete(target)
+        with src.open("rb") as fh:
+            current.save(filename, File(fh), save=True)
+        return True
+
+    def _images(self):
+        if not SEED_ASSETS.is_dir():
+            self.stdout.write(self.style.WARNING("  seed_assets/ missing — skipping photos"))
+            return
+
+        written = 0
+        written += self._attach(SiteSettings.load(), "hero_image", "hero")
+
+        for service in Service.objects.all():
+            written += self._attach(service, "image", f"service-{service.slug}")
+            for n in (1, 2):
+                if not (SEED_ASSETS / f"gallery-{service.slug}-{n}.webp").exists():
+                    continue
+                shot, _ = ServiceImage.objects.get_or_create(
+                    service=service, order=n, defaults={"image": ""}
+                )
+                written += self._attach(shot, "image", f"gallery-{service.slug}-{n}")
+
+        for gym_class in GymClass.objects.all():
+            written += self._attach(gym_class, "image", f"class-{gym_class.slug}")
+
+        for member in TeamMember.objects.all():
+            written += self._attach(member, "photo", f"trainer-{member.slug}")
+
+        for post in Post.objects.all():
+            written += self._attach(post, "cover_image", f"post-{post.slug}")
+
+        for n, testimonial in enumerate(Testimonial.objects.order_by("order", "pk"), start=1):
+            written += self._attach(testimonial, "photo", f"testimonial-{n}")
+
+        self.stdout.write(f"  {written} photos copied from seed_assets/")

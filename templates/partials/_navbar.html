@@ -2,7 +2,6 @@
 {% with vn=request.resolver_match.view_name %}
 <nav class="navbar navbar-expand-lg navbar-forge sticky-top" aria-label="{% trans 'Main navigation' %}">
   <div class="container">
-
     <a class="navbar-brand d-flex align-items-center gap-2" href="{% url 'core:home' %}">
       {% if site.logo %}<img src="{{ site.logo.url }}" alt="" height="30" width="30">{% endif %}
       FORGE<span>.</span>
@@ -16,7 +15,6 @@
 
     <div class="collapse navbar-collapse" id="mainNav">
       <ul class="navbar-nav mx-lg-auto">
-
         <li class="nav-item">
           <a class="nav-link {% if vn == 'core:about' %}active{% endif %}"
              {% if vn == 'core:about' %}aria-current="page"{% endif %}
@@ -24,7 +22,6 @@
         </li>
 
         <li class="nav-item dropdown">
-          {# A button, not a placeholder anchor: dead hrefs break crawlers and keyboard users. #}
           <button type="button"
                   class="nav-link dropdown-toggle btn btn-link {% if 'training' in vn %}active{% endif %}"
                   data-bs-toggle="dropdown" aria-expanded="false">
@@ -37,7 +34,6 @@
             <li><a class="dropdown-item" href="{% url 'training:pricing' %}">{% trans "Memberships" %}</a></li>
           </ul>
         </li>
-
 
         <li class="nav-item">
           <a class="nav-link {% if 'services' in vn %}active{% endif %}"
@@ -65,8 +61,6 @@
       </ul>
 
       <div class="d-flex align-items-center gap-3 mt-3 mt-lg-0">
-
-        {# Posts to set_language, which stores the choice and redirects back. #}
         <form action="{% url 'set_language' %}" method="post" class="lang-switch">
           {% csrf_token %}
           <input type="hidden" name="next" value="{{ request.get_full_path|slice:'3:' }}">

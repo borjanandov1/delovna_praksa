@@ -1,6 +1,5 @@
 {% extends "base.html" %}
 {% load i18n %}
-
 {% block title %}{% trans "Weekly schedule" %} — {{ site.name }}{% endblock %}
 {% block meta_description %}{% trans "The full weekly class timetable at FORGE Fitness Studio — times, coaches and rooms for every session." %}{% endblock %}
 
@@ -82,5 +81,4 @@
     <a class="btn btn-accent btn-lg" href="{% url 'contact:booking' %}">{% trans "Book a class" %}</a>
   </div>
 </section>
-
 {% endblock %}

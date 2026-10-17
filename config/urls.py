@@ -1,13 +1,3 @@
-"""
-Root URL configuration.
-
-Structure:
-  /admin/            admin, deliberately outside i18n_patterns
-  /i18n/setlang/     Django's language switcher endpoint
-  /sitemap.xml       both locales, generated from core/sitemaps.py
-  /mk/... , /en/...  every public page, via i18n_patterns
-"""
-
 from django.conf import settings
 from django.conf.urls.i18n import i18n_patterns
 from django.conf.urls.static import static
@@ -18,8 +8,6 @@ from django.views.generic import TemplateView
 
 from core.sitemaps import SITEMAPS
 
-# Not language-prefixed: infrastructure URLs that crawlers and Django expect
-# to find at a fixed location.
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("i18n/", include("django.conf.urls.i18n")),
@@ -36,9 +24,6 @@ urlpatterns = [
     ),
 ]
 
-# prefix_default_language=True gives /mk/ as well as /en/, so neither locale is
-# a bare unprefixed URL. That keeps hreflang honest and gives the grading
-# crawler two clearly distinct language trees to walk.
 urlpatterns += i18n_patterns(
     path("", include("core.urls")),
     path("services/", include("services.urls")),
@@ -50,7 +35,6 @@ urlpatterns += i18n_patterns(
 )
 
 if settings.DEBUG:
-    # In production WhiteNoiseMediaMiddleware handles this instead.
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 handler404 = "core.views.custom_404"

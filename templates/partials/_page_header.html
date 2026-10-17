@@ -1,12 +1,4 @@
 {% load i18n %}
-{% comment %}
-  Shared page banner. Include it with: eyebrow, heading, sub.
-  `crumbs` is an optional list of {label, url} dicts for the breadcrumb trail.
-
-  Use {% comment %} here, never a multi-line {# #} — Django only recognises
-  {# #} on a single line, so a multi-line one is parsed as ordinary text and
-  any template tag inside it is executed for real.
-{% endcomment %}
 <header class="section-dark section-tight">
   <div class="container">
     {% if crumbs %}

@@ -1,6 +1,5 @@
 {% extends "base.html" %}
 {% load i18n %}
-
 {% block title %}{% trans "Contact us" %} — {{ site.name }}{% endblock %}
 {% block meta_description %}{% trans "Get in touch with FORGE Fitness Studio — address, phone, email, opening hours and a contact form." %}{% endblock %}
 
@@ -11,7 +10,6 @@
 <section class="section">
   <div class="container">
     <div class="row g-5">
-
       <div class="col-lg-7">
         <h2 class="h4 mb-4">{% trans "Send us a message" %}</h2>
         {% include "contact/partials/_contact_form.html" %}
@@ -87,16 +85,15 @@
   </div>
 </section>
 
-<section class="section-tight pb-0">
-  <div class="container-fluid px-0">
+<section class="section-tight">
+  <div class="container">
     <iframe
       title="{% trans 'Map showing the location of the gym' %}"
-      class="w-100 border-0 d-block"
+      class="w-100 rounded-4 border-0 d-block"
       height="420"
       loading="lazy"
       referrerpolicy="no-referrer-when-downgrade"
       src="{{ site.map_embed_url }}"></iframe>
   </div>
 </section>
-
 {% endblock %}

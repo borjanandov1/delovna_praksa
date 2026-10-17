@@ -1,6 +1,5 @@
 {% extends "base.html" %}
 {% load i18n %}
-
 {% block title %}{% trans "Book a free trial" %} — {{ site.name }}{% endblock %}
 {% block meta_description %}{% trans "Book your free trial session at FORGE Fitness Studio. Pick a class and a date — no membership required." %}{% endblock %}
 
@@ -11,7 +10,6 @@
 <section class="section">
   <div class="container">
     <div class="row g-5">
-
       <div class="col-lg-7">
         {% include "contact/partials/_booking_form.html" %}
       </div>
@@ -47,7 +45,6 @@
           </ol>
 
           <hr class="my-4">
-
           <p class="small text-muted mb-2"><strong>{% trans "Bring" %}:</strong>
             {% trans "training clothes, indoor shoes, a water bottle and a towel." %}</p>
           <p class="small text-muted mb-0">
@@ -64,5 +61,4 @@
     </div>
   </div>
 </section>
-
 {% endblock %}

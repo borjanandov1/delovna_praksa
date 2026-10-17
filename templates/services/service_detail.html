@@ -1,6 +1,5 @@
 {% extends "base.html" %}
 {% load i18n static %}
-
 {% block title %}{{ service.title }} — {{ site.name }}{% endblock %}
 {% block meta_description %}{{ service.short_desc|truncatechars:155 }}{% endblock %}
 {% block og_title %}{{ service.title }}{% endblock %}
@@ -28,12 +27,11 @@
 <section class="section">
   <div class="container">
     <div class="row g-5">
-
       <div class="col-lg-8">
         {% if service.image %}
           <img src="{{ service.image.url }}" alt="{{ service.title }}"
                class="w-100 rounded-4 mb-4" width="900" height="600"
-               style="object-fit:cover;aspect-ratio:3/2">
+               style="object-fit:cover;aspect-ratio:3/2;height:auto">
         {% endif %}
 
         <div class="lead">{{ service.full_desc|linebreaks }}</div>
@@ -52,7 +50,7 @@
               <div class="col-6 col-md-4">
                 <img src="{{ img.image.url }}" alt="{{ img.caption|default:service.title }}"
                      class="w-100 rounded-3" width="400" height="300" loading="lazy"
-                     style="object-fit:cover;aspect-ratio:4/3">
+                     style="object-fit:cover;aspect-ratio:4/3;height:auto">
               </div>
             {% endfor %}
           </div>
@@ -103,5 +101,4 @@
   </div>
 </section>
 {% endif %}
-
 {% endblock %}

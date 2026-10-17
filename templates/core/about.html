@@ -1,6 +1,5 @@
 {% extends "base.html" %}
 {% load i18n %}
-
 {% block title %}{% trans "About us" %} — {{ site.name }}{% endblock %}
 {% block meta_description %}{% blocktrans %}Our story, our values and the people behind {{ site }}.{% endblocktrans %}{% endblock %}
 
@@ -43,12 +42,10 @@
   </div>
 </section>
 
-{# Timeline #}
 <section class="section section-cream">
   <div class="container">
     <span class="eyebrow">{% trans "Milestones" %}</span>
     <h2 class="mb-5">{% trans "How we got here" %}</h2>
-
     <div class="row g-4">
       {% for year, text in milestones %}
         <div class="col-md-6 col-lg-3">
@@ -90,5 +87,4 @@
     <a class="btn btn-accent btn-lg" href="{% url 'contact:booking' %}">{% trans "Book a free trial" %}</a>
   </div>
 </section>
-
 {% endblock %}

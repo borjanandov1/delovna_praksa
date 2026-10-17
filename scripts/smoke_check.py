@@ -1,11 +1,3 @@
-"""
-Fast in-process smoke test: render every URL in both locales via Django's test
-client and report the status code. Catches template syntax errors, missing
-context variables and NoReverseMatch without needing a running server.
-
-    python scripts/smoke_check.py
-"""
-
 import os
 import sys
 from pathlib import Path
@@ -22,12 +14,9 @@ import logging  # noqa: E402
 
 from django.conf import settings  # noqa: E402
 
-# The test client sends Host: testserver. Django's test *runner* whitelists that
-# automatically; a plain script does not, so add it here.
 if "testserver" not in settings.ALLOWED_HOSTS:
     settings.ALLOWED_HOSTS.append("testserver")
 
-# Keep the output readable — we report status codes ourselves.
 logging.disable(logging.CRITICAL)
 
 from django.test import Client  # noqa: E402
@@ -64,7 +53,6 @@ def collect_urls():
 
 
 def fetch(client, path):
-    """Return (status, error_message). Never raises."""
     try:
         resp = client.get(path)
         return resp.status_code, ""
@@ -73,13 +61,10 @@ def fetch(client, path):
 
 
 def main():
-    # raise_request_exception=True so fetch() can report the real exception;
-    # fetch catches it, so one broken page still never aborts the run.
     client = Client(raise_request_exception=True)
     failures = []
     checked = 0
 
-    # Unprefixed infrastructure URLs.
     for path in ["/sitemap.xml", "/robots.txt"]:
         status, err = fetch(client, path)
         checked += 1
@@ -90,7 +75,6 @@ def main():
     for lang in ("mk", "en"):
         print(f"\n--- /{lang}/ " + "-" * 50)
         for url in collect_urls():
-            # reverse() already returns a language-prefixed path; swap the prefix.
             path = "/" + lang + url[3:] if url.startswith(("/mk", "/en")) else url
             status, err = fetch(client, path)
             checked += 1

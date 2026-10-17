@@ -1,9 +1,4 @@
 {% load i18n %}
-{% comment %}
-  Results grid only. Rendered on its own for HTMX requests (see
-  PostListView.get_template_names) and included by post_list.html otherwise,
-  so both paths render identical markup.
-{% endcomment %}
 <div id="postGrid">
   <h2 class="visually-hidden">
     {% if active_category %}{{ active_category.name }}{% else %}{% trans "All articles" %}{% endif %}

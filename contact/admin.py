@@ -15,7 +15,6 @@ class ContactMessageAdmin(admin.ModelAdmin):
     actions = ["mark_read", "mark_unread"]
 
     def has_add_permission(self, request):
-        # Messages only ever arrive through the public form.
         return False
 
     @admin.action(description=_("Mark selected messages as read"))

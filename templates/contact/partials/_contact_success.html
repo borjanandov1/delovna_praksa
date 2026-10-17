@@ -1,5 +1,4 @@
 {% load i18n %}
-{# Swapped in place of the form after a successful HTMX submit. #}
 <div class="text-center py-5" role="status" aria-live="polite">
   <div class="d-inline-flex align-items-center justify-content-center mb-4"
        style="width:72px;height:72px;border-radius:50%;background:var(--forge-lime)">
@@ -11,6 +10,5 @@
   </h2>
 
   <p class="text-muted mb-4 mx-auto" style="max-width:28rem">{{ success_message }}</p>
-
   <a class="btn btn-outline-dark" href="{% url 'core:home' %}">{% trans "Back to homepage" %}</a>
 </div>

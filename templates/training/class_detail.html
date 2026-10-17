@@ -1,6 +1,5 @@
 {% extends "base.html" %}
 {% load i18n static %}
-
 {% block title %}{{ gym_class.title }} — {% trans "Classes" %} — {{ site.name }}{% endblock %}
 {% block meta_description %}{{ gym_class.short_desc|truncatechars:155 }}{% endblock %}
 {% block og_title %}{{ gym_class.title }}{% endblock %}
@@ -33,12 +32,11 @@
 <section class="section">
   <div class="container">
     <div class="row g-5">
-
       <div class="col-lg-8">
         {% if gym_class.image %}
           <img src="{{ gym_class.image.url }}" alt="{{ gym_class.title }}"
                class="w-100 rounded-4 mb-4" width="900" height="600"
-               style="object-fit:cover;aspect-ratio:3/2">
+               style="object-fit:cover;aspect-ratio:3/2;height:auto">
         {% endif %}
 
         <div class="lead">{{ gym_class.full_desc|linebreaks }}</div>
@@ -130,5 +128,4 @@
   </div>
 </section>
 {% endif %}
-
 {% endblock %}

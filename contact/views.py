@@ -14,13 +14,6 @@ logger = logging.getLogger(__name__)
 
 
 def notify_staff(subject, body):
-    """
-    Best-effort email notification.
-
-    Wrapped in try/except on purpose: if SMTP is misconfigured or unreachable
-    on the FCSE server, the visitor must still get their success page. The
-    record is already safe in the database either way.
-    """
     try:
         send_mail(
             subject=subject,
@@ -34,12 +27,6 @@ def notify_staff(subject, body):
 
 
 class HtmxFormMixin:
-    """
-    Progressive enhancement: without JS the form does a normal POST → redirect
-    → success message (post/redirect/get, so a refresh can't double-submit).
-    With HTMX it swaps in a success partial instead, no page reload.
-    """
-
     success_partial = None
     success_message = ""
 
@@ -59,7 +46,6 @@ class HtmxFormMixin:
 
     def form_invalid(self, form):
         if self.request.headers.get("HX-Request"):
-            # Re-render just the form so HTMX can swap the errors back in.
             return render(
                 self.request, self.form_partial, {"form": form}, status=422
             )

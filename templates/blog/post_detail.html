@@ -1,6 +1,5 @@
 {% extends "base.html" %}
 {% load i18n static %}
-
 {% block title %}{{ post.title }} — {{ site.name }}{% endblock %}
 {% block meta_description %}{{ post.excerpt|truncatechars:155 }}{% endblock %}
 {% block og_title %}{{ post.title }}{% endblock %}
@@ -26,7 +25,6 @@
 
     {% if post.category %}<span class="eyebrow eyebrow-light">{{ post.category.name }}</span>{% endif %}
     <h1 class="mb-3">{{ post.title }}</h1>
-
     <div class="d-flex flex-wrap align-items-center gap-3 small text-white-50">
       {% if post.author %}
         <a href="{{ post.author.get_absolute_url }}" class="d-flex align-items-center gap-2 text-decoration-none text-white-50">
@@ -53,15 +51,13 @@
         {% if post.cover_image %}
           <img src="{{ post.cover_image.url }}" alt="{{ post.title }}"
                class="w-100 rounded-4 mb-5" width="900" height="500"
-               style="object-fit:cover;aspect-ratio:16/9">
+               style="object-fit:cover;aspect-ratio:16/9;height:auto">
         {% endif %}
 
         <p class="lead">{{ post.excerpt }}</p>
-
         <div class="mt-4">{{ post.body|linebreaks }}</div>
 
         <hr class="my-5">
-
         <div class="d-flex flex-wrap justify-content-between align-items-center gap-3">
           <a class="btn btn-outline-dark" href="{% url 'blog:list' %}">
             <i class="bi bi-arrow-left me-1" aria-hidden="true"></i>{% trans "Back to blog" %}
@@ -102,5 +98,4 @@
   </div>
 </section>
 {% endif %}
-
 {% endblock %}

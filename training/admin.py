@@ -7,8 +7,6 @@ from .models import ClassSession, GymClass, MembershipPlan
 class ClassSessionInline(TranslationTabularInline):
     model = ClassSession
     extra = 2
-    # Editing the weekly slots inline is what makes the timetable manageable
-    # for the gym owner — one screen per class instead of a separate model.
 
 
 @admin.register(GymClass)

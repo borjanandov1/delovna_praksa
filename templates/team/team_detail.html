@@ -1,6 +1,5 @@
 {% extends "base.html" %}
 {% load i18n static %}
-
 {% block title %}{{ member.name }} — {{ member.role }} — {{ site.name }}{% endblock %}
 {% block meta_description %}{{ member.short_bio|default:member.role|truncatechars:155 }}{% endblock %}
 {% block og_title %}{{ member.name }} — {{ member.role }}{% endblock %}
@@ -26,12 +25,11 @@
 <section class="section">
   <div class="container">
     <div class="row g-5">
-
       <div class="col-lg-5">
         {% if member.photo %}
           <img src="{{ member.photo.url }}" alt="{{ member.name }}"
                class="w-100 rounded-4" width="600" height="800"
-               style="object-fit:cover;aspect-ratio:3/4">
+               style="object-fit:cover;aspect-ratio:3/4;height:auto">
         {% endif %}
 
         <div class="card-forge p-4 mt-4">
@@ -108,5 +106,4 @@
   </div>
 </section>
 {% endif %}
-
 {% endblock %}

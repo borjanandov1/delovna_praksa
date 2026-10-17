@@ -1,6 +1,5 @@
 {% extends "base.html" %}
 {% load i18n %}
-
 {% block title %}{% trans "Blog" %} — {{ site.name }}{% endblock %}
 {% block meta_description %}{% trans "Training advice, nutrition guides and studio news from the coaching team at FORGE Fitness Studio." %}{% endblock %}
 
@@ -10,7 +9,6 @@
 
 <section class="section">
   <div class="container">
-
     <div class="row g-3 align-items-center mb-5">
       <div class="col-lg-7">
         <nav class="d-flex flex-wrap gap-2" aria-label="{% trans 'Filter posts by category' %}">
@@ -26,7 +24,6 @@
       </div>
 
       <div class="col-lg-5">
-        {# HTMX: updates the grid as you type, with a normal GET as fallback. #}
         <form role="search" method="get" action="{% url 'blog:list' %}"
               hx-get="{% url 'blog:list' %}"
               hx-target="#postGrid"
@@ -54,5 +51,4 @@
 
   </div>
 </section>
-
 {% endblock %}

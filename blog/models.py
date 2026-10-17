@@ -75,5 +75,4 @@ class Post(models.Model):
 
     @property
     def reading_time(self):
-        """Rough minutes-to-read, at ~200 words per minute."""
         return max(1, round(len(self.body.split()) / 200))

@@ -22,7 +22,6 @@ class HomeView(TemplateView):
             plans=MembershipPlan.objects.all()[:3],
             testimonials=Testimonial.objects.filter(is_featured=True)[:3],
             latest_posts=Post.published.select_related("category", "author")[:3],
-            # Full count, not the sliced list used for the cards above.
             trainer_count=TeamMember.objects.filter(is_active=True).count(),
             class_count=GymClass.objects.filter(is_active=True).count(),
         )
@@ -36,8 +35,6 @@ class AboutView(TemplateView):
         ctx = super().get_context_data(**kwargs)
         ctx["trainers"] = TeamMember.objects.filter(is_active=True)[:4]
         ctx["testimonials"] = Testimonial.objects.all()[:6]
-        # Static editorial content — deliberately not a model, since it changes
-        # once every few years and does not need an admin screen.
         ctx["milestones"] = [
             (2019, _("Opened with two racks in a converted textile workshop.")),
             (2021, _("Expanded to 1400m² and added the group-class studio.")),
@@ -52,7 +49,6 @@ class FAQView(TemplateView):
 
     def get_context_data(self, **kwargs):
         ctx = super().get_context_data(**kwargs)
-        # Group by category so the template renders one accordion per group.
         grouped = {}
         for item in FAQ.objects.all():
             grouped.setdefault(item.get_category_display(), []).append(item)
@@ -73,6 +69,4 @@ def custom_404(request, exception):
 
 
 def custom_500(request):
-    # No context processors run for handler500, so this template must not rely
-    # on {{ site }} — see templates/500.html.
     return render(request, "500.html", status=500)

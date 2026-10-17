@@ -10,5 +10,4 @@ class SpecialtyTR(TranslationOptions):
 
 @register(TeamMember)
 class TeamMemberTR(TranslationOptions):
-    # `name` stays untranslated — a person's name is the same in both locales.
-    fields = ("role", "short_bio", "bio", "certifications")
+    fields = ("name", "role", "short_bio", "bio", "certifications")
