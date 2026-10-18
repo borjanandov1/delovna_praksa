@@ -3,6 +3,8 @@ set -e
 
 mkdir -p "$(dirname "${SQLITE_PATH:-/app/db.sqlite3}")" "${MEDIA_ROOT:-/app/media}"
 
+echo "ALLOWED_HOSTS=${ALLOWED_HOSTS:-<not set>}"
+
 python manage.py migrate --noinput
 
 # Seed demo content only on an empty database, so admin edits survive redeploys.
