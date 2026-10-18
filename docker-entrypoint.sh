@@ -8,7 +8,8 @@ echo "ALLOWED_HOSTS=${ALLOWED_HOSTS:-<not set>}"
 python manage.py migrate --noinput
 
 # Seed demo content only on an empty database, so admin edits survive redeploys.
-if [ "$(python manage.py shell -c 'from training.models import MembershipPlan; print(MembershipPlan.objects.exists())')" = "False" ]; then
+# -v 0 stops Django 5.2's shell from printing its "N objects imported" banner.
+if [ "$(python manage.py shell -v 0 -c 'from training.models import MembershipPlan; print(MembershipPlan.objects.exists())' | tail -n 1)" = "False" ]; then
   python manage.py seed_demo
 fi
 
