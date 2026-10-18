@@ -2,7 +2,9 @@ FROM python:3.13-slim
 
 ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1 \
-    DJANGO_SETTINGS_MODULE=config.settings.prod \n    SQLITE_PATH=/data/db.sqlite3 \n    MEDIA_ROOT=/data/media
+    DJANGO_SETTINGS_MODULE=config.settings.prod \
+    SQLITE_PATH=/data/db.sqlite3 \
+    MEDIA_ROOT=/data/media
 
 WORKDIR /app
 
