@@ -86,12 +86,12 @@ MK = {
         "Нашата приказна, нашите вредности и луѓето зад %(site)s.",
     "FORGE opened in a converted textile workshop in 2019 with two squat racks and a "
     "stubborn belief: strength training should be welcoming, coached properly, and free "
-    "of intimidation. Today we run a 1400m² floor, forty classes a week and a coaching "
+    "of intimidation. Today we run a 600m² floor, forty classes a week and a coaching "
     "team that still knows every member by name.":
         "FORGE се отвори во преуредена текстилна работилница во 2019 година, со две "
         "конструкции за чучањ и тврдоглаво уверување: тренингот за сила треба да биде "
         "пристапен, стручно воден и без чувство на непријатност. Денес имаме сала од "
-        "1400м², четириесет часа неделно и тренерски тим што сè уште го знае секој член "
+        "600м², четириесет часа неделно и тренерски тим што сè уште го знае секој член "
         "по име.",
     "What we stand for": "Во што веруваме",
     "Coaching first — every member gets a plan": "Прво коучинг — секој член добива план",
@@ -103,8 +103,8 @@ MK = {
     "How we got here": "Како стигнавме дотука",
     "Opened with two racks in a converted textile workshop.":
         "Отворивме со две конструкции во преуредена текстилна работилница.",
-    "Expanded to 1400m² and added the group-class studio.":
-        "Се проширивме на 1400м² и додадовме студио за групни часови.",
+    "Expanded to 600m² and added the group-class studio.":
+        "Се проширивме на 600м² и додадовме студио за групни часови.",
     "Certified strength & conditioning programme launched.":
         "Започна сертифицираната програма за сила и кондиција.",
     "1200 members and a coaching team of eight.":

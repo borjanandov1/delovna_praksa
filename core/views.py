@@ -37,7 +37,7 @@ class AboutView(TemplateView):
         ctx["testimonials"] = Testimonial.objects.all()[:6]
         ctx["milestones"] = [
             (2019, _("Opened with two racks in a converted textile workshop.")),
-            (2021, _("Expanded to 1400m² and added the group-class studio.")),
+            (2021, _("Expanded to 600m² and added the group-class studio.")),
             (2023, _("Certified strength & conditioning programme launched.")),
             (2025, _("1200 members and a coaching team of eight.")),
         ]

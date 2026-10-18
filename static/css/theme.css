@@ -367,6 +367,28 @@ h3, .h3 { font-size: clamp(1.5rem, 3vw, 2.125rem); }
 .schedule-table tbody tr:hover { background: var(--forge-cream); }
 
 .price-card { position: relative; overflow: visible; }
+.price-badge {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  z-index: 2;
+}
+
+/* Bebas Neue has no Cyrillic glyphs, so Macedonian headings fell back to Inter.
+   Oswald is a condensed face with Cyrillic that matches the look. */
+:lang(mk) h1, :lang(mk) h2, :lang(mk) h3,
+:lang(mk) .display-1, :lang(mk) .display-2, :lang(mk) .display-3,
+:lang(mk) .font-display, :lang(mk) .price-amount,
+:lang(mk) .stat-value, :lang(mk) .schedule-table th, :lang(mk) .navbar-brand {
+  font-family: 'Oswald', 'Bebas Neue', 'Inter', sans-serif;
+  font-weight: 500;
+  letter-spacing: .02em;
+}
+
+.map-embed { position: relative; z-index: 0; isolation: isolate; overflow: hidden; }
+.map-embed iframe { display: block; width: 100%; }
 .price-card.featured {
   border-color: var(--forge-black);
   box-shadow: var(--forge-shadow-lg);
@@ -501,3 +523,9 @@ h3, .h3 { font-size: clamp(1.5rem, 3vw, 2.125rem); }
 @media print {
   .navbar-forge, .footer, .cookie-banner, .btn { display: none !important; }
 }
+
+/* htmx only fades the indicator out, so it still took up space and pushed button text
+   off-centre. Remove it from layout until a request is in flight. */
+.btn .htmx-indicator { display: none; }
+.htmx-request .btn .htmx-indicator,
+.htmx-request.btn .htmx-indicator { display: inline-block; }

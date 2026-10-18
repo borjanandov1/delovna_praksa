@@ -49,7 +49,7 @@
         <div class="stat-label">{% trans "Classes per week" %}</div>
       </div>
       <div class="col-6 col-lg-3">
-        <div class="stat-value">1400m²</div>
+        <div class="stat-value">600m²</div>
         <div class="stat-label">{% trans "Training floor" %}</div>
       </div>
     </div>
@@ -80,7 +80,7 @@
 
 <section class="section section-cream">
   <div class="container">
-    <div class="row align-items-center g-5">
+    <div class="row align-items-center g-4 g-lg-5">
       <div class="col-lg-6">
         <span class="eyebrow">{% trans "Who we are" %}</span>
         <h2 class="mb-4">{% trans "More than a gym" %}</h2>
@@ -135,7 +135,7 @@
         <div class="col-md-6 col-lg-4 d-flex">
           <div class="card-forge price-card {% if plan.is_featured %}featured{% endif %} p-4 p-lg-5 reveal d-flex flex-column w-100">
             {% if plan.is_featured %}
-              <span class="badge-lime position-absolute" style="top:-.75rem;left:50%;transform:translateX(-50%)">
+              <span class="badge-lime price-badge">
                 {% trans "Most popular" %}
               </span>
             {% endif %}
@@ -222,7 +222,7 @@
 
 <section class="section section-cream">
   <div class="container">
-    <div class="row g-5 align-items-center">
+    <div class="row g-4 g-lg-5 align-items-center">
       <div class="col-lg-5">
         <span class="eyebrow">{% trans "Come by" %}</span>
         <h2 class="mb-3">{% trans "Your first session is on us" %}</h2>

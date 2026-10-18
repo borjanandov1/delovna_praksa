@@ -466,8 +466,8 @@ msgid "Everything people usually ask before their first session."
 msgstr "Сè што луѓето обично прашуваат пред првиот тренинг."
 
 #: core/views.py:40
-msgid "Expanded to 1400m² and added the group-class studio."
-msgstr "Се проширивме на 1400м² и додадовме студио за групни часови."
+msgid "Expanded to 600m² and added the group-class studio."
+msgstr "Се проширивме на 600м² и додадовме студио за групни часови."
 
 #: templates/team/team_detail.html:40
 msgid "Experience"
@@ -489,12 +489,12 @@ msgstr "Често поставувани прашања"
 msgid ""
 "FORGE opened in a converted textile workshop in 2019 with two squat racks and a "
 "stubborn belief: strength training should be welcoming, coached properly, and free of"
-" intimidation. Today we run a 1400m² floor, forty classes a week and a coaching team "
+" intimidation. Today we run a 600m² floor, forty classes a week and a coaching team "
 "that still knows every member by name."
 msgstr ""
 "FORGE се отвори во преуредена текстилна работилница во 2019 година, со две "
 "конструкции за чучањ и тврдоглаво уверување: тренингот за сила треба да биде "
-"пристапен, стручно воден и без чувство на непријатност. Денес имаме сала од 1400м², "
+"пристапен, стручно воден и без чувство на непријатност. Денес имаме сала од 600м², "
 "четириесет часа неделно и тренерски тим што сè уште го знае секој член по име."
 
 #: core/models.py:19 templates/partials/_footer.html:14

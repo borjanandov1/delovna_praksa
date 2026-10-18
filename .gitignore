@@ -30,3 +30,6 @@ media/
 .DS_Store
 Thumbs.db
 desktop.ini
+
+# RepoRun persistent data (database + uploads)
+.stack-data/

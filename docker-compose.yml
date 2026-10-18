@@ -1,0 +1,10 @@
+services:
+  web:
+    build: .
+    cpus: 0.5
+    mem_limit: 512m
+    environment:
+      SQLITE_PATH: /data/db.sqlite3
+      MEDIA_ROOT: /data/media
+    volumes:
+      - .stack-data/db:/data

@@ -5,6 +5,10 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["localhost", "127.0.0.1", "[::1]"]
 
+# Serve CSS/JS straight from static/ and pick up edits without collectstatic or a restart.
+WHITENOISE_USE_FINDERS = True
+WHITENOISE_AUTOREFRESH = True
+
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 
 STORAGES = {
