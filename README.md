@@ -157,16 +157,3 @@ See **[DEPLOY.md](DEPLOY.md)**.
 
 ---
 
-## Still to do
-
-- [ ] **Swap the placeholder photographs for real ones** — `seed_assets/` holds 53
-      stock images (hero, 6 trainers, 8 classes, 8 services, 8 blog covers, 6
-      testimonials, 16 gallery shots) that `seed_demo` attaches automatically. They are
-      Unsplash stock, so the people shown are not actual FORGE staff or members — see
-      [seed_assets/CREDITS.md](seed_assets/CREDITS.md). To replace one, drop a file with
-      the same name into `seed_assets/` and re-run `seed_demo`, or upload through the
-      admin. Keep to the existing sizes: cards 1200x900, portraits 900x1200,
-      testimonials 400x400, hero 1600x900; WebP, under ~200KB each.
-- [ ] Register the team and topic at the link on Courses
-- [ ] Deploy to FCSE and submit the URL
-- [ ] Review 3 classmates' projects (10 points — do not skip these)
